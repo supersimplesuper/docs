@@ -42,12 +42,18 @@ jobs:
           cache-to: type=registry,ref=${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:latest,mode=max
           cache-from: type=registry,ref=${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:latest
 
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ap-southeast-2
+          role-to-assume: arn:aws:iam::447066819406:role/github
+
       - name: Extract built docs from container
         run: |
           container_id=$(docker create "${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}")
           docker cp "$container_id:/usr/src/app/docs/.vitepress/dist" "./docs"
           docker rm "$container_id"
 
-      # - name: Deploy docs to bucket
-      #   run: |
-      #     aws s3 sync --delete ./docs s3://ss-apps-production-docssuperapi-origin
+      - name: Deploy docs to bucket
+        run: |
+          aws s3 sync --delete ./docs s3://ss-apps-production-docssuperapi-origin
