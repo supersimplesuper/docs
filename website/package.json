@@ -1,0 +1,18 @@
+{
+  "name": "super-api-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs --host 0.0.0.0",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mermaid": "^10.9.0",
+    "vitepress": "^1.1.4",
+    "vitepress-plugin-mermaid": "2.0.16"
+  }
+}

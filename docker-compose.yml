@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  website:
+    build:
+      context: ./website
+    ports:
+      - 5173:5173
+    restart: "unless-stopped"
+    user: "1000"
+    volumes:
+      - ./website:/usr/src/app
+      - ./passwd:/etc/passwd
+      - home:/home/server
+
+volumes:
+  home:
