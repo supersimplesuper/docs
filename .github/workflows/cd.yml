@@ -1,0 +1,53 @@
+name: CD
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: "cd"
+  cancel-in-progress: false
+
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: "./website"
+          push: true
+          platforms: linux/amd64
+          tags: |
+            ${{ steps.setup_cd.outputs.ghcr_registry }}/${{ inputs.image_name }}:${{ github.sha }}
+          cache-to: type=registry,ref=${{ steps.setup_cd.outputs.ghcr_registry }}/docs:latest,mode=max
+          cache-from: type=registry,ref=${{ steps.setup_cd.outputs.ghcr_registry }}/docs:latest
+
+
+      - name: Extract built docs from container
+        run: |
+          container_id=$(docker create "${{ steps.build_and_push_ghcr.outputs.ghcr_registry }}/docs:${{ github.sha }}")
+          docker cp "$container_id:/usr/src/app/docs/.vitepress/dist" "./docs"
+          docker rm "$container_id"
+
+      # - name: Deploy docs to bucket
+      #   run: |
+      #     aws s3 sync --delete ./docs s3://ss-apps-production-docssuperapi-origin
