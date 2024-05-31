@@ -1,5 +1,15 @@
 {
   "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "prettier": "3.2.5"
+  },
+  "scripts": {
+    "format-check": "prettier --write --ignore-unknown --check .",
+    "format": "prettier --write --ignore-unknown .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
