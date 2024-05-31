@@ -1,14 +1,21 @@
 import { withMermaid } from "vitepress-plugin-mermaid";
 
 export default withMermaid({
-  appearance: 'force-dark',
+  appearance: "force-dark",
   title: "Docs",
   titleTemplate: "SuperAPI: The embedded future of super",
   description:
     "SuperAPI docs for HR software partners and super funds to begin working with embedded super.",
   head: [
     ["link", { rel: "icon", href: "/favicon.png" }],
-    ["script", { defer: '', "data-domain": "docs.superapi.com.au", src: "https://plausible.io/js/script.js" }]
+    [
+      "script",
+      {
+        defer: "",
+        "data-domain": "docs.superapi.com.au",
+        src: "https://plausible.io/js/script.js",
+      },
+    ],
   ],
   themeConfig: {
     logo: {
@@ -22,7 +29,7 @@ export default withMermaid({
     },
     nav: [
       { text: "Hiring", link: "/hiring/index.html" },
-      { text: "Software partners", link: "/software_partners/index.html" }
+      { text: "Software partners", link: "/software_partners/index.html" },
     ],
 
     /*
@@ -38,9 +45,12 @@ export default withMermaid({
     */
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/supersimplesuper/' },
-      { icon: 'x', link: 'https://twitter.com/superapidev' },
-      { icon: 'linkedin', link: 'https://au.linkedin.com/company/superapi-com-au' }
-    ]
+      { icon: "github", link: "https://github.com/supersimplesuper/" },
+      { icon: "x", link: "https://twitter.com/superapidev" },
+      {
+        icon: "linkedin",
+        link: "https://au.linkedin.com/company/superapi-com-au",
+      },
+    ],
   },
 });

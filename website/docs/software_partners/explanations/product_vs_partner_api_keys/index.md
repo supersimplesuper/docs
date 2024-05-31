@@ -24,4 +24,4 @@ Now back to our original problem - how do we work with software which requires d
 
 ## In summary
 
-You can think of the product API key as the key used by your software product to do the day to day work with SuperAPI.  Meanwhile the partner API key allows you to configure the way SuperAPI itself works. Currently we only support the dynamic creation of products using the partner key but we have plans to expand the functionality further in the future.
+You can think of the product API key as the key used by your software product to do the day to day work with SuperAPI. Meanwhile the partner API key allows you to configure the way SuperAPI itself works. Currently we only support the dynamic creation of products using the partner key but we have plans to expand the functionality further in the future.

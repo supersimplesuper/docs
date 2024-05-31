@@ -41,7 +41,6 @@ jobs:
           cache-to: type=registry,ref=${{ steps.setup_cd.outputs.ghcr_registry }}/docs:latest,mode=max
           cache-from: type=registry,ref=${{ steps.setup_cd.outputs.ghcr_registry }}/docs:latest
 
-
       - name: Extract built docs from container
         run: |
           container_id=$(docker create "${{ steps.build_and_push_ghcr.outputs.ghcr_registry }}/docs:${{ github.sha }}")

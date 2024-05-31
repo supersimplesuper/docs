@@ -4,7 +4,7 @@ The following repo contains the documentation for our SuperAPI product, these do
 
 ## How we write documentation
 
-When writing documentation we follow the thinking from the [Diátaxis system of documentation writing](https://diataxis.fr/). In their words, a "A systematic approach to technical documentation authoring". In reality this manifests as organising the sub pages under each of our products into "Tutorials", "How to guides", "Explanations" and "References". Writing documentation in the style of Diátaxis is very much an ongoing ideal that we strive towards but don't impose as a strict rule. In other words, it's better to have *some* documentation in place rather than *no* documentation because it doesn't conform to how we like it.
+When writing documentation we follow the thinking from the [Diátaxis system of documentation writing](https://diataxis.fr/). In their words, a "A systematic approach to technical documentation authoring". In reality this manifests as organising the sub pages under each of our products into "Tutorials", "How to guides", "Explanations" and "References". Writing documentation in the style of Diátaxis is very much an ongoing ideal that we strive towards but don't impose as a strict rule. In other words, it's better to have _some_ documentation in place rather than _no_ documentation because it doesn't conform to how we like it.
 
 ## Contributing to our documentation
 
@@ -24,9 +24,9 @@ If you would like to contribute directly to the docs, awesome! It could be anyth
 
 We've tried to simplify the process as much as possible to run this locally, at a minimum you will need to ensure that you have the following installed:
 
-* Docker
-* Docker Compose
-* NodeJS 18
+- Docker
+- Docker Compose
+- NodeJS 18
 
 ```bash
 make install
