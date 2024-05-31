@@ -10,6 +10,7 @@ setup: build
 
 install: setup
 	docker compose run --no-deps --rm website npm install;
+	npm install
 
 bash:
 	docker compose run --rm website bash

@@ -22,7 +22,11 @@ If you would like to contribute directly to the docs, awesome! It could be anyth
 
 ## Getting things running locally
 
-We've tried to simplify the process as much as possible to run this locally, at a minimum you will need to ensure that you have make, Docker and Docker Compose installed.
+We've tried to simplify the process as much as possible to run this locally, at a minimum you will need to ensure that you have the following installed:
+
+* Docker
+* Docker Compose
+* NodeJS 18
 
 ```bash
 make install
