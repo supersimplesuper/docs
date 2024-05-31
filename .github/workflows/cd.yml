@@ -37,14 +37,14 @@ jobs:
           push: true
           platforms: linux/amd64
           tags: |
-            $REPOSITORY_NAME/$IMAGE_NAME:${{ github.sha }}
-            $REPOSITORY_NAME/$IMAGE_NAME:latest
-          cache-to: type=registry,ref=$REPOSITORY_NAME/$IMAGE_NAME:latest,mode=max
-          cache-from: type=registry,ref=$REPOSITORY_NAME/$IMAGE_NAME:latest
+            ${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:latest
+          cache-to: type=registry,ref=${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:latest,mode=max
+          cache-from: type=registry,ref=${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:latest
 
       - name: Extract built docs from container
         run: |
-          container_id=$(docker create "$REPOSITORY_NAME/$IMAGE_NAME:${{ github.sha }}")
+          container_id=$(docker create "${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}")
           docker cp "$container_id:/usr/src/app/docs/.vitepress/dist" "./docs"
           docker rm "$container_id"
 
