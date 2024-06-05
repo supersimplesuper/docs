@@ -13,6 +13,10 @@ We will also go into some detail around some hypothetical actions you might want
 
 Webhooks are always based on a subject entity in our system. Currently these subject entities are one of either an `employer` or `onboarding_session` but we may extend this to more entities depending on the nature of the webhook. For example, if we were to emit a webhook that was related to an event occurring with a product in our system then the subject of that webhook would be a `product`. You can also think of the webhook subject being a kind of namespace for the webhook.
 
+::: warning
+We may introduce additional webhook namespaces for `employee` and `products` in the future.
+:::
+
 ### The event
 
 Webhooks are sent based on events occurring in our system and this information is also passed to the consumer of the webhook. Events include things like an employer changing their settings or an onboarding session being completed.
