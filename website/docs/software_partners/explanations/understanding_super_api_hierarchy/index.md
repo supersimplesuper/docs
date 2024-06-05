@@ -2,11 +2,11 @@
 
 It can be a bit tricky to understand the terminology that SuperAPI uses, in particular with objects that are used as the links between SuperAPI and out software partners. You might have come across these terms in our documentation or after we've been on a call together:
 
-* Partner
-* Product
-* Employer
-* Employee
-* Onboarding session
+- Partner
+- Product
+- Employer
+- Employee
+- Onboarding session
 
 This reference has been created as a shortcut to help you understand how these entities relate to each other and how they relate to objects in your system.
 
