@@ -32,11 +32,11 @@ This entity is managed by the SuperAPI team.
 
 ### Product
 
-The product represents your application. In most cases, this is usually singular but in some circumstances you may want to dynamically provision products using your partner API key. For example, if your application is instanced many times, one for each customer, or you have use vanity url subdomains, you may want to dynamically create products.
+The product represents your application. In most cases, you will have a singular product per environment. However there are cases where you may want to dynamically provision products using your partner API key. For example, if your application is instanced many times, one for each customer, or you use vanity url subdomains, you may want to dynamically create products.
 
-We have no limit on the number of products you can create under your partner and suggest creating products when developing locally against our API.
+We have no limit on the number of products you can create per partner. We suggest creating products when developing locally against our API.
 
-Products start in a sandbox environment by default. This prevents you from calling real ATO or SuperFund APIs (we will instead simulate the calls). If you are creating products using a partner key then you will be able to dynamically set the sandbox status of the product.
+Products start in a sandbox environment by default. Sandboxed products prevent you from calling real ATO or SuperFund APIs (we will instead simulate the calls). If you are creating products using a partner key, you can dynamically set the sandbox status of the product.
 
 ::: info
 We will typically create you a product for production and for development when getting you set up.
@@ -44,7 +44,9 @@ We will typically create you a product for production and for development when g
 
 ### Employer
 
-The employer represents a business entity that is using your software. For example, if you have payroll software then the employer represents the organisation in your system with an ABN. Depending on the functionality of SuperAPI used, you may need to get the owner of the organisation to perform a setup action before you can do other functions in SuperAPI. An example of this is that we require the selection of a default super fund before superannuation onboarding functions can be enabled.
+The employer represents a business entity that is using your software. For example, if you have payroll software then the employer represents the organisation in your system with an ABN.
+
+Depending on the SuperAPI functionality you want to enable, you might need to get the owner of the organisation (i.e. your customer) to perform one or more setup actions before you can use other functions in SuperAPI. For example, we require employers to select a default super fund before superannuation onboarding functions can be enabled.
 
 ::: info
 This entity requires a `remote_id` field which can be used to map back to your system.
@@ -52,7 +54,7 @@ This entity requires a `remote_id` field which can be used to map back to your s
 
 ### Employee
 
-The employee represents a user entity who is employed at the employer. This entity should be unique per employer <> employee relationship in your system (e.g. if a user works at two organisations in your system, then we should have two matching employee records in SuperAPI, not one representing the underlying user). Currently this entity exists to provide future functionality such as superannuation payments via our SuperSend product and to allow our software partners to configure superannuation performance dashboards inside the application.
+The employee represents a user entity who is employed by the employer. This entity should be unique per employer <> employee relationship in your system (e.g. if a user works at two organisations in your system, then we should have two matching employee records in SuperAPI, not one representing the underlying user). Currently this entity exists to provide future functionality such as superannuation payments via our SuperSend product and to allow our software partners to configure superannuation performance dashboards inside the application.
 
 ::: info
 This entity requires a `remote_id` field which can be used to map back to your system.
@@ -60,7 +62,7 @@ This entity requires a `remote_id` field which can be used to map back to your s
 
 ### Onboarding session
 
-The onboarding session represents a one off workflow that can be given to a user to perform actions in the SuperAPI system via the embed. These actions include actions like selecting a bank account, validating a phone and nominating a superannuation fund to make contributions to.
+The onboarding session represents a one-off workflow that is given to a user to perform actions in SuperAPI via the embed. Onboarding Session actions include adding bank account/s, validating a phone number and nominating a superannuation fund to make contributions to.
 
 ::: info
 This entity requires a `remote_id` field which can be used to map back to your system.
@@ -68,7 +70,7 @@ This entity requires a `remote_id` field which can be used to map back to your s
 
 ## Tracking SuperAPI entities in your system
 
-We highly suggest creating new database tables to track the "join" between the entities in your system (employers, employees) and the entities in SuperAPI. This provides a convenient indicator that the join between the systems as been created and allows you to store SuperAPI related information in a way that does not pollute the primary models in your system.
+We highly suggest creating new database tables to track the relationship ("join") between the entities in your system (employers, employees) and the entities in SuperAPI. This provides a convenient indicator that the join between the systems has been created. It also allows you to store SuperAPI related information in a way that does not pollute the primary models in your system.
 
 For example, to model the relationship between employers in your system and SuperAPI, your database could look like:
 
