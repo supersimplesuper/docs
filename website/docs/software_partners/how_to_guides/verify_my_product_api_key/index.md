@@ -40,3 +40,5 @@ After issuing the `curl` request above, you will receive a payload similar to th
   "version": "v1"
 }
 ```
+
+After you've gotten your product key working, [check out how to create an employer](/software_partners/how_to_guides/create_an_employer/index.html).
