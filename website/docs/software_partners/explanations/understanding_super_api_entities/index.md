@@ -1,6 +1,6 @@
 # Understanding SuperAPI entities
 
-It can be a bit tricky to understand the terminology that SuperAPI uses, in particular with objects that are used as the links between SuperAPI and out software partners. You might have come across these terms in our documentation or after we've been on a call together:
+It can be a bit tricky to understand the entities that SuperAPI uses, in particular the entities that are used as the links between SuperAPI and your software. You might have come across these terms in our documentation or after we've been on a call together:
 
 - Partner
 - Product
@@ -12,24 +12,34 @@ This reference has been created as a shortcut to help you understand how these e
 
 ## Entities
 
+The purpose of these entities is to model the relationship between your system and SuperAPI. They follow a strict hierarchy from the Partner at the top down to the onboarding session, in detail:
+
+```mermaid
+erDiagram
+    Partner ||--o{ Product : "Has many"
+    Product ||--o{ Employer : "Has many"
+    Employer ||--o{ Employee : "Has many"
+    Employee ||--o{ "Onboarding session" : "Has many"
+```
+
 ### Partner
 
-The partner represents the relationship between SuperAPI and the software partner that is consuming our service. This entity is at the top of the hierarchy with all other entities underneath it. For most software partners, you don't need to worry too much about this entity as we take care of it for you. However, for some partners that have particular software configurations, you may need to work with the partner object. The most common case is using the partner API key to dynamically create products.
+The partner represents the relationship between SuperAPI and the software partner that is consuming our service. For most software partners, you don't need to worry too much about this entity as we take care of it for you. However, for some partners that have particular software configurations you will call API routes using the special partner key to dynamically create products.
 
 ::: info
-The partner entity and partner API key will be created for you by the SuperAPI team.
+This entity is managed by the SuperAPI team.
 :::
 
 ### Product
 
-The product represents your application. In most cases, this is usually singular but in some circumstances you may want to dynamically provision products using your API key. For example, if your application is instanced many times, one for each customer, or you have use vanity subdomains, you may dynamically create products.
+The product represents your application. In most cases, this is usually singular but in some circumstances you may want to dynamically provision products using your partner API key. For example, if your application is instanced many times, one for each customer, or you have use vanity url subdomains, you may want to dynamically create products.
 
-We have no limit on the number of products you can create under your partner and suggest creating a product when developing locally against our API.
+We have no limit on the number of products you can create under your partner and suggest creating products when developing locally against our API.
 
 Products start in a sandbox environment by default. This prevents you from calling real ATO or SuperFund APIs (we will instead simulate the calls). If you are creating products using a partner key then you will be able to dynamically set the sandbox status of the product.
 
 ::: info
-We will typically create you a product for production and for development when provisioning your partner key.
+We will typically create you a product for production and for development when getting you set up.
 :::
 
 ### Employer
@@ -69,7 +79,7 @@ classDiagram
     }
     class EmployerSuperAPIEmployers {
         +int id
-        +int employer_id Foreign key to internal employers table
+        +int employer_id Foreign key to your internal employers table
         +UUID super_api_employer_id Foreign key to remote SuperAPI record
         +data data returned to you from SuperAPI about the employer
     }
