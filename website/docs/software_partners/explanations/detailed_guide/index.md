@@ -373,7 +373,9 @@ curl -X POST https://api.superapi.com.au/api/v1/employer/:id/generate-embed-url 
   -H "x-api-key: superapi_yourapikeysDZFUnrDIyNp7YTAPDcJXge" \
   -d '{
     "options": {
-      "valid_until": "2024-05-10T00:10:29Z"
+      "valid_until": "2024-05-10T00:10:29Z",
+      "app": "super_settings",
+      "session_id": "your_session_id"
     },
   }'
 ```
@@ -382,9 +384,11 @@ curl -X POST https://api.superapi.com.au/api/v1/employer/:id/generate-embed-url 
 
 This request takes an `options` payload which allows you to customise the way the embed functions. You can control the embed behaviour with the following options:
 
-| Field       | Kind   | Description                                                           |
-| ----------- | ------ | --------------------------------------------------------------------- |
-| valid_until | string | At what point in time does this URL stop functioning in IS8601 format |
+| Field       | Kind   | Description                                                                                                                                                                                                                                     |
+| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| valid_until | string | At what point in time does this URL stop functioning in IS8601 format                                                                                                                                                                           |
+| app         | string | The name of the app that you want to load. Generally, this will be `super_settings`                                                                                                                                                             |
+| session_id  | string | A unique string by which we will identify the session in our system. This is useful for maintaining state across multiple instances of the embed for the same user. We recommend you use something like a 'userid' or equivalent in your system |
 
 ::: danger
 **Do not store the generated urls!** Rather, create them at the time the page is being rendered. It is important to set a value for the `valid_until` which is not too far into the future. A suggested value is 30 seconds. It is safe to sign or request a generated URL each time the page is loaded.
