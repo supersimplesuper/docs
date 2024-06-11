@@ -56,14 +56,14 @@ This will create the product entity, similar to:
     },
     "sandboxed": true,
     "show_toast_messages": true
-  },
+  },S
   "version": "v1"
 }
 ```
 
 ## Step 3
 
-The final step is to then request an API key for that product. As we don't have an API key for our product yet, we must use our partner API key to also create the product API key, that can be done with:
+Now the next step is to request an API key for that product. As we don't have an API key for our product yet, we must use our partner API key to also create the product API key, that can be done with:
 
 ```bash
 curl -X POST https://api.superapi.com.au/api/v1/partner/product/:id/product-api-key \
@@ -77,4 +77,21 @@ This final step will return the product API key to you in the field `api_key`.
 
 ::: warning
 Ensure you protect this API key! Do not check it into your source code control.
+:::
+
+## Step 4
+
+Once your dynamically created product is provisioned then the last step is to take it out of the sandbox so it can be used. This can be achieved by updating the product using the partner api key.
+
+```bash
+curl -X PUT https://api.superapi.com.au/api/v1/partner/product/:id \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: superapipartner_yourkeyQvyaXOF" \
+  -d '{
+    "sandboxed": false
+  }'
+```
+
+::: warning
+Once the product has left the sandbox then requests to the ATO and SuperFund APIs will no longer be mocked!
 :::
