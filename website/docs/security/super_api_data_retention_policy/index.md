@@ -4,6 +4,7 @@
 
 | Version    | Changes                                                                                                                                 |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 11/06/2024 | Adjusted date back to 30 days due to the need to handle the delay on MRR registrations over the SuperSend network                       |
 | 21/02/2024 | Updated with details about the legal entity we comply with in Australia. Adjusted dates we hold data for (down from 30 days to 7 days). |
 | 21/01/2024 | Initial version                                                                                                                         |
 
@@ -36,9 +37,10 @@ Data retention periods are applied depending on the classification of the data i
 
 ### Sensitive Data
 
-Sensitive data is retained for the minimal period of time possible for the system to function correctly and to be legally compliant to the standards set out by the Office of the Australian Information Commissioner (OAIC) . To be specific:
+Sensitive data is retained for the minimal period of time possible for the system to function correctly and to be legally compliant to the standards set out by the Office of the Australian Information Commissioner (OAIC). To be specific:
 
-- Data from a user making a super selection is retained for a maximum of 7 days before it is expired.
+- Data from a user making a super selection is retained for a maximum of 30 days before it is expired.
+- The main driver to hold the data for 30 days is the need to issue MRR requests over the SuperStream network and to wait for a reply.
 - When data is removed from the selection session object, we anonymize the data. It undergoes the following transformation:
 
   | Field          | Action                             |
@@ -61,11 +63,11 @@ Sensitive data is retained for the minimal period of time possible for the syste
   | phone          | Sha256 hashed                      |
 
 - We queue a payload of data that is sent to the partner which contains PII information. This data is retained for 30 days for debugging / auditing / service outage recovery (i.e., the partner system cannot accept the data at this time).
-- We generate a PDF version of the super choice selection form. This is retained in our S3 bucket for 7 days. A secure link is sent as part of the payload to the partner which allows them to download this document. It is also presented to the user at the end of the flow for them to download if they require a hard copy of it.
+- We generate a PDF version of the super choice selection form. This is retained in our S3 bucket for 7 days (this is intentionally shorter than the usual timeout) before it undergoes automatic removal. A secure link is sent as part of the payload to the partner which allows them to download this document. It is also presented to the user at the end of the flow for them to download if they require a hard copy of it.
 
 ### Summary
 
-The maximum length of time that sensitive data is held in the system is 7 days and this is mostly driven by the length of time we allow for our partner to receive the data or perform debugging against it. It is also possible to reduce this length of time for a partner if required, i.e., if 3 days was considered a sufficient amount of time to handle outages and debugging, we can reduce the time sensitive data is available in the system.
+The maximum length of time that sensitive data is held in the system is 30 days and this is mostly driven by the length of time we allow for our partner to receive the data or perform debugging against it. It is also possible to reduce this length of time for a partner if required, i.e., if 3 days was considered a sufficient amount of time to handle outages and debugging, we can reduce the time sensitive data is available in the system.
 
 ## Data Storage, Protection, Access and Logging
 
