@@ -2,17 +2,25 @@
 
 This document outlines how hire at SuperAPI. Chances are if you're reading this then you're thinking about joining us, awesome! One of our values at SuperAPI is to be open and transparent in the way we operate and hiring is no exception. We wrote document to give you an idea of what to expect if you go through the hiring process with SuperAPI.
 
+We don’t always get the hiring process right, so if you have feedback, thoughts or anything else, then please reach out to us. You can contact us directly at jobs@superapi.com.au
+
 :::info
 We're always open to meeting Elixir developers based in Melbourne. Drop us a line at jobs@superapi.com.au and come say "hi" in person. We're located in Melbourne's CBD close to the Southern Cross station.
 :::
 
-We don’t always get the hiring process right, so if you have feedback, thoughts or anything else, then please reach out to us. You can contact us directly at jobs@superapi.com.au
-
 ## How we work
 
-At the end of the day, we're a SASS company providing software to our partners. That means we don't usually solve extremely difficult software engineering problems here, the problems we do solve tend towards data modelling, performance, software architecture, compliance and data visualisation. This means that when we interview, we're looking for people with a broad experience base across multiple software engineering disciplines who have a deep specialties in areas that interest them (commonly known as "t-shaped" people).
+At the end of the day, we're a SASS company providing software to our partners. That means we don't usually solve extremely difficult software engineering problems, the kind of problems we do solve tend toward:
 
-We've tried to make SuperAPI a fund place to work. This means that we don't take ourselves too seriously, foster a blameless culture and have a strong philosophy in "giving back". If you write a cool piece of code, let's open source it and make it available to everyone! We're the kind of company that is more likely to have an informal beer after work together on Friday than to have formal team building exercises.
+- Data modelling
+- Performance
+- Software architecture
+- Compliance
+- Data visualisation
+
+This means that when we interview, we're looking for people with a broad experience base across multiple software engineering disciplines who have a deep specialties in areas that interest them (commonly known as "t-shaped" people).
+
+We've tried to make SuperAPI the kind of place that we've always wanted to work at but couldn't. This means that we don't take ourselves too seriously, foster a blameless culture and have a strong philosophy in "giving back" (wrote a cool piece of code? Let's open source it!). We're the kind of company that is more likely to have an informal beer after work together on Friday than to have formal team building exercises.
 
 ## The two sets of criteria we look at
 
