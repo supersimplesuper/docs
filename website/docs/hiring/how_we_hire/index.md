@@ -1,28 +1,38 @@
 # How we hire at SuperAPI
 
-Interested in a role at SuperAPI? Great! In this document we’ve tried to outline what makes us tick with regards to what we look for in an employee and what you can expect when you come through the hiring process with us.
+This document outlines how hire at SuperAPI. Chances are if you're reading this then you're thinking about joining us, awesome! One of our values at SuperAPI is to be open and transparent in the way we operate and hiring is no exception. We wrote document to give you an idea of what to expect if you go through the hiring process with SuperAPI.
 
-We don’t always get this right, so if you have feedback, thoughts or anything, then please reach out to us. Contact details are on the homepage.
+:::info
+We're always open to meeting Elixir developers based in Melbourne. Drop us a line at jobs@superapi.com.au and come say "hi" in person. We're located in Melbourne's CBD close to the Southern Cross station.
+:::
 
-## Two parts to the job
+We don’t always get the hiring process right, so if you have feedback, thoughts or anything else, then please reach out to us. You can contact us directly at jobs@superapi.com.au
 
-First, it’s important to understand that when we hire we don’t just look at your skills. If you’re a developer and have a deep understanding of Elixir, that’s great, but it’s only half of the puzzle. Along with skills in the area that we’re in, we also look for what could be described as a “culture” fit (although we think we’ve done a bit more deeper thinking about what culture means then the average company).
+## How we work
 
-### The Culture interview
+At the end of the day, we're a SASS company providing software to our partners. That means we don't usually solve extremely difficult software engineering problems here, the problems we do solve tend towards data modelling, performance, software architecture, compliance and data visualisation. This means that when we interview, we're looking for people with a broad experience base across multiple software engineering disciplines who have a deep specialties in areas that interest them (commonly known as "t-shaped" people).
 
-We call it culture at SuperAPI because that’s the easiest shortcut to getting at what we’re talking about, however we go a bit deeper than the usual 1 hour video chat with the manager of the team you’re hiring for. Instead, what we’re looking for are people that fit a certain set of characteristics that we’ve noticed great people have had over the years that we’ve worked with them. Obviously, this list could be much larger but we’ve distilled it down to the following:
+We've tried to make SuperAPI a fund place to work. This means that we don't take ourselves too seriously, foster a blameless culture and have a strong philosophy in "giving back". If you write a cool piece of code, let's open source it and make it available to everyone! We're the kind of company that is more likely to have an informal beer after work together on Friday than to have formal team building exercises.
 
-- **Optimism** - kindness, thoughtfulness and a sense that the glass is always at least half full
-- **Curious intelligence** - learning for the sake of learning, a curiosity towards new things
-- **A work ethic** - pride in the work done, a willingness to master one's craft. Not to be confused with willingness to work all hours.
-- **Empathy** - An awareness of how one's actions affect others, caring for others
-- **Integrity** - Do the right thing, even when no one is watching
+## The two sets of criteria we look at
+
+First, it’s important to understand that when we hire we don’t just look at your skills. If you’re a developer and have a deep understanding of Elixir, that’s great, but that's only half of the puzzle. Along with Elixir skills that match the kind of work we do, we also look for what could be described as a "culture" fit. We kind of despise the word culture as it doesn't quite capture what we're looking for but it will do as a stand in until we can think of a better word.
+
+### The "culture" interview
+
+We call it culture at SuperAPI because that’s the easiest shortcut to getting at what we’re talking about. Basically what it means is that we’re looking for people that have a certain set of characteristics that meant we loved working with them. Obviously, this list could be much larger but we’ve distilled it down to the following:
+
+- **Optimism** - kindness, thoughtfulness and a sense that the glass is always at least half full.
+- **Curious intelligence** - learning for the sake of learning, a curiosity towards new things.
+- **A work ethic** - pride in the work done, a willingness to master one's craft. Not to be confused with willingness to work all hours!
+- **Empathy** - An awareness of how one's actions affect others, caring for others.
+- **Integrity** - Do the right thing, even when no one is watching.
 
 Our culture interview is always the first interview that we do, in fact it might not even feel like the usual cultural interview at another workplace. After we’ve had a chat, the interviewers will get together and discuss the meeting and try to frame it in light of the 5 criteria listed above. Depending on how we go, we’ll then progress to the skills based interview.
 
 ### The skills interview
 
-Our skills interview follows a more traditional interview process. E.g. for a skills interview in our engineering team, we’re looking to see how your development skills will fit with the kind of work that we do. In this interview we strive to make it as close as possible to the actual kinds of work that you will be doing. We don’t believe that getting you to try and build a minesweeper clone in a couple of hours or building a Mars rover simulator is a good way of simulating the kinds of work that we do in our codebase.
+Our skills interview follows a more traditional interview process. E.g. for a skills interview in our engineering team, we’re looking to see how your development skills will fit with the kind of work that we do. In this interview we strive to make it as close as possible to the actual kinds of work that you will be doing, what this also means is that as we don't typically solve leetcode style problems, we don't use leetcode style tests for potential employees.
 
 Some of the things you can expect from the skills interview are:
 
@@ -31,5 +41,7 @@ Some of the things you can expect from the skills interview are:
 - **Pair on a feature** - We’ll pick an easy feature from the codebase and work together to implement it. Similar to the pull request review, we’re looking to see how you approach a problem.
 
 - **Bring in some code** - Rather than working on our code, let’s work on yours instead. Bring in something you’re proud of building (and can show us!) and let’s work through how you might add a feature to your own code base.
+
+- **Tell us about our code** - Let's bring up some of our code and you tell us what it's doing and ask some questions about why we did it.
 
 In all cases, these aren’t pass or fail tests in the sense that you must add the feature in the hour we have allotted. Instead, we’re looking for how you approach a problem and communicate with the engineer that’s running the test.
