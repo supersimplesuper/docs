@@ -24,11 +24,11 @@ We've tried to make SuperAPI the kind of place that we've always wanted to work 
 
 ## The two sets of criteria we look at
 
-First, it’s important to understand that when we hire we don’t just look at your skills. If you’re a developer and have a deep understanding of Elixir, that’s great, but that's only half of the puzzle. Along with Elixir skills that match the kind of work we do, we also look for what could be described as a "culture" fit. We kind of despise the word culture as it doesn't quite capture what we're looking for but it will do as a stand in until we can think of a better word.
+First, it’s important to understand that when we hire we don’t just look at your skills. If you’re a developer and have a deep understanding of Elixir, that’s great, but that's only half of the puzzle. Along with Elixir skills that match the kind of work we do, we also look for what could be described as a "culture" fit (we kind of despise the word culture as it doesn't quite capture what we're looking for but it will do as a stand in until we can think of a better word)
 
 ### The "culture" interview
 
-We call it culture at SuperAPI because that’s the easiest shortcut to getting at what we’re talking about. Basically what it means is that we’re looking for people that have a certain set of characteristics that meant we loved working with them. Obviously, this list could be much larger but we’ve distilled it down to the following:
+When we do the culture interview we’re looking for people that have a certain set of characteristics. These characteristics are built up from those we've noticed in each other and with people that we've loved working with in the past. They are:
 
 - **Optimism** - kindness, thoughtfulness and a sense that the glass is always at least half full.
 - **Curious intelligence** - learning for the sake of learning, a curiosity towards new things.
@@ -36,11 +36,11 @@ We call it culture at SuperAPI because that’s the easiest shortcut to getting 
 - **Empathy** - An awareness of how one's actions affect others, caring for others.
 - **Integrity** - Do the right thing, even when no one is watching.
 
-Our culture interview is always the first interview that we do, in fact it might not even feel like the usual cultural interview at another workplace. After we’ve had a chat, the interviewers will get together and discuss the meeting and try to frame it in light of the 5 criteria listed above. Depending on how we go, we’ll then progress to the skills based interview.
+Our culture interview is always the first interview that we do, in fact it might not even feel like the usual cultural interview at another workplace. After we’ve had a chat, we will get together and discuss the meeting and try to frame it in light of the 5 criteria listed above. Depending on how that goes, we’ll then progress to the skills based interview.
 
 ### The skills interview
 
-Our skills interview follows a more traditional interview process. E.g. for a skills interview in our engineering team, we’re looking to see how your development skills will fit with the kind of work that we do. In this interview we strive to make it as close as possible to the actual kinds of work that you will be doing, what this also means is that as we don't typically solve leetcode style problems, we don't use leetcode style tests for potential employees.
+Our skills interview follows a more traditional interview process. E.g. for a skills interview in our engineering team, we’re looking to see how your development skills will fit with the kind of work that we do. In this interview we strive to make it as close as possible to the actual kinds of work that you will be doing, what this also means is that as we don't typically solve leetcode style problems here, we don't use leetcode style tests for potential employees.
 
 Some of the things you can expect from the skills interview are:
 
