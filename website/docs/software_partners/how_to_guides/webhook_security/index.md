@@ -10,4 +10,4 @@ Using this authentication code in practice looks like:
 
 ## Signing tokens
 
-A key component of this system is the token which is used to sign the request that is sent from us. This token is present on our [partner object](https://api.superapi.com.au/swaggerui#/product/SuperApiWeb.Api.V1.ProductController.show) in the form of the field `webhook_signing_token`. This key will be returned to you when a product is created and should be stored securely in your system.
+A key component of this system is the token which is used to sign the request that is sent from us. This token is present on our [product object](https://api.superapi.com.au/swaggerui#/product/SuperApiWeb.Api.V1.ProductController.show) in the form of the field `webhook_signing_token`. This key will be returned to you when a product is created and should be stored securely in your system.
