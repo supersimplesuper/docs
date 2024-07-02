@@ -27,6 +27,7 @@ _Coming soon_
 - Ready to go deeper? We have a [detailed guide](/software_partners/explanations/detailed_guide/index.html) on how to integrate your software.
 - What is the [difference between product keys and partner keys?](/software_partners/explanations/product_vs_partner_api_keys/index.html)
 - What is the difference between [partners, employers, employees and onboarding sessions](/software_partners/explanations/understanding_super_api_entities/index.html)?
+- Understand the [employer status](/software_partners/explanations/working_with_the_employer_status/index.html) fields so that you can customise your UI
 
 ## References
 
