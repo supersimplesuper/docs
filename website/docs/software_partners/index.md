@@ -31,7 +31,7 @@ _Coming soon_
 
 ## References
 
-- View our [live swagger spec](https://api.superapi.com.au/swaggerui) (this is currently a work in progress)
+- View our [live swagger spec](https://api.superapi.com.au/swaggerui)
 - View the [list of webhooks](/software_partners/references/list_of_webhooks/index.html) that you can expected to be emitted from SuperAPI, along with the payloads they will contain. (this is currently a work in progress)
 
 <!--@include: @/parts/getting_help.md-->
