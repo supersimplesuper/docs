@@ -16,6 +16,18 @@ export default withMermaid({
         src: "https://plausible.io/js/script.js",
       },
     ],
+    [
+      "script",
+      {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-0VSQ045BFG",
+      },
+    ],
+    [
+      "script",
+      {},
+      "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-0VSQ045BFG');",
+    ],
   ],
   themeConfig: {
     logo: {
