@@ -82,7 +82,7 @@ curl -X POST https://api.superapi.com.au/api/v1/onboarding-session \
   }'
 ```
 
-Notice that you can also pass additional details about the employer here. If passed, we will automatically update the employer with those details. This can provide an easy hook to ensure that the employer is always up to date in our system before a user is onboarded to them. After the onboarding session has been created, it will then return a payload of data back to you. The important thing in this payload will be the id, as this is then used to construct the embed which can be given to the user to complete the onboarding.
+Notice that you can also pass additional details about the *employer* here. If passed, we will automatically update the employer with those details. This can provide an easy hook to ensure that the employer is always up to date in our system before a user is onboarded to them. After the onboarding session has been created, it will then return a payload of data back to you. The important thing in this payload will be the id, as this is then used to construct the embed which can be given to the user to complete the onboarding.
 
 This can be done as follows:
 
