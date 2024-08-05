@@ -9,7 +9,7 @@ This page contains documentation designed to help our software partners integrat
 
 ## Tutorials
 
-_Coming soon_
+- Ready to go? Follow the tutorial on how to [integrate SuperAPI](/software_partners/integrate_super_api/detailed_guide/index.html).
 
 ## How to guides
 
@@ -25,7 +25,6 @@ _Coming soon_
 ## Explanations
 
 - Read a [high level overview](/software_partners/explanations/overview/index.html) of the steps required to integrate your software with SuperAPI.
-- Ready to go deeper? We have a [detailed guide](/software_partners/explanations/detailed_guide/index.html) on how to integrate your software.
 - What is the [difference between product keys and partner keys?](/software_partners/explanations/product_vs_partner_api_keys/index.html)
 - What is the difference between [partners, employers, employees and onboarding sessions](/software_partners/explanations/understanding_super_api_entities/index.html)?
 - Understand the [employer status](/software_partners/explanations/working_with_the_employer_status/index.html) fields so that you can customise your UI

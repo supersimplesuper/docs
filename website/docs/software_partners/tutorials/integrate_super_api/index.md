@@ -4,7 +4,7 @@ outline: deep
 
 # Integrating SuperAPI
 
-The following is a detailed step by step guide on how to integrate SuperAPI into your product.
+The following is a detailed step by step tutorial on how to integrate SuperAPI into your product.
 
 <!--@include: @/parts/getting_help.md-->
 <!--@include: @/parts/terminology.md-->
@@ -13,7 +13,7 @@ The following is a detailed step by step guide on how to integrate SuperAPI into
 
 | Date       | Change                                                                                                     |
 | ---------- | ---------------------------------------------------------------------------------------------------------- |
-| 05/08/2024 | Removed detailed information and provided links to guides instead                                          |
+| 05/08/2024 | Removed detailed information and provided links to guides instead, moved to tutorials section              |
 | 10/05/2024 | `valid_until` changed to be an ISO8601 timestamp for consistency                                           |
 | 08/05/2024 | Documented disclaimers and bank accounts                                                                   |
 | 07/05/2024 | Generated PDF super assets moved under the onboarding_session_super_selection                              |
