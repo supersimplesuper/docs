@@ -237,3 +237,7 @@ classDiagram
 Webhooks exist as the primary mechanism to transport data from SuperAPI back to the partner website. Webhooks will always deliver to the same URL (this is configured when we provision your partner account, contact us if you need to update this) but will be wrapped in metadata to help distinguish the event that triggered the webhook.
 
 Please see the [list of webhooks](/software_partners/references/list_of_webhooks/index.html), how to [work with webhooks locally](/software_partners/how_to_guides/work_with_webhooks_locally/index.html) and how [webhook security](/software_partners/how_to_guides/webhook_security/index.html) works.
+
+## Payloads
+
+For detailed information on the data that is sent to and from the API, please view our [live swagger spec](https://api.superapi.com.au/swaggerui),
