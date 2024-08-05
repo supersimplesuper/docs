@@ -5,11 +5,10 @@ This page contains documentation designed to help our software partners integrat
 ## Getting started
 
 - [SuperAPI Overview](/software_partners/explanations/overview/index.html): This is the best starting point for understanding how SuperAPI works.
-- [Integration Guide](/software_partners/explanations/detailed_guide/index.html): A detailed guide for integrating your product with SuperAPI.
 
 ## Tutorials
 
-- Ready to go? Follow the tutorial on how to [integrate SuperAPI](/software_partners/integrate_super_api/detailed_guide/index.html).
+- Ready to go? Follow the tutorial on how to [integrate SuperAPI](/software_partners/tutorials/integrate_super_api/index.html).
 
 ## How to guides
 
