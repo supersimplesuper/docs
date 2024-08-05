@@ -1,8 +1,8 @@
 {
   "devDependencies": {
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
-    "prettier": "3.2.5"
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.8",
+    "prettier": "3.3.3"
   },
   "scripts": {
     "format-check": "prettier --write --ignore-unknown --check .",
