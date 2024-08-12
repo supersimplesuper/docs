@@ -11,7 +11,7 @@ hero:
     alt: "SuperAPI Embedded Super Ecosystem"
   actions:
     - theme: brand
-      text: Get started with SuperAPI)
+      text: Get started with SuperAPI
       link: /software_partners/index.html
 
 features:
