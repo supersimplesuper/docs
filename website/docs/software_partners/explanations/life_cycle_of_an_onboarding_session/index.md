@@ -33,7 +33,7 @@ stateDiagram-v2
         used when creating the onboarding session
     end note
     deliver_output --> completed
-    completed --> archived
+    completed --> pending_archived
     note right of completed
         Here we emit a event notifying you that the
         onboarding session has completed.
@@ -43,7 +43,14 @@ stateDiagram-v2
         Actions taken here are dependent on what
         steps are in your custom_steps. E.g. if
         super selection is used, here we will
-        staple the user then default them.
+        staple the user then default them. After
+        abadonment actions have been triggered,
+        it then moves to wait for the results.
+    end note
+    pending_archived --> archived
+    note left of pending_archived
+        At this point we remove PII from the
+        onboarding session
     end note
 
     class custom_steps movement
@@ -51,9 +58,12 @@ stateDiagram-v2
 
 One of the benefits of using SuperAPI is that we have abstracted away from you most of the logic that surrounds handling some of the more complex actions that need to be taken, e.g. MRR registration.
 
-## Timelines
+## Events that move the workflow automatically
 
-We have two based time events that can affect onboarding sessions, these are when we decide to move it to being abandoned and when we archive the onboarding session.
+Workflow states can be moved by events outside of the users control. These are:
 
-- An onboarding session is considered abandoned after 2 weeks. At this point we do not allow it to be embedded and will active stapling and defaulting behaviour if your workflow contains super onboarding.
-- An onboarding session is archived at 4 weeks regardless of what state it is in. At this point we remove all PII from the onboarding session.
+| Event                        | Effect                                                                                                                                                                                                        |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Abandoned                    | Fired after two weeks if the onboarding session has not been completed. Will trigger abandonment behaviour then wait for the results. This for example will be to start the stapling and defaulting behaviour |
+| Archived                     | Fired after four weeks regardless of what state the onboarding session is. PII is removed here                                                                                                                |
+| Duplicate onboarding session | If another onboarding session is created while a previous one exists for the same workflow and employee, we immediately archive the existing onboarding session                                               |
