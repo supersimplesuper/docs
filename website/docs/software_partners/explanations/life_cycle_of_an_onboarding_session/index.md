@@ -50,3 +50,10 @@ stateDiagram-v2
 ```
 
 One of the benefits of using SuperAPI is that we have abstracted away from you most of the logic that surrounds handling some of the more complex actions that need to be taken, e.g. MRR registration.
+
+## Timelines
+
+We have two based time events that can affect onboarding sessions, these are when we decide to move it to being abandoned and when we archive the onboarding session.
+
+- An onboarding session is considered abandoned after 2 weeks. At this point we do not allow it to be embedded and will active stapling and defaulting behaviour if your workflow contains super onboarding.
+- An onboarding session is archived at 4 weeks regardless of what state it is in. At this point we remove all PII from the onboarding session.
