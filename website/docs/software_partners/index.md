@@ -38,6 +38,7 @@ This page contains documentation designed to help our software partners integrat
 - What is the [difference between product keys and partner keys?](/software_partners/explanations/product_vs_partner_api_keys/index.html)
 - What is the difference between [partners, employers, employees and onboarding sessions](/software_partners/explanations/understanding_super_api_entities/index.html)?
 - Understand the [employer status](/software_partners/explanations/working_with_the_employer_status/index.html) fields so that you can customise your UI
+- Understand the [life cycle of an onboarding session](/software_partners/explanations/life_cycle_of_an_onboarding_session/index.html)
 
 ## References
 
