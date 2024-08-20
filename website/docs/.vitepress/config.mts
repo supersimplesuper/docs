@@ -42,6 +42,7 @@ export default withMermaid({
     nav: [
       { text: "Hiring", link: "/hiring/index.html" },
       { text: "Software partners", link: "/software_partners/index.html" },
+      { text: "Security", link: "/security/index.html" },
     ],
 
     /*
