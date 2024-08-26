@@ -27,6 +27,7 @@ curl -X POST https://api.superapi.com.au/api/v1/onboarding-session \
       "remote_id": "1234"
     },
     "email": "employee@example.com",
+    "remote_id": "1234",
     "email_validated": true,
     "phone": "0405 123 456",
     "phone_number_validated": false,
@@ -77,6 +78,7 @@ curl -X POST https://api.superapi.com.au/api/v1/onboarding-session \
     "email": "employee@example.com",
     "email_validated": true,
     "phone": "0405 123 456",
+    "remote_id": "1234",
     "phone_number_validated": false,
     "workflow_slug": "your_provided_slug"
   }'
