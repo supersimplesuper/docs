@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:22
 
 ENV APP_HOME=/usr/src/app \
     PATH="${PATH}:/usr/src/app/node_modules/.bin"
