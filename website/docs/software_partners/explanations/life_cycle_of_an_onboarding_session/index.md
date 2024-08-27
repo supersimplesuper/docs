@@ -44,7 +44,7 @@ stateDiagram-v2
         steps are in your custom_steps. E.g. if
         super selection is used, here we will
         staple the user then default them. After
-        abadonment actions have been triggered,
+        abandonment actions have been triggered,
         it then moves to wait for the results.
     end note
     pending_archived --> archived
