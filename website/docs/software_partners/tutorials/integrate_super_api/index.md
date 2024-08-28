@@ -13,6 +13,7 @@ The following is a detailed step by step tutorial on how to integrate SuperAPI i
 
 | Date       | Change                                                                                                     |
 | ---------- | ---------------------------------------------------------------------------------------------------------- |
+| 28/08/2024 | `valid_until` date range is now restricted to 2 hours in the future                                        |
 | 05/08/2024 | Removed detailed information and provided links to guides instead, moved to tutorials section              |
 | 10/05/2024 | `valid_until` changed to be an ISO8601 timestamp for consistency                                           |
 | 08/05/2024 | Documented disclaimers and bank accounts                                                                   |
