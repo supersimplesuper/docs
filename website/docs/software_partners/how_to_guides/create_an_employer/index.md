@@ -87,13 +87,13 @@ To configure the embed you have three parameters you can use, they are:
 
 - `app` - This controls the app that is launched in the embed when called. Currently we only support `super_settings` but plan to add additional apps in the future.
 - `session_id` - This is similar to a cookie and is used in our system to provide "state" for the user of the app. Set this to something unique for the user in your system like users primary key id in your users table.
-- `valid_until` - At what point in the future that this embed will stop work. Set this to about one or two hours. It can be very short as the validation is performed only when connecting for the first time, existing embeds that are still open do not expire when this time is up. Beware that Chrome is very fond of automatically reloading pages in the background (including iFrames) so this can cause a connection error.
+- `valid_until` - At what point in the future that this embed will stop working. This should not exceed more than 2 hours, nor set in the past. It can be very short as the validation is performed only when connecting for the first time, existing embeds that are still open do not expire when this time is up. Beware that Chrome is very fond of automatically reloading pages in the background (including iFrames) so this can cause a connection error.
 
 ::: info
-Make sure you set a `valid_until` in the future.
+Make sure you set a `valid_until` within a 2 hour window in the future and set to the UTC timezone.
 :::
 
-Typically you would want to create these embed URLs on page load. I.e. each time an employer loads the page, you create a use a new embed url. As such, the `valid_until` should be a max of two hours. Consider how long it will take the employer to interact with the page (including getting up going for a break before coming back!). Google Chrome also has a tendency to unload pages in background tabs and reload them when the user returns to the page. A `valid_until` which is too low will cause an error when this happens.
+Typically you would want to create these embed URLs on page load. I.e. each time an employer loads the page, you create a use a new embed url. As such, the `valid_until` must be a max of two hours. Consider how long it will take the employer to interact with the page (including getting up going for a break before coming back!). Google Chrome also has a tendency to unload pages in background tabs and reload them when the user returns to the page. A `valid_until` which is too low will cause an error when this happens.
 
 ::: danger
 Generated URLs are sensitive. Anyone with access to the URL is authenticated as if they were the logged in user. Don't store generated URLs in the database.
