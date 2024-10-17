@@ -27,6 +27,7 @@ This page contains documentation designed to help our software partners integrat
 - How do I [dynamically create products](/software_partners/how_to_guides/dynamically_create_products/index.html)?
 - How do I [create an employer](/software_partners/how_to_guides/create_an_employer/index.html)?
 - How do I [work with onboarding sessions](/software_partners/how_to_guides/work_with_onboarding_sessions/index.html)?
+- How do I [update details](/software_partners/how_to_guides/update_details/index.html) on an employee (like superannuation)?
 
 ### General
 
