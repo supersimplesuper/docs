@@ -29,6 +29,10 @@ This page contains documentation designed to help our software partners integrat
 - How do I [work with onboarding sessions](/software_partners/how_to_guides/work_with_onboarding_sessions/index.html)?
 - How do I [update details](/software_partners/how_to_guides/update_details/index.html) on an employee (like superannuation)?
 
+### Theming
+
+- How do I work with [custom themes](/software_partners/how_to_guides/custom_themes/index.html)?
+
 ### General
 
 - How does an employer [activate stapling](/software_partners/how_to_guides/stapling/index.html) in the access manager?
@@ -38,7 +42,7 @@ This page contains documentation designed to help our software partners integrat
 - Read a [high level overview](/software_partners/explanations/overview/index.html) of the steps required to integrate your software with SuperAPI.
 - What is the [difference between product keys and partner keys?](/software_partners/explanations/product_vs_partner_api_keys/index.html)
 - What is the difference between [partners, employers, employees and onboarding sessions](/software_partners/explanations/understanding_super_api_entities/index.html)?
-- Understand the [employer status](/software_partners/explanations/working_with_the_employer_status/index.html) fields so that you can customise your UI
+- Understand the [employer status](/software_partners/explanations/working_with_the_employer_status/index.html) fields so that you can customise your UI to communicate the employers onboarding setup.
 - Understand the [life cycle of an onboarding session](/software_partners/explanations/life_cycle_of_an_onboarding_session/index.html)
 
 ## References
