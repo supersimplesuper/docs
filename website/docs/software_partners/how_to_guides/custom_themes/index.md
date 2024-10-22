@@ -157,7 +157,7 @@ To upload your custom theme, make sure you have a Partner API key. Once you're r
 ```bash
 curl -X POST https://api.superapi.com.au/api/v1/partner/custom-css/upload \
     -H "Content-Type: multipart/form-data" \
-    -H "x-api-key: superapipartner_MFeEX1iG_SgWz2GMFPReIWcJChQZS05aq" \
+    -H "x-api-key: superapipartner_partnerKeySgWz2GMFPReIWcJChQZS05aq" \
     -F "file=@./example.css"
 ```
 
