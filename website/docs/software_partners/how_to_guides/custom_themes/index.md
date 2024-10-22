@@ -13,6 +13,7 @@ Our default theme is designed around our Xonboard product. It's built around a l
 Spacing and sizing is based on a fluid scale, with a base font size of 16px. The scale is based on the `clamp` function, which allows for a minimum, maximum, and a fluid value in between. This fluid value is based on the viewport width. This allows our embed to look appropriate across a variety of sizes.
 
 Examples of these values are:
+
 ```css
 :root {
   /* Text Sizes */
@@ -39,64 +40,70 @@ We use these CSS variables to apply styles across all of our embeds. They define
 Here is a list of the variables that are used in the default theme:
 
 ```css
---color-primary: var(--color-darkBlue);
---color-primary-shade: color-mix(in srgb, var(--color-primary), black 8%);
---color-primary-glare: color-mix(in srgb, var(--color-primary), white 8%);
+:root {
+  --color-primary: var(--color-darkBlue);
+  --color-primary-shade: color-mix(in srgb, var(--color-primary), black 8%);
+  --color-primary-glare: color-mix(in srgb, var(--color-primary), white 8%);
 
---color-secondary: var(--color-lightBlue);
---color-secondary-shade: color-mix(in srgb, var(--color-secondary), black 8%);
---color-secondary-glare: color-mix(in srgb, var(--color-secondary), white 20%);
+  --color-secondary: var(--color-lightBlue);
+  --color-secondary-shade: color-mix(in srgb, var(--color-secondary), black 8%);
+  --color-secondary-glare: color-mix(
+    in srgb,
+    var(--color-secondary),
+    white 20%
+  );
 
---leading: 1.5;
---leading-short: 1.3;
---leading-fine: 1.1;
---leading-flat: 1;
---leading-loose: 1.7;
+  --leading: 1.5;
+  --leading-short: 1.3;
+  --leading-fine: 1.1;
+  --leading-flat: 1;
+  --leading-loose: 1.7;
 
---kerning: normal;
---kerning-tight: -0.04ch;
---kerning-loose: 0.1ch;
+  --kerning: normal;
+  --kerning-tight: -0.04ch;
+  --kerning-loose: 0.1ch;
 
---text-size-base: var(--step-0);
---text-size-lede: var(--step-1);
---text-size-meta: var(--step--1);
---text-size-heading-1: var(--step-4);
---text-size-heading-2: var(--step-3);
---text-size-heading-3: var(--step-2);
---text-size-heading-4: var(--step-1);
---text-size-prose: var(--text-size-base);
+  --text-size-base: var(--step-0);
+  --text-size-lede: var(--step-1);
+  --text-size-meta: var(--step--1);
+  --text-size-heading-1: var(--step-4);
+  --text-size-heading-2: var(--step-3);
+  --text-size-heading-3: var(--step-2);
+  --text-size-heading-4: var(--step-1);
+  --text-size-prose: var(--text-size-base);
 
---space-gutter: var(--space-m);
---space-gutter-s: var(--space-s);
---space-gutter-l: var(--space-l);
---space-regions: var(--space-xl);
---size-wrapper-max-width: 1135px;
+  --space-gutter: var(--space-m);
+  --space-gutter-s: var(--space-s);
+  --space-gutter-l: var(--space-l);
+  --space-regions: var(--space-xl);
+  --size-wrapper-max-width: 1135px;
 
---color-global-bg: transparent;
---color-global-text: var(--color-charcoalBlue);
---color-global-header: var(--color-blueGrey);
---color-surface-bg: var(--color-secondary);
---color-surface-bg-interact: var(--color-secondary-glare);
---color-surface-text: var(--color-darkBlue);
---color-surface-text-interact: var(--color-blueGrey-glare);
+  --color-global-bg: transparent;
+  --color-global-text: var(--color-charcoalBlue);
+  --color-global-header: var(--color-blueGrey);
+  --color-surface-bg: var(--color-secondary);
+  --color-surface-bg-interact: var(--color-secondary-glare);
+  --color-surface-text: var(--color-darkBlue);
+  --color-surface-text-interact: var(--color-blueGrey-glare);
 
---color-recessed: var(--color-mid);
+  --color-recessed: var(--color-mid);
 
---font-base: "Roboto Flex", -apple-system, BlinkMacSystemFont, avenir next,
-  avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
-  arial, sans-serif;
---font-display: var(--font-base);
---font-lede: var(--font-base);
---font-weight-regular: 400;
---font-weight-medium: 500;
---font-weight-bold: 600;
---font-weight-black: 600;
+  --font-base: "Roboto Flex", -apple-system, BlinkMacSystemFont, avenir next,
+    avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+    arial, sans-serif;
+  --font-display: var(--font-base);
+  --font-lede: var(--font-base);
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+  --font-weight-black: 600;
 
---focus-ring: 2px solid currentColor;
---focus-ring-offset: 2px;
+  --focus-ring: 2px solid currentColor;
+  --focus-ring-offset: 2px;
 
---border-radius-m: 0.5rem;
---border-radius-s: 0.25rem;
+  --border-radius-m: 0.5rem;
+  --border-radius-s: 0.25rem;
+}
 ```
 
 ## Creating a custom theme
@@ -106,31 +113,37 @@ Copy our CSS variables into a new CSS file. Using your current design as a guide
 Here is an example of a custom theme:
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+:root {
+  @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
---font-base: "Nunito Sans", sans-serif;
---color-primary: #fdaf17;
---color-primary-shade: color-mix(in srgb, var(--color-primary), black 5%);
---color-primary-glare: color-mix(in srgb, var(--color-primary), white 10%);
+  --font-base: "Nunito Sans", sans-serif;
+  --color-primary: #fdaf17;
+  --color-primary-shade: color-mix(in srgb, var(--color-primary), black 5%);
+  --color-primary-glare: color-mix(in srgb, var(--color-primary), white 10%);
 
---color-secondary: #fdaf17;
---color-secondary-shade: color-mix(in srgb, var(--color-secondary), black 3%);
---color-secondary-glare: color-mix(in srgb, var(--color-secondary), white 10%);
+  --color-secondary: #fdaf17;
+  --color-secondary-shade: color-mix(in srgb, var(--color-secondary), black 3%);
+  --color-secondary-glare: color-mix(
+    in srgb,
+    var(--color-secondary),
+    white 10%
+  );
 
---color-global-text: #c1192a;
---color-surface-text: #c1192a;
---color-global-header: #c1192a;
+  --color-global-text: #c1192a;
+  --color-surface-text: #c1192a;
+  --color-global-header: #c1192a;
 
---color-global-bg: #fdaf17;
---color-surface-bg: var(--color-secondary);
---color-surface-bg-interact: var(--color-secondary-shade);
+  --color-global-bg: #fdaf17;
+  --color-surface-bg: var(--color-secondary);
+  --color-surface-bg-interact: var(--color-secondary-shade);
 
---color-recessed: #fdaf17;
+  --color-recessed: #fdaf17;
 
---button-color:  #c1192a;
+  --button-color: #c1192a;
 
---border-radius-m: 4px;
---border-radius-s: 2px;
+  --border-radius-m: 4px;
+  --border-radius-s: 2px;
+}
 ```
 
 ::: tip
@@ -172,11 +185,11 @@ We strong recommend the first example here over the second:
 
 ```css
 .button {
-  font-weight: var(--font-weight-bold, 700)
+  font-weight: var(--font-weight-bold, 700);
 }
 
 .fund_block_non_partner .card .button {
-  font-weight: var(--font-weight-bold, 700)
+  font-weight: var(--font-weight-bold, 700);
 }
 ```
 
