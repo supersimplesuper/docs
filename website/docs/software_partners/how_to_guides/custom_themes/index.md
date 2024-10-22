@@ -107,6 +107,7 @@ Here is an example of a custom theme:
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 --font-base: "Nunito Sans", sans-serif;
 --color-primary: #fdaf17;
 --color-primary-shade: color-mix(in srgb, var(--color-primary), black 5%);
@@ -141,10 +142,10 @@ Don't use this theme
 To upload your custom theme, make sure you have a Partner API key. Once you're ready, make a post request like so:
 
 ```bash
-curl -X POST https://api.superapi.com.au/api/v1/partner/custom-theme/upload \
+curl -X POST https://api.superapi.com.au/api/v1/partner/custom-css/upload \
     -H "Content-Type: multipart/form-data" \
-    -H "x-api-key: superapi_yourapikeysDZFUnrDIyNp7YTAPDcJXge" \
-    -F "file=@path/to/your/theme.css"
+    -H "x-api-key: superapipartner_MFeEX1iG_SgWz2GMFPReIWcJChQZS05aq" \
+    -F "file=@./example.css"
 ```
 
 This will upload your theme. The next time you load an embed for that partner, it will use your custom theme.
