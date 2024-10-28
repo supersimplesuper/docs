@@ -1,26 +1,51 @@
+---
+outline: deep
+---
+
 # How to active automated super stapling
 
-To activate automated super stapling you must assign "SuperAPI Pty Ltd" as an appointed business to access ATO Online Services on your behalf (via API). This appointment is setup via ATO Access Manager, using your MyGovID. In order to setup the appointment you must have "Principal Authority" or "Authorisation administrator" privileges within the business entity.
+To activate automated super stapling you must assign "SuperAPI Pty Ltd" as an appointed business to access ATO Online Services on your behalf (via API). This appointment is setup via ATO Access Manager, using your MyGovID.
 
-1. Login to [ATO Access Manager](https://am.ato.gov.au/) using your MyGovID
+In order to setup the appointment you must have "Principal Authority" or "Authorisation administrator" privileges within the business entity.
 
-![Step 1: Login to ATO Access Manager](ato-stapling-api-permission-step-1.png)
+## Setup Instructions
 
-2. If you have access to multiple companies, select which company you'd like to authorise for Super Stapling and click "Continue"
-3. Click this link to ["Appoint New Business"](https://am.ato.gov.au/Xea/CreateAppointment.aspx). Alternatively, to reach the same location, under "Business Appointments" in the left hand navigation menu, click "Who has access to my business" and then click ["Appoint New Business"](https://am.ato.gov.au/Xea/CreateAppointment.aspx).
-4. Enter ABN: "67 674 661 244" to appoint "SuperAPI Pty Ltd" as your provider of ATO Online Services, and click "Continue".
+### 1: Login to ATO Access Manager
 
-![Step 4: Appoint business](ato-stapling-api-permission-step-4.png)
+- Login to [ATO Access Manager](https://am.ato.gov.au/) using your MyGovID
 
-5. Verify the business name shown is "SuperAPI Pty Ltd". Then scroll down to "Employee Commencement Form", and check all three boxes "View", "Prepare" and "Lodge". Click "Save".
+[![Step 1: Login to ATO Access Manager](ato-access-manager-login-small.png)](https://am.ato.gov.au/)
 
-![Step 5: Assign permissions](ato-stapling-api-permission-step-5.png)
+### 2: Select your business entity
 
-6. Success. You should now see "SuperAPI Pty Ltd" under your appointed businesses.
+- If you have access to multiple companies, select which company you'd like to authorise for Super Stapling and _click_ **"Continue"**
 
-![Step 6: Success](ato-stapling-api-permission-step-6-success.png)
+### 3: Appoint a new business
 
-Alternatively, you want to pre-enable future SuperAPI features which leverage ATO Online Services you can select "Access to all online functionality (including future enhancements) for my business".
+- Under **"Business Appointments"**, _click_ **"Who has access to my business"**
+- Enter ABN: **"67 674 661 244"** to appoint **"SuperAPI Pty Ltd"** as your provider of ATO Online Services
+- _Click_ **"Continue"**
+
+![Step 3: Appoint a new business](ato-stapling-api-permission-setup.png)
+
+### 4: Assign permissions
+
+- Scroll down to **"Employee Commencement Form"**
+- _Check_ all three boxes, **"View"**, **"Prepare"**, **"Lodge"**
+- _click_ **"Save"**
+- You should now see "SuperAPI Pty Ltd" under your appointed businesses
+
+![Step 4: Assign Permissions](am-ato-access-manager-options-small.png)
+
+![Step 4: Permissions Set](ato-stapling-api-permission-set.png)
+
+### 5: Success
+
+- You should now see **"SuperAPI Pty Ltd"** under your appointed businesses.
+- To verify that super stapling has been succesfully authorisation return to **"Employer Setup"** and _click_ the **"Check stapling activation"**.
+- You've now successfully setup super stapling
+
+![Step 5: Success](ato-stapling-api-permission-step-6-success-2.png)
 
 ## FAQ: Help activating automated super stapling
 
