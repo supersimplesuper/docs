@@ -35,7 +35,7 @@ This page contains documentation designed to help our software partners integrat
 
 ### General
 
-- How does an employer [activate stapling](/software_partners/how_to_guides/stapling/index.html) in the access manager?
+- How does an employer [activate stapling](/software_partners/how_to_guides/stapling-setup-instructions/index.html) in the access manager?
 
 ## Explanations
 
