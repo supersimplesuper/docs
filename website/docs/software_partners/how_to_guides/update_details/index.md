@@ -41,5 +41,4 @@ Passing in the employees previous fund will have two main effects on the onboard
 
 ## Additional notes
 
-- We do not support SMSF funds being supplied yet. If you would like to support this then please get in touch with us.
 - We only support passing in one existing fund. If you have employees with more than one then please get in touch with us.
