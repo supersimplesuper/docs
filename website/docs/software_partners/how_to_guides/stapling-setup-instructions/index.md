@@ -8,6 +8,8 @@ To activate automated super stapling you must assign "SuperAPI Pty Ltd" as an ap
 
 In order to setup the appointment you must have "Principal Authority" or "Authorisation administrator" privileges within the business entity.
 
+> **Note:** These instructions will activate both TFN Declarations & Super Stapling.
+
 ## Setup Instructions
 
 ### 1: Login to ATO Access Manager
