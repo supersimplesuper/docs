@@ -49,5 +49,6 @@ This page contains documentation designed to help our software partners integrat
 
 - View our [live swagger spec](https://api.superapi.com.au/swaggerui)
 - View the [list of webhooks](/software_partners/references/list_of_webhooks/index.html) that you can expected to be emitted from SuperAPI, along with the payloads they will contain. (this is currently a work in progress)
+- View the [list of workflow slugs](/software_partners/references/workflow_slugs/index.html) that are available to partners.
 
 <!--@include: @/parts/getting_help.md-->
