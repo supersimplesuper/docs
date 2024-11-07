@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# How to active automated super stapling
+# How to activate automated super stapling with SuperAPI
 
 To activate automated super stapling you must assign "SuperAPI Pty Ltd" as an appointed business to access ATO Online Services on your behalf (via API). This appointment is setup via ATO Access Manager, using your MyGovID.
 
