@@ -17,11 +17,11 @@ hero:
 features:
   - title: A development ecosystem
     icon:
-      src: /ecosystem.png
+      src: /super-api-ecosystem-vertical-v2.svg
     details: SuperAPI connects super funds and members at scale, to enable efficiency for employers, employees and software providers when managing superannuation obligations.
   - title: Automation of choice
     icon:
-      src: /product-choice-smallest.png
+      src: /super-api-embedded-super-choice-form.svg
     details: We digitise the super choice form to enable employees to make super choices through an informed process. We reduce invalid choices through automation, validation and UX that informs users of their decisions and obligations.
   - title: Power through connection
     icon:
@@ -29,4 +29,6 @@ features:
     details: Through productised abstraction, we bring the power of a range of API's for superannuation together in a single package, which solves the key problems faced by employers.
 ---
 
-![Product Overview](/super-api-product-overview.png "Product Overview")
+![Product Overview](/super-api-product-overview-v2.svg "Product Overview")
+
+![CSS Injection for custom Styles.css](/superapi-embedded-css-styled.png "Custom CSS Styles")
