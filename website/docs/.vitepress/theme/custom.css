@@ -12,3 +12,10 @@
   --vp-c-brand-3: #ff4375;
   --vp-c-brand-soft: var(--vp-c-indigo-soft);
 }
+
+/* Force larger image sizes */
+.VPFeatures .VPImage {
+  width: 100% !important; /* Set desired width */
+  height: 480px !important; /* Set desired height */
+  object-fit: contain; /* Ensure the image fits without distortion */
+}
