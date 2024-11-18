@@ -30,5 +30,3 @@ features:
 ---
 
 ![Product Overview](/super-api-product-overview-v2.svg "Product Overview")
-
-![CSS Injection for custom Styles.css](/superapi-embedded-css-styled.png "Custom CSS Styles")

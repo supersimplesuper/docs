@@ -4,6 +4,8 @@ You can customise the look and feel of the SuperApi embeds to more closely match
 
 Right now, this process is fairly basic, and has a few limitations. Namely, that each partner has a single custom theme, and that changes to that theme are reflected immediately for all users. Therefore, we encourage our software partners to adjust their custom themes with a non-production / development `Partner` account, and only once confident with the changes to apply them to their production account.
 
+![CSS Injection for custom Styles.css](/superapi-embedded-css-styled.png "Custom CSS Styles")
+
 ## Our 'default' theme
 
 Our default theme is designed around our Xonboard product. It's built around a large set of CSS variables that are used throughout the stylesheets, giving partners an easy way to customise the look and feel of the embeds.
