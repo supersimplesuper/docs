@@ -1,17 +1,6 @@
 import { withMermaid } from "vitepress-plugin-mermaid";
 
 export default withMermaid({
-  vitepress: {
-    transformHtml: (html: string): string => {
-      return html.replace(
-        "</body>",
-        `<script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
-          <script type="text/javascript">window.Beacon('init', 'd6bc29d3-697b-4a5a-bac2-a1f4f2dd9b94')</script>
-        </body>`,
-      );
-    },
-  },
-
   appearance: "force-dark",
   title: "Docs",
   titleTemplate: "SuperAPI: The embedded future of super",
@@ -38,6 +27,16 @@ export default withMermaid({
       "script",
       {},
       "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-0VSQ045BFG');",
+    ],
+    [
+      "script",
+      { type: "text/javascript" },
+      `!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});`,
+    ],
+    [
+      "script",
+      { type: "text/javascript" },
+      `window.Beacon('init', 'd6bc29d3-697b-4a5a-bac2-a1f4f2dd9b94');`,
     ],
   ],
   themeConfig: {
