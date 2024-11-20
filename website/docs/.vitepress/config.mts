@@ -45,6 +45,9 @@ export default withMermaid({
       dark: "/logo-white-pink.svg",
       alt: "SuperAPI Logo",
     },
+    search: {
+      provider: "local",
+    },
     footer: {
       message: "The future of super is embedded",
       copyright: "Copyright © 2024 SuperAPI Pty Ltd (ACN: 674 661 244)",
