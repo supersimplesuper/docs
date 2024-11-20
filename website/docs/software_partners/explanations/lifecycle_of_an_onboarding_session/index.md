@@ -1,6 +1,6 @@
-# Life cycle of an onboarding session
+# Lifecycle of an onboarding session
 
-Unlike [other entities](/software_partners/explanations/understanding_super_api_entities/index.html) in the SuperAPI system, onboarding sessions follow a very defined life cycle of events as they designed to be created when we need an employee to take a discrete set of actions in the SuperAPI system vs say setting up some configuration as you might do with an employer. As such, we provide some additional webhooks which allow you take actions in your system based on how the user is progressing through the onboarding session. It's worth noting that an onboarding session is conceptually the same as a state machine (or rather a state chart as we nest state machines). Thinking about them like this may help with understanding how to model them in your system.
+Unlike [other entities](/software_partners/explanations/understanding_super_api_entities/index.html) in the SuperAPI system, onboarding sessions follow a very defined lifecycle of events as they designed to be created when we need an employee to take a discrete set of actions in the SuperAPI system vs say setting up some configuration as you might do with an employer. As such, we provide some additional webhooks which allow you take actions in your system based on how the user is progressing through the onboarding session. It's worth noting that an onboarding session is conceptually the same as a state machine (or rather a state chart as we nest state machines). Thinking about them like this may help with understanding how to model them in your system.
 
 A diagram can speak for a thousand words:
 
