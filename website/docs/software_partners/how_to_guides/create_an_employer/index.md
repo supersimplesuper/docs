@@ -36,8 +36,11 @@ curl -X POST https://api.superapi.com.au/api/v1/employer \
   -H "Content-Type: application/json" \
   -H "x-api-key: superapi_yourapikeysDZFUnrDIyNp7YTAPDcJXge" \
   -d '{
+    "abn": "96878537596",
+    "accepted_stapling_statement": false,
+    "accepted_tfn_declaration_statement": false,
+    "country": "aus",
     "name": "The company name",
-    "abn": "12345",
     "remote_id": "12345"
   }'
 ```
