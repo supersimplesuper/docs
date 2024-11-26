@@ -34,7 +34,6 @@ curl -X POST https://api.superapi.com.au/api/v1/partner/product \
   -H "x-api-key: superapipartner_yourkeyQvyaXOF" \
   -d '{
     "name": "My product name",
-    "show_toast_messages": true,
     "target_origin": "example.com",
     "webhook_url": "https://www.example.com/webhook_destination"
   }'
@@ -54,8 +53,7 @@ This will create the product entity, similar to:
       "id": "2e6b4c5a-3336-4ce9-89d1-5137fda6379b",
       "max_bank_accounts": 3
     },
-    "sandboxed": true,
-    "show_toast_messages": true
+    "sandboxed": true
   },S
   "version": "v1"
 }

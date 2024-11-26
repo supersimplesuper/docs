@@ -34,8 +34,7 @@ After issuing the `curl` request above, you will receive a payload similar to th
     "slug": "your-product-name",
     "target_origin": "example.com",
     "webhook_url": "https://example.com/webhook",
-    "sandboxed": true,
-    "show_toast_messages": true
+    "sandboxed": true
   },
   "version": "v1"
 }
