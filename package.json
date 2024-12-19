@@ -1,15 +1,9 @@
 {
   "devDependencies": {
-    "husky": "^9.1.7",
-    "lint-staged": "^15.2.11",
-    "prettier": "3.4.2"
+    "@biomejs/biome": "1.9.4",
+    "lefthook": "^1.10.0"
   },
   "scripts": {
-    "format-check": "prettier --write --ignore-unknown --check .",
-    "format": "prettier --write --ignore-unknown .",
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "format": "npx @biomejs/biome check --write ."
   }
 }
