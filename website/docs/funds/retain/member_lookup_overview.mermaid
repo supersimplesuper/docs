@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant P as 3rd Party Software
+    participant S as SuperAPI
+    participant F as Super Fund
+
+    P-->>S: Creates a new onboarding session for an employee
+    P->>S: Directs employee to complete onboarding
+    S->>S: Employee confirms details / adds additional details
+    S->>S: Employee agrees to disclaimers & terms related to member lookup service
+    S-->>F: Send employee details to member lookup service
+    F-->>S: Respond with member details (or not found)
+    S->>S: Present existing super fund membership(s) to employee
+    S->>S: Employee nominates a super fund for their super choice
+    S->>P: Return employee upon completion of super choice
+    S-->>P: Webhook with employee's super choice details (confirmed)

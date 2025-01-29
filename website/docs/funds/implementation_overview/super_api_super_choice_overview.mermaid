@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant P as 3rd Party Software
+    participant S as SuperAPI
+    participant F as Super Fund
+
+    P->>S: Sends a user that needs to select super
+    S->>F: Does this member have an account with you?
+    F-->>S: Member exists or does not exist
+    S->>F: User wants to join your fund
+    F->>S: Returns new member details
+    S->>P: Returns new member details

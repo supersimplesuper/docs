@@ -55,10 +55,15 @@ export default withMermaid({
     nav: [
       { text: "Hiring", link: "/hiring/index.html" },
       { text: "Software partners", link: "/software_partners/index.html" },
+      { text: "Funds", link: "/funds/index.html" },
       { text: "Security", link: "/security/index.html" },
       {
         text: "API Spec (Swagger)",
         link: "https://api.superapi.com.au/swaggerui",
+      },
+      {
+        text: "Status",
+        link: "https://status.superapi.com.au",
       },
     ],
 
