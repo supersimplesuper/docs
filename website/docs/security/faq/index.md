@@ -6,7 +6,9 @@ The following document answers many of our frequently asked questions regarding 
 
 ### Are you currently certified against any IT Security standards?
 
-We are not currently certified against ISO standards, however we are currently in the process of obtaining our ISO27001 certification.
+SuperAPI is an approved Digital Service Provider (DSP) with the Australian Tax Office (ATO). The ATO requires all DSPs to pass an initial assessment of the ISO standards, including a binding confirmation of our self certification with ISO27001. 
+
+As a significant provider as an ATO DSP, SuperAPI is currently pursuing the IS27001:2013 and ISO27001:2022 security frameworks with a goal to have these in place by late 2025. 
 
 ## Change and release
 
