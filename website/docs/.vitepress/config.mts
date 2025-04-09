@@ -81,10 +81,9 @@ export default withMermaid({
 
     socialLinks: [
       { icon: "github", link: "https://github.com/supersimplesuper/" },
-      { icon: "x", link: "https://twitter.com/superapidev" },
       {
         icon: "linkedin",
-        link: "https://au.linkedin.com/company/superapi-com-au",
+        link: "https://www.linkedin.com/company/superapi-com-au",
       },
     ],
   },
