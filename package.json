@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "lefthook": "^1.11.6"
+    "lefthook": "^1.11.9"
   },
   "scripts": {
     "format": "npx @biomejs/biome check --write ."
