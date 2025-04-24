@@ -79,3 +79,21 @@ One special exception to the complete / incomplete outcome is the `onboarding_se
 | complete                       | The user completed all steps required to provide details for payment to their nominated super fund.                                                                                                 | Submit the employees details to payroll                                                                                                                                                                                                     |
 | complete_without_member_number | The user did not complete the form, we were unable to find their stapled superfund and we did not receive a response from sending a request (MRR) to join them to the employers default super fund. | Notify the employer to either collect superfund details directly from the employee, staple the employee or join the employee to their default fund. This is an uncommon outcome where the employer will have to manually resolve the issue. |
 | incomplete                     | You requested details via the API about an onboarding session where the user is in the process of selecting a superfund.                                                                            | Wait for the user to complete their onboarding                                                                                                                                                                                              |
+
+## Super selection and abandonment
+
+Unlike most onboarding modules, the super selection module has special abandonment behavior designed to ensure we capture member numbers for superannuation payments even when employees don't complete the process. When abandoned, the system follows this decision flow:
+
+```mermaid
+flowchart TD
+    A[Start: Super selection abandoned] --> B{Has an existing super fund been provided?}
+    B -- Yes --> C[Return existing super fund details]
+    B -- No --> D{Has employer set up ATO connection?}
+    D -- No --> E[Return: Could not find a member number]
+    D -- Yes --> F{Use stapling API to look up fund}
+    F -- Found --> G[Return stapled fund details]
+    F -- Not found --> H[Trigger MRR to default fund]
+    H --> I{Did MRR return a response?}
+    I -- Response found --> J[Return default fund details]
+    I -- No response --> K[Return: Could not find a member number]
+```
