@@ -103,3 +103,40 @@ Generated URLs are sensitive. Anyone with access to the URL is authenticated as 
 :::
 
 One you have the generated URL, [take a look at our JavaScript library](https://github.com/supersimplesuper/super-api-embed) which is designed to make it easy to work with them in the browser.
+
+## Bulk setup of employers
+
+If you're adding SuperAPI to an existing system, you can automatically set up multiple employers with their default super fund details in one go. This eliminates the need for manual configuration by each employer before they can start using features like employee onboarding.
+
+:::warning
+We don't hardcode rate limits on our API but if you're setting up thousands of employers on one go, please use a sensible rate limit (~5 per second)
+:::
+
+To create an employer with pre-configured default fund details:
+
+1. Prepare your employer data, including the required `brand_id` for their default super fund
+2. Use the same employer creation endpoint with the additional `employer_default_super_fund_product` parameter
+
+```bash
+curl -X POST https://api.superapi.com.au/api/v1/employer \
+ -H "Content-Type: application/json" \
+ -H "x-api-key: superapi_yourapikeysDZFUnrDIyNp7YTAPDcJXge" \
+ -d '{
+   "abn": "96878537596",
+   "name": "The company name",
+   "remote_id": "12345",
+   "country": "aus",
+   "employer_default_super_fund_product": {
+     "brand_id": "5d48b588-87fa-4afc-8065-1f3224a25c4f",
+     "employer_number": "abcd1234",
+     "accepted_ato_standard_business_reporting_terms": true
+   }
+ }'
+```
+
+To find the correct brand_id when you only have a USI (Unique Superannuation Identifier):
+
+1. First query our [super fund product endpoint](https://swagger.superapi.com.au/#tag/super_fund_products/operation/SuperApiWeb.Api.V1.SuperFundProductsController.index) to locate the product by USI
+2. Then use our [super fund brand endpoint](https://swagger.superapi.com.au/#tag/super_fund_brands/operation/SuperApiWeb.Api.V1.SuperFundBrandsController.index) to get the associated brand_id
+
+Note that some USIs may be associated with multiple brands (e.g., Russell Investments operates both Resource Super and Salaam Super under one USI).
