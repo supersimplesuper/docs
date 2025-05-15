@@ -27,8 +27,7 @@ function recursivelyUpdateApiKeyVars(itemWithMaybeChildren, summaries) {
 }
 
 (async () => {
-  // const endpoint = process.env.SUPERAPI_ENDPOINT;
-  const endpoint = "http://localhost:4000/api/openapi";
+  const endpoint = "https://api.superapi.com.au/api/openapi";
 
   const res = await fetch(endpoint, {
     headers: {
@@ -38,8 +37,6 @@ function recursivelyUpdateApiKeyVars(itemWithMaybeChildren, summaries) {
 
   const json = await res.json();
   const schemaAsString = JSON.stringify(json);
-
-  fs.writeFileSync("super_api_openapi.json", schemaAsString);
 
   const postmanCollection = await new Promise((resolve, reject) => {
     OpenAPIConverter.convert(
@@ -75,4 +72,6 @@ function recursivelyUpdateApiKeyVars(itemWithMaybeChildren, summaries) {
       summariesWithSecurity.map((s) => [s.summary, s.security]),
     ),
   );
+
+  process.stdout.write(JSON.stringify(postmanCollection, null, 2));
 })();
