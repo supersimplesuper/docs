@@ -73,5 +73,16 @@ function recursivelyUpdateApiKeyVars(itemWithMaybeChildren, summaries) {
     ),
   );
 
+  postmanCollection.variable.push({
+    type: "string",
+    value: "Product API key",
+    key: "productApiKey",
+  });
+  postmanCollection.variable.push({
+    type: "string",
+    value: "Partner API key",
+    key: "partnerApiKey",
+  });
+
   process.stdout.write(JSON.stringify(postmanCollection, null, 2));
 })();
