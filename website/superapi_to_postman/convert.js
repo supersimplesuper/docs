@@ -15,12 +15,11 @@ function recursivelyUpdateApiKeyVars(itemWithMaybeChildren, summaries) {
   if (!authLevel) {
     return;
   }
-  const authSet = new Set(authLevel);
-  if (authSet.has("product_authorization")) {
+  if (authLevel === "product_authorization") {
     itemWithMaybeChildren.request.auth.apikey[1].value = "{{productApiKey}}";
     return;
   }
-  if (authSet.has("partner_authorization")) {
+  if (authLevel === "partner_authorization") {
     itemWithMaybeChildren.request.auth.apikey[1].value = "{{partnerApiKey}}";
     return;
   }
@@ -40,8 +39,8 @@ function recursivelyUpdateApiKeyVars(itemWithMaybeChildren, summaries) {
 
   const postmanCollection = await new Promise((resolve, reject) => {
     OpenAPIConverter.convert(
-      { type: "string", data: schemaAsString },
-      {},
+      { type: "json", data: schemaAsString },
+      { collapseFolders: false, folderStrategy: "Tags" },
       (err, conversionResult) => {
         if (err) return reject(err);
 
@@ -59,19 +58,28 @@ function recursivelyUpdateApiKeyVars(itemWithMaybeChildren, summaries) {
       Object.values(methods).map((method) => {
         if (!method.security) return [];
 
-        return {
-          security: method.security.flatMap((sec) => Object.keys(sec)),
-          summary: method.summary,
-        };
+        // Controller action determines the authorization level
+        const operationPath = method.operationId.split(".");
+        const operation = operationPath[operationPath.length - 1];
+
+        const securityEntries = Object.entries(method.security[0]);
+
+        const security =
+          securityEntries.length === 1
+            ? securityEntries[0][0]
+            : securityEntries.flatMap(([auth, operations]) => {
+                return operations.find((op) => op === operation) ? [auth] : [];
+              })[0];
+
+        return [method.summary, security];
       }),
   );
 
-  recursivelyUpdateApiKeyVars(
-    postmanCollection.item[1],
-    Object.fromEntries(
-      summariesWithSecurity.map((s) => [s.summary, s.security]),
-    ),
-  );
+  const securityLookup = Object.fromEntries(summariesWithSecurity);
+
+  for (const item of postmanCollection.item) {
+    recursivelyUpdateApiKeyVars(item, securityLookup);
+  }
 
   postmanCollection.variable.push({
     type: "string",
