@@ -11,6 +11,7 @@ setup: build
 install: setup
 	docker compose run --no-deps --rm website npm install;
 	npm install
+	cd website && npm run docs:postman_collection && cd ../
 
 bash:
 	docker compose run --rm website bash
