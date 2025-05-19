@@ -1,6 +1,8 @@
 name: CD
 
 on:
+  schedule:
+    - cron:  '0 1 * * *'
   push:
     branches:
       - main
@@ -52,6 +54,7 @@ jobs:
         run: |
           container_id=$(docker create "${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}")
           docker cp "$container_id:/usr/src/app/docs/.vitepress/dist" "./docs"
+          docker cp "$container_id:/usr/src/app/postman_collection.json" "./docs"
           docker rm "$container_id"
 
       - name: Deploy docs to bucket
