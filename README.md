@@ -32,7 +32,7 @@ We've tried to simplify the process as much as possible to run this locally, at 
 make install
 ```
 
-Then to start the server:
+Then to start the server
 
 ```bash
 make start
