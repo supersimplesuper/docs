@@ -6,7 +6,7 @@
   "scripts": {
     "docs:dev": "vitepress dev docs --host 0.0.0.0",
     "docs:build": "vitepress build docs",
-    "docs:postman_collection": "node superapi_to_postman/convert.js > docs/public/postman_collection.json",
+    "docs:postman_collection": "node superapi_to_postman/convert.js > /usr/src/app/docs/public/postman_collection.json",
     "docs:preview": "vitepress preview docs"
   },
   "author": "",
