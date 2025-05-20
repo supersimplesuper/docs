@@ -2,6 +2,14 @@
 
 To protect sensitive superannuation data and meet ATO security expectations, all software partners must implement the following authentication and session standards. These are non-negotiable and apply to all new software partner integrations.
 
+## Password complexity
+
+Passwords must have a minimum of 80 bits of entropy.
+
+This ensures passwords cannot be reliably guessed, even with high-speed automated attempts. At this level, cracking a password would take over 9 years at 1 trillion guesses per second.
+
+Entropy should be calculated based on randomness, not password length or character types. Use passphrases or password generators to meet this standard. Avoid relying on user-created passwords without entropy checks.
+
 ## Shared logins are blocked
 
 Users must have individual logins. Shared credentials aren’t allowed and should be blocked. Each user should be identifiable and auditable.
