@@ -9,4 +9,3 @@ To make integrating with SuperAPI easier we provide a partner dashboard where yo
 ## Screenshots
 
 ![Partner dashboard 1](/partner_dashboard_1.png "Partner dashboard 1")
-![Partner dashboard 2](/partner_dashboard_2.png "Partner dashboard 2")
