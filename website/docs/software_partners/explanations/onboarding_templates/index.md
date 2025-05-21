@@ -1,19 +1,19 @@
 # Onboarding templates
 
-Some features of [onboarding sessions](/software_partners/how_to_guides/work_with_onboarding_sessions/index.html) require an onboarding template to be applied to the onboarding session to enable functionality. Conceptually, this is the employer customising an onboarding session for a particular kind of employee. As an example, imagine a childcare onboarding an employee who drives the bus. You would want to collect details like:
+Some features of [onboarding sessions](/software_partners/how_to_guides/work_with_onboarding_sessions/index.html) require an onboarding template to unlock additional functionality. An onboarding template is a reusable configuration for an onboarding session. It allows an employer to specify additional requirements (like extra documents to upload or custom questions to answer) for a particular type of employee or role. For example, imagine a childcare onboarding an employee who drives the bus. You would want to collect details like:
 
 * An appropriate drivers license
 * A working with children's check
-* A question form to capture the drivers measurements for a uniform.
+* A question form to capture the driver's measurements for a uniform.
 
-Onboarding templates allow the customisation required of an onboarding session to capture this kind of information. They are designed to be applied to multiple employees that all perform the same role in an organisation.
+Onboarding templates provide the flexibility to capture additional information beyond the standard onboarding. They are designed to be applied to multiple employees that all perform the same role in an organisation. Onboarding templates are not required for onboarding sessions, they simply unlock additional features.
 
 ## Modules requiring onboarding templates
 
 The following modules require onboarding session templates to be configured so that they can be used.
 
-* Document uploads
-* E-signing / form completion (coming soon)
+* Document uploads (for collecting files/documents from the employee)
+* E-signing / form completion (for presenting forms or documents to be filled out and signed)
 
 ## Configuring onboarding templates
 
@@ -30,8 +30,10 @@ curl -X POST https://api.superapi.com.au/api/v1/employer/:id/generate-embed-url 
   }'
 ```
 
-This will present a UI that allows the creation and management of onboarding templates for that employer. You should place this embed in the appropriate employer setup or configuration portion of your software.
+This embed opens a UI where the employer can create and manage their onboarding templates. We recommend placing this embed in the employer configuration section of your app.
 
 ## Using an onboarding template
 
-Onboarding templates should be given to the onboarding session at the time of creation. They cannot be added to an onboarding session after it has been created. You can [query a list of available onboarding templates](https://swagger.superapi.com.au/#tag/employer_templates) which should be done in your UI at the point the onboarding session is being created. Then, when the employer has chosen a template, create the onboarding session itself passing a `template_id` field equal to the onboarding template that should be used for that session.
+Onboarding templates should be given to the onboarding session at the time of creation. Templates cannot be added to an onboarding session after it has been created.
+
+[Use the API to list available templates for an employer](https://swagger.superapi.com.au/#tag/employer_templates) when your employer is about to create a new onboarding session. Present these options in your UI for the employer to choose from. Once a template is selected, create the onboarding session via the API and include the chosen template’s ID in the `template_id` field of the payload.
