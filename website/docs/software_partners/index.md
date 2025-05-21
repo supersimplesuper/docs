@@ -12,6 +12,8 @@ This page contains documentation designed to help our software partners integrat
 
 ## How to guides
 
+- How to request access to our [partner dashboard](/software_partners/how_to_guides/partner_dashboard/index.html)
+
 ### API keys
 
 - How do I [rotate my api keys](/software_partners/how_to_guides/rotate_api_key/index.html)?
