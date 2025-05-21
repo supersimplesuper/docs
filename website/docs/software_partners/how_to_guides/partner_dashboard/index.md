@@ -9,3 +9,7 @@ To make integrating with SuperAPI easier we provide a partner dashboard where yo
 ## Screenshots
 
 ![Partner dashboard 1](/partner_dashboard_1.png "Partner dashboard 1")
+
+## How to enable
+
+Please [contact support](mailto:support@superapi.com.au) to enable this for your account.
