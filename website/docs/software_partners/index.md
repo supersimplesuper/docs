@@ -13,6 +13,7 @@ This page contains documentation designed to help our software partners integrat
 ## How to guides
 
 - How to request access to our [partner dashboard](/software_partners/how_to_guides/partner_dashboard/index.html)
+- How to implement our [hosted MFA](/software_partners/how_to_guides/hosted_mfa/index.html)
 
 ### API keys
 
