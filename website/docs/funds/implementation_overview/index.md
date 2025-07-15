@@ -1,94 +1,122 @@
 # SuperAPI Fund Implementation Overview
 
-This guide provides an overview of how the SuperAPI product integrates with a super fund. It is not intended to be a detailed implementation guide and therefore contains no specific technical details about how to integrate SuperAPI. However it does serve as an overview of the integration process so that the effort and time required to perform the implementation can be estimated easily and accurately.
+This document outlines how SuperAPI integrates with a super fund. It is not a step‑by‑step implementation manual and includes no low‑level technical detail. Instead, it offers a high‑level view of the integration process so that the time and effort required for implementation can be estimated with confidence.
 
-This document can be read by anyone and contains no sensitive information. Those that will get the most out of this document are:
+This document will be more useful to:
 
-- Software engineers or managers of software engineers working at superfund's
-- Anyone who requires an understanding of the scope of effort required to implement SuperAPI.
+- Software engineers or engineering managers working at super funds.
+- Stakeholders who need to understand the scope of work involved in implementing SuperAPI.
 
 ## What is Super API?
 
-SuperAPI is a platform that integrates super funds and HR software products together by providing a service which allows HR software products to easily onboard employees that need to make superannuation selections.
+SuperAPI connects super funds to HR and payroll software, allowing employees to make their superannuation choice quickly and securely during onboarding.
 
-The SuperAPI platforms allows your fund to:
+The platform enables your fund to:
 
-1. Display to the employee details about your fund if they are a member when they are starting a new role at a company.
+1. Show existing members their fund details when they start a new job.
 
-2. Be shown to employees that are new to the market or those seeking a new fund.
+2. Appear to employees who are new to the workforce or looking to switch funds.
 
-3. Be shown as the default fund of an employer to users making a super selection choice.
+3. Be offered as an employer's default fund during the super choice process.
 
-4. Get leads from members that are interested in rolling over their funds.
+4. Receive leads from members interested in rolling over their balance.
 
-5. Provide additional information about your fund to those that are reselecting or joining your fund.
+5. Supply richer information to employees reselecting or joining your fund.
 
 <!--@include: @/parts/getting_help.md-->
 <!--@include: @/parts/terminology.md-->
 
-## An example super selection
+## How do we integrate funds?
 
-The following diagram details how the SuperAPI bridges between Super Funds and Employers.
+SuperAPI supports two integration touch‑points for super funds. You may implement either one, but adopting both unlocks the full value of the platform.
+
+Each touch‑point can slot into your existing authentication and authorisation framework, so no major changes are needed to your current systems. The two options are:
+
+1. **Member lookup (Retain)** – confirms whether an employee is already a member of your fund
+2. **Member creation (Grow)** – registers a new member when an employee chooses to join your fund
+
+## Example flows
+
+### Fund retention
+
+The following diagram shows how a member is retained with a fund that has integrated to SuperAPI.
 
 ```mermaid
 sequenceDiagram
-    participant P as 3rd Party Software
+    participant P as 3rd party software
     participant S as SuperAPI
-    participant F as Super Fund
+    participant F as Super fund
 
     P->>S: Sends a user that needs to select super
     S->>F: Does this member have an account with you?
-    F-->>S: Member exists or does not exist
-    S->>F: User wants to join your fund
+    F-->>S: Membership exists
+    S->>P: Return existing member details
+```
+
+The process runs as follows:
+
+1. A third‑party software partner sends SuperAPI an employee who must choose a super fund. SuperAPI creates an onboarding session.
+2. SuperAPI asks each linked fund whether the employee already has a membership.
+3. Each fund responds, indicating whether a matching member record exists.
+4. The employee chooses to stay with the fund.
+5. SuperAPI returns the existing membership data to the third‑party software.
+
+### Fund retention
+
+The following diagram shows how a member is retained with a fund that has integrated to SuperAPI.
+
+```mermaid
+sequenceDiagram
+    participant P as 3rd party software
+    participant S as SuperAPI
+    participant F as Super fund
+
+    P->>S: Sends a user that needs to select super
+    S->>F: Does this member have an account with you?
+    F-->>S: No membership exists
+    S->>F: Please create a new member
     F->>S: Returns new member details
     S->>P: Returns new member details
 ```
 
-Here we can see the following steps:
+The process runs as follows:
 
-1. Our **3rd Party Software** partner sent us an **Employee** who needed to select which super fund they belong to, we created them a **Super Selection Session**
-2. We check with the **Super Fund Partner**'s linked to SuperAPI if they have an existing account for the **Employee** making a **Super Selection Session**
-3. They return to us if they have a **Member** that matches that user making their super selection.
-4. In the case that an **Employee** wants to join your fund, we send you details about them and you provision a new member account for them.
-5. We turn the final payload to the **3rd Party Software**, they now have all the details required to ensure payroll can be paid by the **Employer** to the **Employee**.
-
-## How do we integrate funds?
-
-Super funds are integrated into SuperAPI in two ways. You may provide one or both of these integrations. Implementing both will ensure that you get the full value out of the SuperAPI integration.
-
-We have some flexibility in the way that these fund integrations are performed and can conform to an authentication / authorisation system that may already exist. All integrations require two high level touch points however, these are:
-
-### [Member lookup (Retain)](/funds/retain/index.html)
-
-The first integration is the ability for us to lookup and find if a member exists. When a **3rd Party Software** requires a user to make a **Super Selection Session** they will send us a payload of details about the **Employee**. Before they send us these details, they have verified that the user owns the email address and phone number associated with that user. We then use these authenticated details to check with each of the funds that have a link with SuperAPI, if a **Member** with those details exists. If a member does exist, we show these details prominently to the user making it easy to reselect the fund.
-
-### [Member creation (Grow)](/funds/grow/index.html)
-
-The second integration is the ability for us to create a member within the fund. This is used when the user decides to join a new fund. They might be new to the workforce or looking for a change. In both cases, it is possible for the user to select a super fund and register as a new member. The purpose of the integration is to register the employee as a new member with the fund, and return the necessary details in order to populate the employer's payroll system with enough information to begin making employer contributions to the super fund.
+1. A third‑party software partner sends SuperAPI an employee who must choose a super fund. SuperAPI creates an onboarding session.
+2. SuperAPI asks each linked fund whether the employee already has a membership.
+3. No membership exists
+4. The employee chooses to join a new fund.
+5. SuperAPI supplies the employee's verified details, and the fund provisions a new member account.
+6. The fund returns the new member information, which SuperAPI relays to the third‑party software so the employer can begin payroll contributions to the new fund.
 
 ### Creative
 
-When integrating into SuperAPI your funds creative will be used according to its brand guidelines. Please supply any creative, brand kits etc to us when the implementation process starts.
+When your fund integrates with SuperAPI, its branding is presented exactly as specified in your brand guidelines. Please supply logos, colour palettes, typography, and any other creative material at the start of the project so that our design team can prepare the interface.
 
 ### Implementation timeline
 
-A typical implementation into SuperAPI can occur very quickly if APIs are already available for member lookup and creation, provided they follow standard best practices.
+Where APIs for member lookup and creation already exist, a SuperAPI integration can usually be completed in a few weeks. If new endpoints or changes to authentication are needed, additional time will be required. We will agree a detailed plan and timeline with your technical team during project initiation.
 
 ## Security
 
-As we are dealing with personally identifiable information, the security of the SuperAPI system is paramount. Therefore, we have adopted the following security posture:
+Protecting personally identifiable information is central to the SuperAPI platform. We follow recognised best practice and are on track to obtain ISO 27001 certification early next year (2025).
 
-### Platform
+### Features
 
-Our platform implements security best practices where possible. While not currently ISO27001 certified, we are in the process of achieving this accreditation and expect to have it in place early next year. A security framework like ISO27001 is not enough by itself to guarantee a secure system and as such, we implement best practices from within the software engineering industry that may not be explicitly mentioned in the ISO27001 framework. A good example of this is code signing to ensure that all code integrated into the product originates from a developer that possesses a unique key which identifies them as the code author.
+* Encryption in transit and at rest across all services
+* Role‑based access control with least‑privilege defaults
+* Continuous vulnerability scanning and annual penetration tests
+* Segregated development, staging, and production environments
+* Regular backup and disaster‑recovery testing
 
 To gain an overview of our security implementation, please see our [Security FAQ](https://docs.superapi.com.au/security/faq/index.html)
 
 ### Sensitive data handling and retention
 
-A question we get asked frequently is around how we handle sensitive data in our system, sensitive data being both PII data (names, addresses etc) and government issued unique identifiers, i.e. TFNs. In short, we hold onto this data for the shortest amount of time possible (usually measured in minutes) that is required for us to perform our super selection process and satisfy our legal requirements around auditing. Where we manage data that can't be deleted, e.g. login attempts, we take great care to ensure that the data logged is stripped of identifiable information.
+We retain all sensitive data, including personally identifiable information and Tax File Numbers, for the life of the platform. Continuous retention provides a secure repository that partners can consult when verifying historic events such as an employee's superannuation choice and satisfies statutory record‑keeping requirements under the Superannuation Industry (Supervision) Act.
 
-To explore this in greater detail, please see our [Data Retention Policy](https://docs.superapi.com.au/security/super_api_data_retention_policy/index.html)
+All sensitive data are encrypted in transit and at rest. Access is strictly role based, logged, and reviewed regularly. Operational logs capture only the information needed for security monitoring and auditing, limiting exposure of personal details.
+
+Data are stored solely in Australian data centres certified to ISO 27001 or an equivalent standard. Back‑ups are replicated to geographically separate locations, and the principle of least privilege is enforced across the infrastructure, supported by regular penetration testing.
 
 ## Support
 
