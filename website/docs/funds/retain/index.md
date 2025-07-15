@@ -1,50 +1,53 @@
----
-outline: deep
----
+# Retain
 
-# Retain documentation
+This guide explains how to integrate with SuperAPI’s Retain capability so your fund can identify and engage existing members during employer onboarding.
 
-Retain is the high level term used for functionality within SuperAPI that assists super funds to retain & engage their existing members. The key integration to enable Retain features is the capability to lookup existing members at super fund.
+## About Retain
 
-## Implementation methods
+Retain is a set of SuperAPI features that lets super funds:
 
-There are multiple methods of implementing the Retain member lookup service. They differ in the technical requirements for implementation, and who is required to perform the implementation (SuperAPI vs Superfund).
+1. Recognise existing members at the point of employer onboarding
+2. Surface a member's current account so they can keep contributing to it
+3. Improve retention, reduce account proliferation and cut rollover costs
 
-### A) Member lookup API
+The core requirement is a member lookup service that returns a match (or not) when SuperAPI submits a member’s details.
 
-Super fund provides an API that enables member lookup.
+## Integration paths
 
-### B) Hashed lookup (local) (low touch)
+| Method                      | Who builds it                                            | Key tasks                                                               | Typical effort                                |
+| --------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------- |
+| Member Lookup API       | Super fund                                               | Expose HTTPS endpoint, implement auth, return match result in real time | Medium – ideal if you already run public APIs |
+| Hashed Lookup (offline) | Super fund provides data. SuperAPI takes care of lookups | Export and hash member data, deliver file on agreed schedule            | Low – no live infrastructure required         |
 
-This integration method requires a super fund to provide a hashed copy of the member details database, but does not require any futher technical integration.
+## Data used for matching
 
-## Member lookup data payloads
+The following table contains some of the fields that can be used for matching. This is not an exhaustive list.
 
-Regardless of the method of implementation, the following data we can utilise to lookup a members details:
+| Field            | Suitability | Notes                                                                            |
+| ---------------- | ----------- | -------------------------------------------------------------------------------- |
+| `tfn`            | High    | Unique to the individual and stable over time. Strongest single identifier. May have some legal requirements are use. |
+| `date_of_birth`  | High  | Rarely changes and helps disambiguate people with similar names.                 |
+| `email`          | High    | Often unique, but members may use personal or work addresses interchangeably.    |
+| `phone_number`   | Medium  | Helpful when supplied in E.164 format, but users change numbers more frequently. |
+| `first_name`     | Medium | Useful when combined with other fields; subject to spelling variations.          |
+| `family_name`    | Medium  | Same considerations as first name; may change after marriage.                    |
+| `postcode`       | Medium  | Adds context to address matching, though people move house.                      |
+| `address_line_1` | Medium  | Valuable when combined with postcode, but formatting can vary.                   |
+| `middle_name`    | Low     | Often omitted or inconsistently captured, so less reliable.                      |
+| `other_name`     | Low     | Intended for previous names or aliases; rarely supplied.                         |
+| `address_line_2` | Low    | Typically blank or used inconsistently (unit numbers, etc.).                     |
 
-- email
-- phone_number
-- date_of_birth
+> Tip: Providing as many high‑suitability fields as possible will improve the match rates.
 
-- first_name
-- middle_name
-- family_name
-- other_name (previous family name)
+## High‑Level flows
 
-- address (residential)
-- postcode
-
-> Due to the sensitive nature of a Tax File Number (TFN) is it not recommended to use this data in any member lookup functionality. If your systems requires TFN for the purposing of verifying a member, or looking up their details, please get in [contact to discuss your requirements](mailto:developers@superapi.com.au).
-
-## Member lookup process overview
-
-A high level overview of the member lookup process within the overall SuperAPI worflow.
+### API flow
 
 ```mermaid
 sequenceDiagram
-    participant P as 3rd Party Software
+    participant P as 3rd party software
     participant S as SuperAPI
-    participant F as Super Fund
+    participant F as Super fund
 
     P-->>S: Creates a new onboarding session for an employee
     P->>S: Directs employee to complete onboarding
@@ -58,104 +61,61 @@ sequenceDiagram
     S-->>P: Webhook with employee's super choice details (confirmed)
 ```
 
-## A) Member lookup API technical specs
+#### Endpoint
 
-Documentation for building an API integration to meet SuperAPI's requirements for the member lookup feature.
+```
+POST /v1/member_lookup
+Content‑Type: application/json
+```
+##### Required headers
 
-### Endpoint
+These are dependent on the auth flow that is agreed.
 
-Super fund receives a POST request from SuperAPI which contains the member details to look up.
+| Header           | Notes                                           |
+| ---------------- | ----------------------------------------------- |
+| `X-Auth-Key` | Api key          |
 
-`POST /member_lookup`
-
-### Request
+##### Successful response
 
 ```json
 {
-  "request_id": "09c58fab-d162-4dfc-acb5-e87c5c58e91c",
-  "member_lookup": {
-    "email": "test@test.com",
-    "phone_number": 0413001300,
-    "date_of_birth": "1990-04-23",
-    "first_name": "Riley",
-    "middle_name": "John",
-    "family_name": "James",
-    "other_name": "Lennon",
-    "address": {
-      "address_line_1": "100 Station Street",
-      "address_line_2": "",
-      "address_line_3": "",
-      "address_line_4": "",
-      "locality": "North Fitzroy",
-      "postcode": "3064",
-      "state": "VIC"
-    }
+  "member_found": true,
+  "member_details": {
+    "member_number": "12345678",
   }
 }
 ```
 
-### Response
+If your lookup service supports probabilistic matching, you can replace the boolean `member_found` flag with a decimal `confidence` value from 0.00 (no match) to 1.00 (certain match). SuperAPI will display the account automatically when the score is above an agreed threshold (for example 0.80). Scores below the threshold trigger a prompt asking the employee to check or update their details, giving them a chance to improve the match before continuing.
 
-#### Success
-
-Member number & account number are the most critical details to be returned for a successful member lookup. Providing additional details is optional. Considerations should be made regarding 'does our fund receive and process an update of the members details after lookup' and 'what details does the member need to provide to payroll in order to successfully process their super contributions'.
+##### No match response
 
 ```json
 {
-	"request_id": "09c58fab-d162-4dfc-acb5-e87c5c58e91c",
-	"member_found": true,
-	"member_details": {
-		"member_number": "123123123",
-		"account_number": "123123123",
-		...
-	}
-}
-```
-
-#### Failure
-
-```json
-{
-  "request_id": "09c58fab-d162-4dfc-acb5-e87c5c58e91c",
   "member_found": false
 }
 ```
 
-#### Failure (detailed)
+##### Error handling
 
-If you have the capability to provide more insight into why a member was not found, you can provide those details in the following format. The `member_lookup` object in the response is the same object that was sent in the request. Each field is replaced with a true/false response based on whether the field was matched in the member lookup.
+| Status        | When to use                         | Retry guidance                                              |
+| ------------- | ----------------------------------- | ----------------------------------------------------------- |
+| `400`         | Malformed JSON or failed validation | No retry                                                    |
+| `401` / `403` | Authentication failed               | No retry until credentials fixed                            |
+| `429`         | Rate limit exceeded                 | Retry after `Retry‑After` seconds                           |
+| `5xx`         | Temporary server issue              | SuperAPI will retry with exponential back‑off up to 3 times |
 
-This enables us to prompt the user to provide alternative addresses, contact details or names. Or we can submit these in alternative formats to attempt a match.
 
-```json
-{
-  "request_id": "09c58fab-d162-4dfc-acb5-e87c5c58e91c",
-  "member_found": false,
-  "member_lookup": {
-    "email": true,
-    "phone_number": false,
-    "date_of_birth": true,
-    "first_name": false,
-    "middle_name": false,
-    "family_name": false,
-    "other_name": false,
-    "address": {
-      "address_line_1": false,
-      "address_line_2": false,
-      "address_line_3": false,
-      "address_line_4": false,
-      "locality": false,
-      "postcode": false,
-      "state": false
-    }
-  }
-}
-```
+##### Security and compliance
+* **Transport**: All traffic must use TLS 1.2+.
+* **Authentication**: We support many authentication flows, our preference is JWT generated from pre-shared keys.
 
-## B) Hashed Lookup (local) Technical Specs
+##### Versioning and change control
+* The API is versioned via the URL, eg. `/v1/member_lookup`.
+* Backwards‑compatible changes are announced at least 30 days in advance.
+* Breaking changes require 90 days notice.
 
-Super fund generates a SHA-256 hashed member lookup table, which we utilise (locally) to determine fund membership.
+### Hashed data flow
+Please contact us further details of how our hashed data matching functions.
 
-| email | phone | member_number |
-| 909378d4be0d759c88e456e35d14351961646d11f9f0192e61b41427fc1d4e45 | 38f30c489a1c294cf7d8193847979ae6c5c45f78ee5cecf8288827310bb866de | ADF382718 |
-| f660ab912ec121d1b1e928a0bb4bc61b15f5ad44d5efdc4e1c92a25e99b8e44a | a891c6a1a72cb34418124a70cc929f924ea3d8474b6e2929b21952a8cb6914a4 | AAA867483 |
+<!--@include: @/parts/getting_help.md-->
