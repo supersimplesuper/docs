@@ -50,7 +50,7 @@ export default withMermaid({
     },
     footer: {
       message: "The future of super is embedded",
-      copyright: "Copyright © 2024 SuperAPI Pty Ltd (ACN: 674 661 244)",
+      copyright: "Copyright © 2025 SuperAPI Pty Ltd (ACN: 674 661 244)",
     },
     nav: [
       { text: "Hiring", link: "/hiring/index.html" },

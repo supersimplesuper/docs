@@ -49,6 +49,7 @@ This page contains documentation designed to help our software partners integrat
 - Understand the [employer status](/software_partners/explanations/working_with_the_employer_status/index.html) fields so that you can customise your UI to communicate the employers onboarding setup.
 - Understand the [lifecycle of an onboarding session](/software_partners/explanations/lifecycle_of_an_onboarding_session/index.html)
 - Learn about [onboarding templates](/software_partners/explanations/onboarding_templates/index.html) and how they can be used to customise the onboarding session.
+- What is [SuperAPI in a box](/software_partners/explanations/super_api_in_a_box/index.html)?
 
 ## References
 
