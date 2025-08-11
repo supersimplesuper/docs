@@ -1,6 +1,6 @@
 # SuperAPI in a Box
 
-SuperAPI in a Box is designed for organizations that want the fastest integration path or have security concerns about iFrames. This solution allows your employers and employees to use SuperAPI without embedding iFrames directly into your product.
+SuperAPI in a Box is designed for organisations that want the fastest integration path or have security concerns about iFrames. This solution allows your employers and employees to use SuperAPI without embedding iFrames directly into your product.
 
 SuperAPI in a Box works by having SuperAPI handle the hosting of embeds on their servers while maintaining your product's branding and appearance. You create a custom CNAME entry on your domain that points to SuperAPI's servers. When users access these routes, SuperAPI takes over and users interact with the SuperAPI application until they complete onboarding or finish configuring employer details.
 
