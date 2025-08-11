@@ -13,7 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "openapi-to-postmanv2": "^5.0.0",
-    "mermaid": "^11.8.1",
+    "mermaid": "^11.9.0",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "2.0.17"
   }
