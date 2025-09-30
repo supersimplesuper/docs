@@ -4,10 +4,6 @@ This document outlines how we hire at SuperAPI. Chances are if you're reading th
 
 We don't always get the hiring process right, so if you have feedback, thoughts or anything else, then please reach out to us. You can contact us directly at jobs@superapi.com.au
 
-:::info
-We're always open to meeting Elixir developers based in Melbourne. Drop us a line at jobs@superapi.com.au and come say "hi" in person. We're located in Melbourne's CBD close to the Southern Cross station.
-:::
-
 ## Who we are - SuperAPI and Xonboard
 
 SuperAPI is on a mission to simplify employer compliance through intuitive, integrated tools that automate payroll and superannuation obligations. We started with a simple idea: remove the friction from employee onboarding. Today, tens of thousands of Australians use our products every month, and we're building towards a future where every employer, payroll system, and super fund can connect seamlessly. With Payday Super reforms landing in 2026, the demand for trusted, compliant solutions like ours is growing rapidly.
@@ -41,7 +37,7 @@ We don't do trick questions or artificial tests. Our goal is to give you a reali
 We run on an Elixir stack and love the clarity, reliability, and scalability it gives us. Our team cares deeply about clean, maintainable code and solving real problems with the right tools, not just the shiniest ones. Our hiring process reflects that mindset. You'll get to show us how you approach code, through practical exercises and conversations with our engineers, and we'll show you how we collaborate, review, and ship in production. We value thoughtful problem-solving, curiosity, and engineers who enjoy leaving the codebase better than they found it.
 
 :::info
-We're always open to meeting Elixir developers in Melbourne. We also host the official Elixir Melbourne meetup, check out the next event and meet the team in person.
+We're always open to meeting Elixir developers in Melbourne. We also host the official Elixir Melbourne meetup, check out the [next event](https://www.meetup.com/elixir-melbourne/) and meet the team in person.
 :::
 
 ## Contact us
