@@ -36,6 +36,14 @@ We usually start with a conversation that's less about your CV and more about wh
 
 We don't do trick questions or artificial tests. Our goal is to give you a realistic view of what it's like to work at SuperAPI, and for us to understand how you'd approach the challenges and opportunities ahead.
 
+## Engineering At SuperAPI
+
+We run on an Elixir stack and love the clarity, reliability, and scalability it gives us. Our team cares deeply about clean, maintainable code and solving real problems with the right tools, not just the shiniest ones. Our hiring process reflects that mindset. You'll get to show us how you approach code, through practical exercises and conversations with our engineers, and we'll show you how we collaborate, review, and ship in production. We value thoughtful problem-solving, curiosity, and engineers who enjoy leaving the codebase better than they found it.
+
+:::info
+We're always open to meeting Elixir developers in Melbourne. We also host the official Elixir Melbourne meetup, check out the next event and meet the team in person.
+:::
+
 ## Contact us
 
 We're a growing startup, and we know we won't always get everything right. If you have feedback on our hiring process, ideas for how we can improve, or just want to connect, we'd love to hear from you.
