@@ -19,3 +19,9 @@ Retain is the high level term used for functionality within SuperAPI that assist
 Grow is the high level term for functionality within SuperAPI that facilitates the automation of new members joining a super fund.
 
 [Read the super fund grow implementation guide](/funds/grow/index.html)
+
+## Testing your integration
+
+Understand how to conduct your fund integration testing on SuperAPI.
+
+[Read the testing guide](/funds/testing/index.html)
