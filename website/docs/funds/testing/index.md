@@ -12,11 +12,11 @@ We’ll provide you with a [Postman collection](https://www.postman.com/) pre-co
 
 To control which fund appears as the default in an onboarding session, use the employer embed to configure the default fund for that employer.  
 
-[![Employer embed generate URL](./images/employer_embed_generate_url.png)](./images/employer_embed_generate_url.png)
+![Employer embed generate URL](./images/employer_embed_generate_url.png)
 
 Update the `valid_until` field to a UTC datetime up to two hours in the future. You can use [this site to find the current UTC time](https://www.utctime.net/).  
 
-[![Employer embed](./images/employer_embed.png)](./images/employer_embed.png)
+![Employer embed](./images/employer_embed.png)
 
 Once you’ve generated a valid embed URL, load the employer embed and set the default fund to your fund or another fund as needed.  
 
@@ -24,14 +24,14 @@ Once you’ve generated a valid embed URL, load the employer embed and set the d
 
 After configuring the default fund, you can create an onboarding session to test the onboarding experience.  
 
-[![Create onboarding session](./images/os_create.png)](./images/os_create.png)
+![Create onboarding session](./images/os_create.png)
 
 If you want to test features such as retain (matching existing members), adjust the details you send to the onboarding session. This is the data SuperAPI uses to match employees.  
 
 When you’re ready to view the onboarding session, generate an embed URL for it:  
 
-[![Generate onboarding session URL](./images/os_generate_url.png)](./images/os_generate_url.png)
+![Generate onboarding session URL](./images/os_generate_url.png)
 
 Load the URL in your browser to access the onboarding session:  
 
-[![Onboarding session embed](./images/os_embed_show.png)](./images/os_embed_show.png)
+![Onboarding session embed](./images/os_embed_show.png)
