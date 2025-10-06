@@ -13,7 +13,7 @@ install: setup
 	npm install
 
 bash:
-	docker compose run --rm website bash
+	docker compose run --rm website sh
 
 start:
 	docker compose up
