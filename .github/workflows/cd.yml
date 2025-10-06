@@ -48,7 +48,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ap-southeast-2
-          role-to-assume: arn:aws:iam::447066819406:role/github
+          role-to-assume: arn:aws:iam::447066819406:role/GitHubActions
 
       - name: Extract built docs from container
         run: |
