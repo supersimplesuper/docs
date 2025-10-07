@@ -10,6 +10,12 @@ This ensures passwords cannot be reliably guessed, even with high-speed automate
 
 Entropy should be calculated based on randomness, not password length or character types. Use passphrases or password generators to meet this standard. Avoid relying on user-created passwords without entropy checks.
 
+## MFA required
+
+All logins must use a second factor to protect against unauthorised access.
+
+MFA must apply to every user account and be re-prompted when signing in from a new device, network, or browser.
+
 ## Shared logins are blocked
 
 Users must have individual logins. Shared credentials aren’t allowed and should be blocked. Each user should be identifiable and auditable.
