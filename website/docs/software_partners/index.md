@@ -34,7 +34,7 @@ This page contains documentation designed to help our software partners integrat
 
 ### Theming
 
-- How do I work with [custom themes](/software_partners/how_to_guides/custom_themes/index.html)?
+- How do I [customise the look and feel](/software_partners/how_to_guides/customise_the_look_and_feel/index.html) of the embeds?
 
 ### General
 
