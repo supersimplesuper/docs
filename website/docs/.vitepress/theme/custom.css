@@ -19,3 +19,39 @@
   height: 480px !important; /* Set desired height */
   object-fit: contain; /* Ensure the image fits without distortion */
 }
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .modules-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.module-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--vp-c-bg-soft);
+}
+
+.module-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.module-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}

@@ -5,6 +5,7 @@ This page contains documentation designed to help our software partners integrat
 ## Getting started
 
 - [SuperAPI Overview](/software_partners/explanations/overview/index.html): This is the best starting point for understanding how SuperAPI works.
+- What [SuperAPI modules](/software_partners/explanations/modules/index.html) are available?
 
 ## Tutorials
 
