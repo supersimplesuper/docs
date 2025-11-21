@@ -75,3 +75,19 @@ We are always updating and adding new modules, and when you integrate with Super
   </a>
 </div>
 
+## Coming soon
+
+<div class="modules-grid">
+  <div class="module-card" href="welcome_videos.html">
+    <h3>Policy attestations</h3>
+    <p>Upload custom policies that employees can agree to when onboarding.</p>
+  </div>
+  <div class="module-card" href="welcome_videos.html">
+    <h3>VEVO checks</h3>
+    <p>Perform VEVO checks against new starters.</p>
+  </div>
+  <div class="module-card" href="welcome_videos.html">
+    <h3>Policy checks</h3>
+    <p>Perform police checks against new starters.</p>
+  </div>
+</div>

@@ -24,19 +24,16 @@
   border-radius: 0.75rem;
   padding: 1rem 1.25rem;
   background: var(--vp-c-bg-soft);
-
-  /* Override VitePress link styles */
   color: var(--vp-c-text-1);
   text-decoration: none !important;
-  cursor: pointer;
-
   transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
 }
 
-.modules-grid .module-card:hover {
+.modules-grid a.module-card:hover {
   transform: translateY(-2px);
   border-color: var(--vp-c-brand-1);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
 }
 
 .module-card h3 {
