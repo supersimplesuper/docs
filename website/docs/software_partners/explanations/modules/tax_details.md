@@ -11,4 +11,4 @@ This module allows capturing the tax details from employees.
 
 ## Coming soon
 
-* EmplpoyerTick integration to validate the TFN with the ATO.
+* EmployerTick integration to validate the TFN with the ATO.
