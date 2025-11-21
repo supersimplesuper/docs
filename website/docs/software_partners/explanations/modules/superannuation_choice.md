@@ -8,7 +8,7 @@ This module provides a digital version of the super choice form to allow employe
 
 * Employees can request their stapled super fund if the ATO integration has been configured.
 * Integrated into partner funds to automatically determine existing fund memberships.
-* Can create new fund memberships with partner funds if the employee has not existing fund or wishes to switch.
+* Can create new fund memberships with partner funds if the employee has no existing fund or wishes to switch.
 * Supports 1000+ funds for employees to select from.
 * Supports SMSF fund selections and validates that the SMSF is eligable to receive contributions.
 * Supports automatic stapling and defaulting if the ATO integration is enabled.

@@ -8,7 +8,7 @@ The defined terms in this Policy have the same meaning as in our Terms of Use, w
 
 ## superapi.com.au collects Your personal information.
 
-superapi.com.au is a provider of the superapi.com.au an online software system that helps you or your employees by enabling staff onboarding efficiency, statutory compliance, payroll accuracy, and superannuation standard choice form automation, for Australian Businesses who are required to perform Statutory Obligations by law to offer a Superannuation Standard Choice Form to new employees. This enables employee commencement, and/or will support employees to provide the correct information to their employer in order to setup correct bank account details for payroll, declare a tax file number, and make Australian Superannuation Guarantee payments as part of their legal employment.
+superapi.com.au is a provider of the superapi.com.au an online software system that helps you or your employees by enabling staff onboarding efficiency, statutory compliance, payroll accuracy, and superannuation standard choice form automation, for Australian Businesses who are required to perform statutory obligations by law to offer a Superannuation Standard Choice form to new employees. This enables employee commencement, and/or will support employees to provide the correct information to their employer in order to setup correct bank account details for payroll, declare a tax file number, and make Australian Superannuation Guarantee payments as part of their legal employment.
 
 The Service involves the storage of Data about a company or individual. That Data can include personal information. "Personal information" is information about an identifiable individual, and may include information such as the individual's name, email address, telephone number, bank account details, identity documents, superannuation fund, and publicly available web browsing data.
 
@@ -16,7 +16,7 @@ superapi.com.au may collect personal information directly from You when You:
 
 - register to use the Service,
 - use the Service,
-- contact the superapi.com.au support team and,
+- contact the superapi.com.au support team, and
 - visit our Website.
 
 You can always choose not to provide Your personal information to superapi.com.au, but it may mean that we are unable to provide You with the Service.
@@ -83,13 +83,9 @@ You should be aware that superapi.com.au may be required to disclose Your person
 
 If You are an employee, superapi.com.au may request Your personal bank account information, including BSB and Account number, via a third-party technology provider, for the provision of the service only, and will not store this information, nor use this information to charge You for the service in any way. The information will be encrypted at all times when it is transmitted for the purposes of delivering the service.
 
-If You are an employee, superapi.com.au may request Your identity documents including but not limited to Your Passport, Driver's Licence, and Medicare card via a third-party technology provider, for the provision of the service only, and will not store this information, The information will be encrypted by our service provider at all times when it is transmitted for the purposes of delivering the service.
+If You are an employee, superapi.com.au may request Your identity documents including but not limited to Your Passport, Driver's Licence, and Medicare card via a third-party technology provider, for the provision of the service only, and will not store this information. The information will be encrypted by our service provider at all times when it is transmitted for the purposes of delivering the service.
 
 If You are an employer, we may collect Your credit card information or BSB and Account number for the purposes of billing You for this service via a third-party technology provider, for the provision of the service only, and will not store this information, nor use this information to charge You except with Your explicit permission and consent via Our third-party technology provider. The information will be encrypted at all times when it is transmitted for the purposes of delivering the service.
-
-superapi.com.au may request your personal bank account information, including BSB and Account number, via a third-party technology provider, for the provision of the service only, and will not store this information, nor use this information to charge you for the service in any way. The information will be encrypted at all times when it is transmitted for the purposes of delivering the service.
-
-superapi.com.au may request your identity documents including but not limited to your Passport, Driver's Licence, and Medicare card via a third-party technology provider, for the provision of the service only, and will not store this information, The information will be encrypted by our service provider at all times when it is transmitted for the purposes of delivering the service.
 
 ## You may request access to Your personal information
 

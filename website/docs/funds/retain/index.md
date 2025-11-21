@@ -25,7 +25,7 @@ The following table contains some of the fields that can be used for matching. T
 
 | Field            | Suitability | Notes                                                                            |
 | ---------------- | ----------- | -------------------------------------------------------------------------------- |
-| `tfn`            | High    | Unique to the individual and stable over time. Strongest single identifier. May have some legal requirements are use. |
+| `tfn`            | High    | Unique to the individual and stable over time. Strongest single identifier. May have some legal requirements for use. |
 | `date_of_birth`  | High  | Rarely changes and helps disambiguate people with similar names.                 |
 | `email`          | High    | Often unique, but members may use personal or work addresses interchangeably.    |
 | `phone_number`   | Medium  | Helpful when supplied in E.164 format, but users change numbers more frequently. |
@@ -73,7 +73,7 @@ These are dependent on the auth flow that is agreed.
 
 | Header           | Notes                                           |
 | ---------------- | ----------------------------------------------- |
-| `X-Auth-Key` | Api key          |
+| `X-Auth-Key` | API key          |
 
 ##### Successful response
 
@@ -111,11 +111,11 @@ If your lookup service supports probabilistic matching, you can replace the bool
 * **Authentication**: We support many authentication flows, our preference is JWT generated from pre-shared keys.
 
 ##### Versioning and change control
-* The API is versioned via the URL, eg. `/v1/member_lookup`.
+* The API is versioned via the URL, e.g. `/v1/member_lookup`.
 * Backwards‑compatible changes are announced at least 30 days in advance.
 * Breaking changes require 90 days notice.
 
 ### Hashed data flow
-Please contact us further details of how our hashed data matching functions.
+Please contact us for further details of how our hashed data matching functions.
 
 <!--@include: @/parts/getting_help.md-->

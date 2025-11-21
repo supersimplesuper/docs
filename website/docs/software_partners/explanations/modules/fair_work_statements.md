@@ -7,4 +7,4 @@ This module displays employer selected fair work statements to the employee to a
 ## Features
 
 * Display the general, casual and fixed term contract fair work statements to the employee.
-* Records the date and time the employee acknowledge receiving the statements.
+* Records the date and time the employee acknowledged receiving the statements.

@@ -102,9 +102,9 @@ A member number is the minimum amount of data that we require to process the onb
 
 ##### Security and compliance
 * **Transport**: All traffic must use TLS 1.2+.
-* **Authentication**: We support many authentication flows, our preference is JWT generated from pre-shared keys.
+* **Authentication**: We support many authentication flows; our preference is JWT generated from pre-shared keys.
 
 ##### Versioning and change control
-* The API is versioned via the URL, eg. `/v1/member_registration`.
+* The API is versioned via the URL, e.g. `/v1/member_registration`.
 * Backwards‑compatible changes are announced at least 30 days in advance.
 * Breaking changes require 90 days notice.

@@ -11,14 +11,14 @@ This page contains documentation designed to help our software partners integrat
 
 - Ready to go? Follow the tutorial on how to [integrate SuperAPI](/software_partners/tutorials/integrate_super_api/index.html).
 
-## How to guides
+## How-to guides
 
 - How to request access to our [partner dashboard](/software_partners/how_to_guides/partner_dashboard/index.html)
 - How to implement our [hosted MFA](/software_partners/how_to_guides/hosted_mfa/index.html)
 
 ### API keys
 
-- How do I [rotate my api keys](/software_partners/how_to_guides/rotate_api_key/index.html)?
+- How do I [rotate my API keys](/software_partners/how_to_guides/rotate_api_key/index.html)?
 - How do I [verify my product API key](/software_partners/how_to_guides/verify_my_product_api_key/index.html) is working and view product settings?
 
 ### Webhooks
@@ -44,10 +44,10 @@ This page contains documentation designed to help our software partners integrat
 
 ## Explanations
 
-- Read a [high level overview](/software_partners/explanations/overview/index.html) of the steps required to integrate your software with SuperAPI.
+- Read a [high-level overview](/software_partners/explanations/overview/index.html) of the steps required to integrate your software with SuperAPI.
 - What is the [difference between product keys and partner keys?](/software_partners/explanations/product_vs_partner_api_keys/index.html)
-- What is the difference between [partners, employers, employees and onboarding sessions](/software_partners/explanations/understanding_super_api_entities/index.html)?
-- Understand the [employer status](/software_partners/explanations/working_with_the_employer_status/index.html) fields so that you can customise your UI to communicate the employers onboarding setup.
+- What is the difference between [partners, employers, employees, and onboarding sessions](/software_partners/explanations/understanding_super_api_entities/index.html)?
+- Understand the [employer status](/software_partners/explanations/working_with_the_employer_status/index.html) fields so that you can customise your UI to communicate the employer's onboarding setup.
 - Understand the [lifecycle of an onboarding session](/software_partners/explanations/lifecycle_of_an_onboarding_session/index.html)
 - Learn about [onboarding templates](/software_partners/explanations/onboarding_templates/index.html) and how they can be used to customise the onboarding session.
 - What is [SuperAPI in a box](/software_partners/explanations/super_api_in_a_box/index.html)?
@@ -56,7 +56,7 @@ This page contains documentation designed to help our software partners integrat
 
 - View our [live swagger spec](https://api.superapi.com.au/swaggerui)
 - Download our [Postman collection](/postman_collection.json){target="_blank" download="download"} to easily explore the API.
-- View the [list of webhooks](/software_partners/references/list_of_webhooks/index.html) that you can expected to be emitted from SuperAPI, along with the payloads they will contain. (this is currently a work in progress)
+- View the [list of webhooks](/software_partners/references/list_of_webhooks/index.html) that you can expect to be emitted from SuperAPI, along with the payloads they will contain. (this is currently a work in progress)
 - View the [list of workflow slugs](/software_partners/references/workflow_slugs/index.html) that are available to partners.
 - View the [authentication requirements](/software_partners/references/authentication_requirements/index.html) required when embedding SuperAPI.
 

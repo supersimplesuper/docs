@@ -1,6 +1,6 @@
 # E-sign
 
-This module allows the employee onboarding to sign one more documents provided by the employee.
+This module allows the employee onboarding to sign one or more documents provided by the employee.
 
 :::warning
 This module is currently in beta testing on Xonboard and is likely to change before being released to software partners.

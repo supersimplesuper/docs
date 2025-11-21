@@ -6,19 +6,19 @@ The following document answers many of our frequently asked questions regarding 
 
 ### Are you currently certified against any IT Security standards?
 
-SuperAPI is an approved Digital Service Provider (DSP) with the Australian Tax Office (ATO). The ATO requires all DSPs to pass an initial assessment of the ISO standards, including a binding confirmation of our self certification with ISO27001. 
+SuperAPI is an approved Digital Service Provider (DSP) with the Australian Tax Office (ATO). The ATO requires all DSPs to pass an initial assessment of the ISO standards, including a binding confirmation of our self-certification with ISO27001.
 
-As a significant provider as an ATO DSP, SuperAPI is currently pursuing the IS27001:2013 and ISO27001:2022 security frameworks with a goal to have these in place by late 2025. 
+As a significant provider as an ATO DSP, SuperAPI is currently pursuing the ISO27001:2013 and ISO27001:2022 security frameworks with a goal to have these in place by late 2025. 
 
 ## Change and release
 
 ### Are changes tested prior to being applied to the production environment?
 
-Yes. Prior to being released to production all code is tested in two ways. First, we have an extensive suite of automated tests that run on all changes to our code. Only once these tests have passed is it possible to merge the code changes to our codebase. Second, we have a dedicated staging environment where changes are sanity checked before going live. Only once both these processes have been completed is code released.
+Yes. Prior to being released to production, all code is tested in two ways. First, we have an extensive suite of automated tests that run on all changes to our code. Only once these tests have passed is it possible to merge the code changes to our codebase. Second, we have a dedicated staging environment where changes are sanity checked before going live. Only once both these processes have been completed is code released.
 
 ### Are all changes risk assessed to determine the impact to confidentiality, integrity, and availability?
 
-Yes. All changes to our code go through a peer review process where at least one other developer evaluates the change before it is added to the codebase. Additionally, prior to writing any code, the overall concept, architecture and consequences of changes are discussed by the team.
+Yes. All changes to our code go through a peer review process where at least one other developer evaluates the change before it is added to the codebase. Additionally, prior to writing any code, the overall concept, architecture, and consequences of changes are discussed by the team.
 
 ### Are all changes reviewed to ensure that any impacts to security are understood and managed accordingly?
 
@@ -32,18 +32,18 @@ Yes. This occurs as part of the testing / code review before code is released to
 
 ### What countries host your data?
 
-All personally identifiable data is hosted within Australia. Some non PII data, e.g. scrubbed logs, exception traces, analytics may be hosted outside of Australian borders.
+All personally identifiable data is hosted within Australia. Some non-PII data, e.g. scrubbed logs, exception traces, and analytics may be hosted outside of Australian borders.
 
 ### What third parties will have access to data?
 
-As mentioned previously, no PII data is available to third parties. Non PII data is accessed by the following companies:
+As mentioned previously, no PII data is available to third parties. Non-PII data is accessed by the following companies:
 
 - Sentry (https://sentry.io) - Used to track exceptions (errors) that occur in our applications.
 - Plausible (https://plausible.io/) - Used for user analytics.
 
 ### Do you use production data in development or staging environments?
 
-We have the ability to load de-identified production data into our staging and development environments. This data is de-identified by replacing all identifiable fields (email, name, phone numbers etc) with randomly generated data.
+We have the ability to load de-identified production data into our staging and development environments. This data is de-identified by replacing all identifiable fields (email, name, phone numbers, etc.) with randomly generated data.
 
 ### Can you provide a published procedure for transitioning out of the service arrangement, including assurance to sanitise all data?
 
@@ -59,7 +59,7 @@ Our database is managed by AWS (the RDS product) and as such, we have access to 
 
 ### Is data always encrypted in transit?
 
-Yes. We enforce https connections to our apps only (http connections will automatically be redirected to https). More detailed information about the supported TLS versions and ciphers we support can be found at https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html
+Yes. We enforce HTTPS connections to our apps only (HTTP connections will automatically be redirected to HTTPS). More detailed information about the supported TLS versions and ciphers we support can be found at https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html
 
 We use the `ELBSecurityPolicy-2016-08` predefined security policy.
 
@@ -87,11 +87,11 @@ Our AWS environment has been configured using the product "Control Tower Landing
 
 ### What monitoring do you have around access to your infrastructure?
 
-We employ AWS Guard duty to automatically monitor and alert us if any unauthorised access to our cloud environment is detected.
+We employ AWS GuardDuty to automatically monitor and alert us if any unauthorised access to our cloud environment is detected.
 
 ### What best practices do you have in place for architecting your infrastructure?
 
-Our AWS infrastructure uses the best practices outlined by AWS, this is achieved by use of the [AWS Control Tower](https://aws.amazon.com/controltower/) software which is design to automatically setup a multi-account best practices environment with default security controls in place.
+Our AWS infrastructure uses the best practices outlined by AWS, this is achieved by use of the [AWS Control Tower](https://aws.amazon.com/controltower/) software which is designed to automatically setup a multi-account best practices environment with default security controls in place.
 
 ## Service availability
 
@@ -111,7 +111,7 @@ Yes. We have dedicated disaster recovery run plans that can be executed in the e
 
 ### What processes do you have in place for third parties that wish to access or handle data?
 
-Our policy stipulates that vetted third parties have unrestricted access to de-identified data. For identifiable data, only a list of pre approved providers may have (potential) access to the data. Modifying the PII data access approval list requires sign off from one of the founders of the company.
+Our policy stipulates that vetted third parties have unrestricted access to de-identified data. For identifiable data, only a list of pre-approved providers may have (potential) access to the data. Modifying the PII data access approval list requires sign-off from one of the founders of the company.
 
 ### Can you provide access to your IT security and data risk policies?
 
@@ -135,15 +135,15 @@ Our IT security approach is a combination of industry best practices combined wi
 
 ### How do you handle identity access and authorisation controls?
 
-We use the AWS standard services (in particular, IAM) to handle infrastructure access to our apps. The privileges these accounts need for access are handled by creating roles, attach policies to those roles then finally attaching the roles to IAM identities.
+We use the AWS standard services (in particular, IAM) to handle infrastructure access to our apps. The privileges these accounts need for access are handled by creating roles, attaching policies to those roles then finally attaching the roles to IAM identities.
 
 ### Is multi-factor authentication required for all remote user access?
 
-Yes. This extends to all of the services that we interface with as well (AWS, Sentry etc. See the question "What third parties will have access to data?" for a full list)
+Yes. This extends to all of the services that we interface with as well (AWS, Sentry, etc. See the question "What third parties will have access to data?" for a full list)
 
 ### What are your timeframes for notification around a data breach?
 
-If a data breach is suspected then a full investigation will be launched. Notification to third parties that a breach has occurred will be performed once we have confirmed the exact nature and extent of the breach. Disclosure timeframes would vary depending on the breach itself however we would expect notification to take no longer than 24 hours after detection.
+If a data breach is suspected then a full investigation will be launched. Notification to third parties that a breach has occurred will be performed once we have confirmed the exact nature and extent of the breach. Disclosure timeframes would vary depending on the breach itself; however, we would expect notification to take no longer than 24 hours after detection.
 
 ### Do you have an incident response plan in place?
 
@@ -183,8 +183,10 @@ Yes. Security audits are conducted annually. We use auditors that are well regar
 - Data protection
 - Incident response and monitoring
 - Our compliance with industry standards and best practices.
-- How are the results of security auditing reported?
-- Security audit results and completed remediation steps are reported by our periodic newsletter. Detailed results are available on request.
+
+### How are the results of security auditing reported?
+
+Security audit results and completed remediation steps are reported by our periodic newsletter. Detailed results are available on request.
 
 ### Can we engage our own auditor to test the effectiveness of your security controls?
 
@@ -202,19 +204,19 @@ Yes. Security responsibilities and requirements are clearly defined to all emplo
 
 ### Are third parties who have access to systems uniquely identified?
 
-Yes. All third party systems are uniquely identified via API keys or other similar authentication systems.
+Yes. All third-party systems are uniquely identified via API keys or other similar authentication systems.
 
 ### Are all third-party access connections logged and monitored for anomalies?
 
-Yes. However, we currently don't have any third party connections with access _into_ the system as all data is currently sent out of the system via push. Where possible, we follow this pattern to maintain the maximum control over the flow of data. Where this is not possible, we establish detailed logging and monitoring around the integration.
+Yes. However, we currently don't have any third-party connections with access _into_ the system as all data is currently sent out of the system via push. Where possible, we follow this pattern to maintain the maximum control over the flow of data. Where this is not possible, we establish detailed logging and monitoring around the integration.
 
 ### Are all third-party connections reviewed by the security team to ensure that the required security controls are in place and functioning as required?
 
 Yes. All third parties are reviewed before use and monitored over time for any possible reported vulnerabilities or data breaches.
 
-### Is third party access subject to a risk assessment based on the data classification / level of access that is provided?
+### Is third-party access subject to a risk assessment based on the data classification / level of access that is provided?
 
-Yes. Granting access to third party systems is not taken lightly. As such, an assessment is taken which asks questions about why we need to use the third party vs. building internally, the kinds of data that would be given to the third party and the nature of the data that will be given to that third party.
+Yes. Granting access to third-party systems is not taken lightly. As such, an assessment is taken which asks questions about why we need to use the third party vs. building internally, the kinds of data that would be given to the third party and the nature of the data that will be given to that third party.
 
 ## Privacy
 
