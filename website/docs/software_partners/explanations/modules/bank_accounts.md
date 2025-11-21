@@ -9,7 +9,8 @@ Capture bank account details and account payout splits.
 * Validates BSB by matching against an authorised list of BSBs.
 * Provides visual confirmation of selected banks by showing logos.
 * Can handle restricting the allowed bank accounts to account for employer relationships with banks.
-* Sophisticated "splitting" system allows for rules on money disbursement. 
+* Sophisticated "splitting" system allows for rules on money disbursement.
+* Address automatically pre-populated from previous modules or data provided by the software partner.
 
 ## Coming soon
 
