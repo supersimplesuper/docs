@@ -1,6 +1,7 @@
 // .vitepress/theme/index.js
 import DefaultTheme from "vitepress/theme";
 import "./custom.css";
+import "./module_tiles.css";
 import "viewerjs/dist/viewer.min.css";
 import { useRoute } from "vitepress";
 import imageViewer from "vitepress-plugin-image-viewer";

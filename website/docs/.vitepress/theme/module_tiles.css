@@ -1,0 +1,97 @@
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .modules-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modules-grid .module-card {
+  display: block;
+  position: relative;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: var(--vp-c-bg-soft);
+
+  /* Override VitePress link styles */
+  color: var(--vp-c-text-1);
+  text-decoration: none !important;
+  cursor: pointer;
+
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.modules-grid .module-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.module-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+}
+
+.module-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+}
+
+/* “More →” keeps the link treatment */
+.module-more {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+
+.module-card:hover .module-more {
+  text-decoration: underline;
+}
+
+/* Badge container */
+.module-badges {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+/* Badges */
+.badge {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: white;
+}
+
+.badge-beta {
+  background: #3e46c5;
+}
+
+.badge-premium {
+  background: #ff4375;
+}
