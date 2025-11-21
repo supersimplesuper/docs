@@ -1,6 +1,6 @@
 # Update details
 
-Using SuperAPI to update an employees details is very similar to the regular onboarding flow. The main difference being the presence of the employees existing details in the `employer_detail` object when you create an onboarding session. For an example, let's use the `phone_and_super` workflow along with an employees existing superfund details to get them to check their super details.
+Using SuperAPI to update an employee's details is very similar to the regular onboarding flow. The main difference being the presence of the employee's existing details in the `employer_detail` object when you create an onboarding session. For an example, let's use the `phone_and_super` workflow along with an employee's existing super fund details to get them to check their super details.
 
 Here is an example onboarding created with a previous fund:
 
@@ -37,7 +37,7 @@ curl -X POST https://api.superapi.com.au/api/v1/onboarding-session \
   }'
 ```
 
-Passing in the employees previous fund will have two main effects on the onboarding session for them. One, the fund will be shown to them in the "retain" section of our embed allowing them to easily select the fund that they are already with. Second, if the user abandons the onboarding session then we will use the provided fund as the "stapled" fund for that user and return it to you after the timeout of the session.
+Passing in the employee's previous fund will have two main effects on the onboarding session for them. First, the fund will be shown to them in the "retain" section of our embed allowing them to easily select the fund that they are already with. Second, if the user abandons the onboarding session then we will use the provided fund as the "stapled" fund for that user and return it to you after the timeout of the session.
 
 ## Additional notes
 

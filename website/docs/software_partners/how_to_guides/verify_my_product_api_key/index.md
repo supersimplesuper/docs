@@ -2,7 +2,7 @@
 
 It's likely that if you're reading this guide, you've already been issued an API key and want to perform a basic check to make sure that you can successfully access SuperAPI. This guide has been written with the tool `curl` in mind but should also work equally well with tools like Postman and others.
 
-You can also use this endpoint to validate the details related to an API key, such as `webhook_url`, `target_origin` and the `sandbox` status for your product.
+You can also use this endpoint to validate the details related to an API key, such as `webhook_url`, `target_origin`, and the `sandbox` status for your product.
 
 ::: info
 If you haven't been issued an API key, request one from: support@superapi.com.au
@@ -40,4 +40,4 @@ After issuing the `curl` request above, you will receive a payload similar to th
 }
 ```
 
-After you've gotten your product key working, [check out how to create an employer](/software_partners/how_to_guides/create_an_employer/index.html).
+After you've got your product key working, [check out how to create an employer](/software_partners/how_to_guides/create_an_employer/index.html).

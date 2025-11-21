@@ -10,7 +10,7 @@ This module provides a digital version of the super choice form to allow employe
 * Integrated into partner funds to automatically determine existing fund memberships.
 * Can create new fund memberships with partner funds if the employee has no existing fund or wishes to switch.
 * Supports 1000+ funds for employees to select from.
-* Supports SMSF fund selections and validates that the SMSF is eligable to receive contributions.
+* Supports SMSF fund selections and validates that the SMSF is eligible to receive contributions.
 * Supports automatic stapling and defaulting if the ATO integration is enabled.
 * Form data automatically encrypted and saved as each field is completed.
 * Address automatically pre-populated from previous modules or data provided by the software partner.

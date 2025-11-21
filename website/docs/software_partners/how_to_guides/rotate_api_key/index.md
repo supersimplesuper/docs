@@ -1,6 +1,6 @@
 # Rotating API keys
 
-SuperAPI does not enforce a lifetime on API keys but does allow you to rotate your API keys if you have a requirement around doing so. Broadly, these steps are:
+SuperAPI does not enforce a lifetime on API keys but allows you to rotate your API keys if you have a requirement to do so. Broadly, these steps are:
 
 1. Provision a new API key
 2. Test that the new key works
@@ -19,11 +19,11 @@ curl -X POST https://api.superapi.com.au/api/v1/partner/product/:id/product-api-
   -H "x-api-key: superapipartner_yourkeyQvyaXOF"
 ```
 
-Where the `:id` is the product that is having the key rotated and the `x-api-key` is the partner key that you are using to perform the rotation. The response to this request will contain the new API key in the `api_key` field.
+Here, `:id` is the product having its key rotated, and `x-api-key` is the partner key you are using to perform the rotation. The response to this request will contain the new API key in the `api_key` field.
 
 ## Test and store your API key
 
-At this point you will have two API keys (SuperAPI supports an unlimited number of active keys for a product but we suggest limiting this to just the keys you require for use). To test that the new API key is functioning as expected:
+At this point you will have two API keys (SuperAPI supports an unlimited number of active keys for a product, but we suggest limiting this to just the keys you require for use). To test that the new API key is functioning as expected:
 
 ```bash
 curl -X GET https://api.superapi.com.au/api/v1/product \

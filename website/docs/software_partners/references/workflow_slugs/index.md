@@ -8,17 +8,17 @@ While we have some standard workflows that are listed out here, we do offer part
 
 ## Standard Workflow
 
-The standard SuperApi onboarding workflow uses the `standard_onboarding` slug. This workflow will put users through each of the standard onboarding modules offered by SuperApi.
+The standard SuperAPI onboarding workflow uses the `standard_onboarding` slug. This workflow will put users through each of the standard onboarding modules offered by SuperAPI.
 
 For partners who have been provided with a custom workflow slug, you do not need to use this slug.
 
 ## Update Workflows
 
-SuperApi offers the ability for partners to allow users to update various details via our Embeds. To faciliate this process, we have created a set of 'update' slugs that are designed to allow users to modify existing details.
+SuperAPI offers the ability for partners to allow users to update various details via our Embeds. To facilitate this process, we have created a set of 'update' slugs that are designed to allow users to modify existing details.
 
 For each of these, we expect that partners will create the onboarding session with as much information as possible (i.e. from previously completed onboarding sessions) for the relevant workflow. Because we pre-fill as much as possible this will provide users with a better 'update' experience.
 
-These are update slugs are:
+These update slugs are:
 1. `tfnd_only` - Allows users to modify and re-submit their TFN declaration.
 2. `bank_accounts_only` - Allows users to enter their bank account/s.
 3. `phone_and_super` - Allows users to update their superannuation details.

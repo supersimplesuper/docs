@@ -18,8 +18,8 @@ The following is a detailed step by step tutorial on how to integrate SuperAPI i
 | 10/05/2024 | `valid_until` changed to be an ISO8601 timestamp for consistency                                           |
 | 08/05/2024 | Documented disclaimers and bank accounts                                                                   |
 | 07/05/2024 | Generated PDF super assets moved under the onboarding_session_super_selection                              |
-| 16/04/2024 | Return more fields on `employee_detail`'s                                                                  |
-| 08/04/2024 | Add more detail on the `expires_at` column for `onboarding_session`'s                                      |
+| 16/04/2024 | Return more fields on `employee_detail`s                                                                  |
+| 08/04/2024 | Add more detail on the `expires_at` column for `onboarding_session`s                                      |
 | 21/03/2024 | Added `middle_name` and `has_financial_supplement_debt` to employee creation                               |
 | 20/03/2024 | Added `casual` and `labour_hire` pay basis enums                                                           |
 | 06/03/2024 | Indicate that the TFN under the `super_fund_member_detail` response can be null                            |
@@ -31,7 +31,7 @@ The following is a detailed step by step tutorial on how to integrate SuperAPI i
 
 ## Getting setup
 
-Make sure you read the [Overview](/software_partners/explanations/overview/index.html) so you have an understanding of how SuperAPI integrates with 3rd party products. This document has been designed to give you a high level overview of how the pieces of software, i.e. your product and SuperAPI, fit together. That high level understanding will make the following detailed process much easier to follow.
+Make sure you read the [Overview](/software_partners/explanations/overview/index.html) so you have an understanding of how SuperAPI integrates with 3rd party products. This document has been designed to give you a high-level overview of how the pieces of software, i.e. your product and SuperAPI, fit together. That high-level understanding will make the following detailed process much easier to follow.
 
 ### Obtaining your API keys
 
@@ -39,15 +39,15 @@ The first step is to obtain your API keys from SuperAPI. These API keys identify
 
 Depending on your setup, we can provision keys for your staging and local development environments (it is also possible for developers to share a key). Once you're happy with your implementation of SuperAPI then get in touch with us and we can provision you production keys for use in your live environment.
 
-If your software is not multi-tenanted then please talk to us about how to programmatically generate api keys for each of your instances. Ideally you should have only one production key but in some software architectures it may make sense to generate API keys for each instance of your production software.
+If your software is not multi-tenanted then please talk to us about how to programmatically generate API keys for each of your instances. Ideally you should have only one production key but in some software architectures it may make sense to generate API keys for each instance of your production software.
 
 ::: danger
-Your api key is sensitive data and should be treated as such. With it, personal information about the sessions your users have created in SuperAPI can be read. Ensure it is not checked into your source code repository.
+Your API key is sensitive data and should be treated as such. With it, personal information about the sessions your users have created in SuperAPI can be read. Ensure it is not checked into your source code repository.
 :::
 
 #### What is the sandbox?
 
-Sandboxed instances of SuperAPI are made for development and testing purposes. Sandboxed instances have the same functionality as non sandboxed (production) instances. Sandboxed instances are restricted from interacting with external services, such as Super Fund & ATO services. This protects your development & testing environments from accidentally interacting with any external production systems.
+Sandboxed instances of SuperAPI are made for development and testing purposes. Sandboxed instances have the same functionality as non-sandboxed (production) instances. Sandboxed instances are restricted from interacting with external services, such as super fund & ATO services. This protects your development & testing environments from accidentally interacting with any external production systems.
 
 This does not impact how you can integrate with SuperAPI, as any required external services are mocked to enable the required functionality within the sandbox. Only the experience that users will have when going through a super selection flow is impacted.
 
@@ -108,7 +108,7 @@ sequenceDiagram
 
 ## Our REST endpoints
 
-All calls to our Rest endpoints will return the same structured metadata, this is represented as:
+All calls to our REST endpoints will return the same structured metadata, this is represented as:
 
 | Field   | Kind   | Description                                                                                                  |
 | ------- | ------ | ------------------------------------------------------------------------------------------------------------ |
@@ -117,7 +117,7 @@ All calls to our Rest endpoints will return the same structured metadata, this i
 
 ## Employer setup process
 
-Each new employer must be setup in SuperAPI before they can begin onboarding their employees. Setting up an employer is a two step process. First the employer must be created via the API. Then the employer embed must be presented to a user of the employer so they can configure their employer settings.
+Each new employer must be setup in SuperAPI before they can begin onboarding their employees. Setting up an employer is a two-step process. First the employer must be created via the API. Then the employer embed must be presented to a user of the employer so they can configure their employer settings.
 
 ### Overview
 
@@ -165,7 +165,7 @@ classDiagram
     class Employers {
         +int id
     }
-    SuperAPI "1" -- "1" EmployerSuperAPIEmployers : linked via Rest API
+    SuperAPI "1" -- "1" EmployerSuperAPIEmployers : linked via REST API
     EmployerSuperAPIEmployers "1" -- "*" Employers : internal link via foreign key
 ```
 
@@ -175,9 +175,9 @@ Once you are ready to create employers, please see the documentation on how to [
 
 ## Onboarding session
 
-The process of onboarding a new employee with SuperAPI is a two step process. First an onboarding session is created, then the employee is presented with the employee embed (iframe), via which they can complete their super selection.
+The process of onboarding a new employee with SuperAPI is a two-step process. First an onboarding session is created, then the employee is presented with the employee embed (iframe), via which they can complete their super selection.
 
-It is assumed that the SuperAPI super selection step is **not** the first step within your employee onboarding process. Based on this assumption, it is also assumed that you will bootstrap the the onboarding session with employee details that have been collected through the other steps in your employee onboarding journey. The employee details you provide to the onboarding session will be use to prefill any details the employee is required to enter. Some functionality within the employee onboarding session is dependent on employee details (such as stapling / presenting existing super funds) but these features will gracefully degrade if the employee details are not provided (or are invalid).
+It is assumed that the SuperAPI super selection step is **not** the first step within your employee onboarding process. Based on this assumption, it is also assumed that you will bootstrap the onboarding session with employee details that have been collected through the other steps in your employee onboarding journey. The employee details you provide to the onboarding session will be used to prefill any details the employee is required to enter. Some functionality within the employee onboarding session is dependent on employee details (such as stapling / presenting existing super funds) but these features will gracefully degrade if the employee details are not provided (or are invalid).
 
 Unlike the employer embed, the onboarding session is ephemeral. It is expected that a user will have at least one onboarding session but may have more. For example, you may want to require the user to come back to your system to make another super selection after a year to ensure they are making optimal choices about the super fund that they use. In this case, the employee would have two onboarding sessions, each a year apart.
 
@@ -228,7 +228,7 @@ classDiagram
     class Employee {
         +int id
     }
-    SuperAPI "1" -- "1" SuperAPIOnboardingSession : linked via Rest API
+    SuperAPI "1" -- "1" SuperAPIOnboardingSession : linked via REST API
     SuperAPIOnboardingSession "1" -- "*" Employee : internal link via foreign key
 ```
 
@@ -240,4 +240,4 @@ Please see the [list of webhooks](/software_partners/references/list_of_webhooks
 
 ## Payloads
 
-For detailed information on the data that is sent to and from the API, please view our [live swagger spec](https://api.superapi.com.au/swaggerui),
+For detailed information on the data that is sent to and from the API, please view our [live Swagger spec](https://api.superapi.com.au/swaggerui).

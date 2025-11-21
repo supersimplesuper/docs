@@ -1,6 +1,6 @@
 # Creating and working with employers
 
-One of the core concepts in SuperAPI is that of an employer. The employer entity represents the owner of a business and as such, all actions related to a business will involved this employer entity in some form. In your system this may be called a "business" or "organisation" but the concept is the same.
+One of the core concepts in SuperAPI is that of an employer. The employer entity represents the owner of a business and as such, all actions related to a business will involve this employer entity in some form. In your system this may be called a "business" or "organisation" but the concept is the same.
 
 Some of the actions in SuperAPI that require an employer are:
 
@@ -18,7 +18,7 @@ To create an employer in the system, at least three pieces of information are re
 
 1. The `abn` - This is the Australian Business Number (ABN) that this company is registered with at the ATO.
 2. A `name` - The name of this company
-3. A `remote_id` - The unique id of the employer (organisation, business, company etc) in your database. This is returned to you in webhook events so you can easily identify the record that the webhook is referencing.
+3. A `remote_id` - The unique ID of the employer (organisation, business, company, etc.) in your database. This is returned to you in webhook events so you can easily identify the record that the webhook is referencing.
 4. A `product_id` - The id of the product that you are creating the employer under.
 
 ::: info
@@ -49,7 +49,7 @@ curl -X POST https://api.superapi.com.au/api/v1/employer \
 Make sure you replace your `x-api-key` with the product key that has been given to you.
 :::
 
-After submitting the request above, you will be returned an employer object. It is a good idea to store that data against the record that it was created in your system. An example how how we do this is:
+After submitting the request above, you will be returned an employer object. It is a good idea to store that data against the record that it was created in your system. An example of how we do this is:
 
 ```mermaid
 classDiagram
@@ -89,27 +89,27 @@ curl -X POST https://api.superapi.com.au/api/v1/employer/:id/generate-embed-url 
 To configure the embed you have three parameters you can use, they are:
 
 - `app` - This controls the app that is launched in the embed when called. Currently we only support `super_settings` but plan to add additional apps in the future.
-- `session_id` - This is similar to a cookie and is used in our system to provide "state" for the user of the app. Set this to something unique for the user in your system like users primary key id in your users table.
-- `valid_until` - At what point in the future that this embed will stop working. This should not exceed more than 2 hours, nor set in the past. It can be very short as the validation is performed only when connecting for the first time, existing embeds that are still open do not expire when this time is up. Beware that Chrome is very fond of automatically reloading pages in the background (including iFrames) so this can cause a connection error.
+- `session_id` - This is similar to a cookie and is used in our system to provide "state" for the user of the app. Set this to something unique for the user in your system like user's primary key ID in your users table.
+- `valid_until` - At what point in the future that this embed will stop working. This should not exceed more than 2 hours, nor set in the past. It can be very short as the validation is performed only when connecting for the first time; existing embeds that are still open do not expire when this time is up. Beware that Chrome is very fond of automatically reloading pages in the background (including iFrames) so this can cause a connection error.
 
 ::: info
 Make sure you set a `valid_until` within a 2 hour window in the future and set to the UTC timezone.
 :::
 
-Typically you would want to create these embed URLs on page load. I.e. each time an employer loads the page, you create a use a new embed url. As such, the `valid_until` must be a max of two hours. Consider how long it will take the employer to interact with the page (including getting up going for a break before coming back!). Google Chrome also has a tendency to unload pages in background tabs and reload them when the user returns to the page. A `valid_until` which is too low will cause an error when this happens.
+Typically you would want to create these embed URLs on page load. I.e. each time an employer loads the page, you create and use a new embed URL. As such, the `valid_until` must be a max of two hours. Consider how long it will take the employer to interact with the page (including getting up going for a break before coming back!). Google Chrome also has a tendency to unload pages in background tabs and reload them when the user returns to the page. A `valid_until` which is too low will cause an error when this happens.
 
 ::: danger
-Generated URLs are sensitive. Anyone with access to the URL is authenticated as if they were the logged in user. Don't store generated URLs in the database.
+Generated URLs are sensitive. Anyone with access to the URL is authenticated as if they were the logged-in user. Don't store generated URLs in the database.
 :::
 
-One you have the generated URL, [take a look at our JavaScript library](https://github.com/supersimplesuper/super-api-embed) which is designed to make it easy to work with them in the browser.
+Once you have the generated URL, [take a look at our JavaScript library](https://github.com/supersimplesuper/super-api-embed) which is designed to make it easy to work with them in the browser.
 
 ## Bulk setup of employers
 
 If you're adding SuperAPI to an existing system, you can automatically set up multiple employers with their default super fund details in one go. This eliminates the need for manual configuration by each employer before they can start using features like employee onboarding.
 
 :::warning
-We don't hardcode rate limits on our API but if you're setting up thousands of employers on one go, please use a sensible rate limit (~5 per second)
+We don't hardcode rate limits on our API but if you're setting up thousands of employers in one go, please use a sensible rate limit (~5 per second)
 :::
 
 To create an employer with pre-configured default fund details:

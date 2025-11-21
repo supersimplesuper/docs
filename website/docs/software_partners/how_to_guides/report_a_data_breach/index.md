@@ -4,7 +4,7 @@ In the event your system suffers a data breach, you must notify SuperAPI without
 
 To report the breach, please email security@superapi.com.au and include the following details (where known):
 
-* A summary of the incident, including the nature of the breach (e.g., unauthorised access, accidental disclosure, etc.)
+* A summary of the incident, including the nature of the breach (e.g., unauthorised access, accidental disclosure, etc.).
 * Date and time the breach was detected
 * Systems and data affected (including any employers and/or employees impacted)
 * Approximate number of records involved
