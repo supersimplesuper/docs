@@ -22,7 +22,7 @@ Users must have individual logins. Shared credentials aren’t allowed and shoul
 
 ## Session time-out after inactivity
 
-Sessions must auto-lock after a maximum of 30 minutes idle time. This lockout can be a screen lock - no need for full MFA to resume activity.
+Sessions must auto-lock after a maximum of 30 minutes idle time. This lockout can be a screen lock—no need for full MFA to resume activity.
 
 ## ‘Remember me’ lasts no longer than 24 hours
 
@@ -30,7 +30,7 @@ If your app includes a "remember me" or persistent login feature, it must expire
 
 ## Brute-force protection kicks in after 5 failed attempts
 
-After five unsuccessful login attempts, your system must trigger a lockout event. The exact lockout method is up to you - we just require that it happens.
+After five unsuccessful login attempts, your system must trigger a lockout event. The exact lockout method is up to you—we just require that it happens.
 
 ## Tokens must be short-lived and device-bound
 

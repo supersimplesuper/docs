@@ -4,9 +4,9 @@ outline: deep
 
 # How to activate automated super stapling with SuperAPI
 
-To activate automated super stapling you must assign "SuperAPI Pty Ltd" as an appointed business to access ATO Online Services on your behalf (via API). This appointment is setup via ATO Access Manager, using your MyGovID.
+To activate automated super stapling you must assign "SuperAPI Pty Ltd" as an appointed business to access ATO Online Services on your behalf (via API). This appointment is set up via ATO Access Manager, using your MyGovID.
 
-In order to setup the appointment you must have "Principal Authority" or "Authorisation administrator" privileges within the business entity.
+In order to set up the appointment you must have "Principal Authority" or "Authorisation administrator" privileges within the business entity.
 
 > **Note:** These instructions will activate both TFN Declarations & Super Stapling.
 
@@ -20,7 +20,7 @@ In order to setup the appointment you must have "Principal Authority" or "Author
 
 ### 2: Select your business entity
 
-- If you have access to multiple companies, select which company you'd like to authorise for Super Stapling and _click_ **"Continue"**
+- If you have access to multiple companies, select which company you'd like to authorise for Super Stapling and _click_ **"Continue"**.
 
 ### 3: Appoint a new business
 
@@ -34,7 +34,7 @@ In order to setup the appointment you must have "Principal Authority" or "Author
 
 - Scroll down to **"Employee Commencement Form"**
 - _Check_ all three boxes, **"View"**, **"Prepare"**, **"Lodge"**
-- _click_ **"Save"**
+- _Click_ **"Save"**
 - You should now see "SuperAPI Pty Ltd" under your appointed businesses
 
 ![Step 4: Assign Permissions](am-ato-access-manager-options-small.png)
@@ -44,8 +44,8 @@ In order to setup the appointment you must have "Principal Authority" or "Author
 ### 5: Success
 
 - You should now see **"SuperAPI Pty Ltd"** under your appointed businesses.
-- To verify that super stapling has been succesfully authorisation return to **"Employer Setup"** and _click_ the **"Check stapling activation"**.
-- You've now successfully setup super stapling
+- To verify that super stapling has been successfully authorised, return to **"Employer Setup"** and _click_ **"Check stapling activation"**.
+- You've now successfully set up super stapling
 
 ![Step 5: Success](ato-stapling-api-permission-step-6-success-2.png)
 
@@ -53,7 +53,7 @@ In order to setup the appointment you must have "Principal Authority" or "Author
 
 ### Unable to access ATO Access Manager?
 
-If you receive an error when attempting to login to ATO Access Manager then you do not have the required authorisations. You can login to the [Resource Authorisation Manager (RAM)](https://authorisationmanager.gov.au/) to view your privileges. To login to ATO Access Manager you will require the role of "Principal Authority" or "Authorisation administrator". You will also require "Full" level of access to the "Australian Tax Office (ATO)".
+If you receive an error when attempting to log in to ATO Access Manager then you do not have the required authorisations. You can log in to the [Resource Authorisation Manager (RAM)](https://authorisationmanager.gov.au/) to view your privileges. To log in to ATO Access Manager you will require the role of "Principal Authority" or "Authorisation administrator". You will also require "Full" level of access to the "Australian Tax Office (ATO)".
 
 ### Don't have a MyGovID?
 

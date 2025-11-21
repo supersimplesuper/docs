@@ -4,7 +4,7 @@ In [some situations](/software_partners/explanations/product_vs_partner_api_keys
 
 ## Step 1
 
-To perform these steps, you'll need to have access to a partner API key, first, test if it works by fetching information about the partner the key is linked to:
+To perform these steps, you'll need to have access to a partner API key. First, test if it works by fetching information about the partner the key is linked to:
 
 ```bash
 curl -X GET https://api.superapi.com.au/api/v1/partner \
@@ -61,7 +61,7 @@ This will create the product entity, similar to:
 
 ## Step 3
 
-Now the next step is to request an API key for that product. As we don't have an API key for our product yet, we must use our partner API key to also create the product API key, that can be done with:
+Now the next step is to request an API key for that product. As we don't have an API key for our product yet, we must use our partner API key to also create the product API key; that can be done with:
 
 ```bash
 curl -X POST https://api.superapi.com.au/api/v1/partner/product/:id/product-api-key \
@@ -79,7 +79,7 @@ Ensure you protect this API key! Do not check it into your source code control.
 
 ## Step 4
 
-Once your dynamically created product is provisioned then the last step is to take it out of the sandbox so it can be used. This can be achieved by updating the product using the partner api key.
+Once your dynamically created product is provisioned, the last step is to take it out of the sandbox so it can be used. This can be achieved by updating the product using the partner API key.
 
 ```bash
 curl -X PUT https://api.superapi.com.au/api/v1/partner/product/:id \
@@ -91,5 +91,5 @@ curl -X PUT https://api.superapi.com.au/api/v1/partner/product/:id \
 ```
 
 ::: warning
-Once the product has left the sandbox then requests to the ATO and SuperFund APIs will no longer be mocked!
+Once the product has left the sandbox then requests to the ATO and super fund APIs will no longer be mocked!
 :::

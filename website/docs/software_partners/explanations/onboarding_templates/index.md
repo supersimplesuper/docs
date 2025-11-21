@@ -2,7 +2,7 @@
 
 Some features of [onboarding sessions](/software_partners/how_to_guides/work_with_onboarding_sessions/index.html) require an onboarding template to unlock additional functionality. An onboarding template is a reusable configuration for an onboarding session. It allows an employer to specify additional requirements (like extra documents to upload or custom questions to answer) for a particular type of employee or role. For example, imagine a childcare onboarding an employee who drives the bus. You would want to collect details like:
 
-* An appropriate drivers license
+* An appropriate driver's license
 * A working with children's check
 * A question form to capture the driver's measurements for a uniform.
 

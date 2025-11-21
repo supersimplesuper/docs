@@ -4,13 +4,13 @@ For employees to start onboarding in SuperAPI, the employer record must be confi
 
 ## The `onboarding_status` field
 
-This field indicates the overall status of the employers readiness for accepting onboarding and can be used as a "general indicator" in your system for the user to take action.
+This field indicates the overall status of the employer's readiness for accepting onboarding and can be used as a "general indicator" in your system for the user to take action.
 
 The `onboarding_status` can be in three states, they are:
 
 - `complete` - This indicates that all configuration is in a good state and users onboarding will have the best possible experience.
 - `incomplete` - Onboarding can proceed but not all settings are correctly configured for the best user experience. For example, if we're unable to perform stapling requests due to authorisation errors, this will be set to `incomplete`.
-- `error` - Critical information is missing and we cannot onboard employees. This state is rare but will occur if a critical setting like the employers default fund has not been selected.
+- `error` - Critical information is missing and we cannot onboard employees. This state is rare but will occur if a critical setting like the employer's default fund has not been selected.
 
 When an `onboarding_status` is not in the `complete` state, you should redirect the user to a page which [loads the employer embed](/software_partners/how_to_guides/create_an_employer/index.html#showing-the-employer-embed) for them. We will detect the current state that the employer is in and provide instructions for them to fix things so that onboardings can resume smoothly.
 
@@ -28,10 +28,10 @@ This field is present as an object on the employer and can be used to present mo
 }
 ```
 
-Each field will be set to either true or false depending on the configuration on the employer. We may also expand these the fields returned over time (but will never remove any existing fields). These fields represent:
+Each field will be set to either true or false depending on the configuration on the employer. We may also expand these fields returned over time (but will never remove any existing fields). These fields represent:
 
 - `default_fund_configured` - Has a default fund been configured for this employer? This is critical to allowing onboardings.
-- `stapling_enabled` - Have stapling requests been enabled for this employer? Stapling requests are used to lookup information from the ATO about the employees fund and can greatly improve the onboarding experience.
-- `tfnd_enabled` - Have TFND (tax filed number declarations) requests been enabled for the employer? TFNDs are used in conjunction with the stapling to obtain the employees stapled super fund.
+- `stapling_enabled` - Have stapling requests been enabled for this employer? Stapling requests are used to lookup information from the ATO about the employee's fund and can greatly improve the onboarding experience.
+- `tfnd_enabled` - Have TFND (tax filed number declarations) requests been enabled for the employer? TFNDs are used in conjunction with the stapling to obtain the employee's stapled super fund.
 
-Again, the use of these fields are optional but are present to enable the customisation of an error message about the state of the employers `onboarding_status`.
+Again, the use of these fields are optional but are present to enable the customisation of an error message about the state of the employer's `onboarding_status`.

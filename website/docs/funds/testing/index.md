@@ -1,12 +1,12 @@
 # Testing your integration with SuperAPI  
 
-This guide explains how to test your fund’s integration with the SuperAPI platform. You can test all integrations and flows through this method.  
+This guide explains how to test your fund's integration with the SuperAPI platform. You can test all integrations and flows through this method.  
 
 Although tests run in our sandbox environment, everything you see mirrors the production system. The only difference is that external systems (e.g. the ATO Stapling API) return simulated responses and no real-world changes occur.  
 
 ## Testing using Postman  
 
-We’ll provide you with a [Postman collection](https://www.postman.com/) pre-configured to use a dedicated SuperAPI testing account. By adjusting the data you send, you can create onboarding session scenarios that mimic what an employee will experience. These scenarios cover all our integrations (retain, promoted default and grow tiles).  
+We'll provide you with a [Postman collection](https://www.postman.com/) pre-configured to use a dedicated SuperAPI testing account. By adjusting the data you send, you can create onboarding session scenarios that mimic what an employee will experience. These scenarios cover all our integrations (retain, promoted default, and grow tiles).  
 
 ## Setting a default fund  
 

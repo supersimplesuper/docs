@@ -60,7 +60,7 @@ This entity requires a `remote_id` field which can be used to map back to your s
 
 ### Onboarding session
 
-The onboarding session represents a one off workflow that can be given to a user to perform actions in the SuperAPI system via the embed. These actions include actions like selecting a bank account, validating a phone and nominating a superannuation fund to make contributions to.
+The onboarding session represents a one-off workflow that can be given to a user to perform actions in the SuperAPI system via the embed. These actions include actions like selecting a bank account, validating a phone, and nominating a superannuation fund to make contributions to.
 
 ::: info
 This entity requires a `remote_id` field which can be used to map back to your system.
@@ -68,7 +68,7 @@ This entity requires a `remote_id` field which can be used to map back to your s
 
 ## Tracking SuperAPI entities in your system
 
-We highly suggest creating new database tables to track the "join" between the entities in your system (employers, employees) and the entities in SuperAPI. This provides a convenient indicator that the join between the systems as been created and allows you to store SuperAPI related information in a way that does not pollute the primary models in your system.
+We highly suggest creating new database tables to track the "join" between the entities in your system (employers, employees) and the entities in SuperAPI. This provides a convenient indicator that the join between the systems has been created and allows you to store SuperAPI related information in a way that does not pollute the primary models in your system.
 
 For example, to model the relationship between employers in your system and SuperAPI, your database could look like:
 

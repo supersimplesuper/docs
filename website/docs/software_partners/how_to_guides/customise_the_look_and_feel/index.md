@@ -1,6 +1,6 @@
 # Customising the look and feel
 
-SuperAPI is designed to blend seamlessly into your product. Our goal is for users of your software to have no idea where your product stops and SuperAPI begins. For example, in the screenshot of our Xonboard product below, it is almost impossible to tell where Xonboard ends and SuperAPI begins unless you are familiar with the SuperAPI embeds already:
+SuperAPI is designed to blend seamlessly into your product. Our goal is for users of your software to have no idea where your product stops and SuperAPI begins. For example, in the screenshot of our Xonboard product below; it is almost impossible to tell where Xonboard ends and SuperAPI begins unless you are familiar with the SuperAPI embeds already:
 
 ![SuperAPI embed in Xonboard](./images/embed_in_xonboard.png)
 
@@ -20,7 +20,7 @@ We cannot allow full control such as uploading your own stylesheet, as we need t
 To help you understand what can be changed, and to make the process straightforward, [we provide a REST endpoint](https://swagger.superapi.com.au/#/partner/superapiweb.api.v1.partners.customthemecontroller.post) that allows you to define variables in the system. This endpoint lists the variables available and explains which parts of the UI each one affects.
 
 :::info
-Behind the scenes these settings map to variables in our CSS stylesheet. You do not need to set every value, as we provide a base theme that your customisations build on.
+Behind the scenes, these settings map to variables in our CSS stylesheet. You do not need to set every value, as we provide a base theme that your customisations build on.
 :::
 
 When you update these variables, the changes are deployed immediately to all products in your partner system.

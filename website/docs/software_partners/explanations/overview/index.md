@@ -4,7 +4,7 @@ outline: deep
 
 # SuperAPI Partner Implementation Overview
 
-The following document provides a high level overview of the integration between SuperAPI and the 3rd party software that is embedding the SuperAPI. It is not intended to be an in-depth guide on how to integrate our product, rather, it serves to help developers understand the scope of SuperAPI and to begin to plan what effort is needed for integrating the SuperAPI.
+The following document provides a high-level overview of the integration between SuperAPI and the 3rd party software that is embedding the SuperAPI. It is not intended to be an in-depth guide on how to integrate our product; rather, it serves to help developers understand the scope of SuperAPI and to begin to plan what effort is needed for integrating the SuperAPI.
 
 ## Introduction
 
@@ -48,12 +48,12 @@ In Australia these entities collectively comprise the industry infrastructure an
 
 ## Data transport and communication
 
-Before delivering into specifics, you should understand the flow and format of data that is sent between the SuperAPI and the **3rd Party Software**. The following diagram outlines the process of a **Employee** making a super selection in a **Super Selection Session**.
+Before delivering into specifics, you should understand the flow and format of data that is sent between the SuperAPI and the **3rd Party Software**. The following diagram outlines the process of an **Employee** making a super selection in a **Super Selection Session**.
 
 ```mermaid
 sequenceDiagram
     3rd Party Software->>SuperApi: Request a selection session for user
-    SuperApi->>3rd Party Software: Selection session created and and ID returned
+    SuperApi->>3rd Party Software: Selection session created and an ID returned
     3rd Party Software->>User: User is loaded into a widget to make a selection
     User->>User: User completes details about their super choice
     User->>3rd Party Software: On completion an event is sent so the widget can be closed
@@ -70,11 +70,11 @@ Message payloads are JSON with timestamps encoded as strings in UTC ISO8601 form
 
 In most cases, the **Employee** will select a super fund that they are already a member of. In the event they are new to the workforce or they opt to change their super fund, a new registration is created with the super fund. In all cases we validate the provided member number before returning it to the **3rd Party Software**.
 
-If a user is joining a new super fund or changing super funds, the creation of a new member in a superfund is an asynchronous process that can take anywhere from 5 minutes to a few days. As a result, you must plan to receive member data in the future for a **Employee** rather than when the **Employee** completes the **Super Selection Session** in your application.
+If a user is joining a new super fund or changing super funds, the creation of a new member in a superfund is an asynchronous process that can take anywhere from 5 minutes to a few days. As a result, you must plan to receive member data in the future for an **Employee** rather than when the **Employee** completes the **Super Selection Session** in your application.
 
 ### Super selection sessions
 
-A **Super Selection Session** represents a choice made by a **Employee** for the super fund that they want to use. Please don’t confuse this with a browser session, rather, the **3rd Party Software** will create this session by calling the SuperAPI which will return a UUID which can then be given to our **SuperAPI JavaScript Library** which is embedded in your frontend. Once created, we guide the user on a journey to either find their current super fund or to pick a new super fund.
+A **Super Selection Session** represents a choice made by an **Employee** for the super fund that they want to use. Please don’t confuse this with a browser session; rather, the **3rd Party Software** will create this session by calling the SuperAPI which will return a UUID which can then be given to our **SuperAPI JavaScript Library** which is embedded in your frontend. Once created, we guide the user on a journey to either find their current super fund or to pick a new super fund.
 
 ### Super selection use cases
 
@@ -82,11 +82,11 @@ We support the entry, validation, and submission of member details from all exis
 
 Additionally, we have solved for the increasingly complex regulatory overlay that applies in the event that the **Employee** wants to join a new super fund. All super funds who are approved by The Australian Prudential Regulatory Authority (APRA) to accept public members can be joined. Note that each year APRA will release a [heat map](https://www.apra.gov.au/superannuation-heatmaps) of Super fund performance which will blacklist some super funds from accepting new members and re-approve previously black-listed super funds. SuperAPI is automatically updated to reflect these changes.
 
-It is worth noting that a self managed super fund (SMSF) is a regulated financial entity that must be created by an Australian Registered Tax Agent. As such a **Employee** can not create a new self managed super fund through our software or any other employment onboarding software solution.
+It is worth noting that a self managed super fund (SMSF) is a regulated financial entity that must be created by an Australian Registered Tax Agent. As such an **Employee** can not create a new self managed super fund through our software or any other employment onboarding software solution.
 
 **Super Selection Sessions** might not always resolve immediately. It is common for us to have captured all the required information we need from a user but require time for the various backend systems of either the ATO or super funds to consolidate and return data to us before we can complete the process.
 
-In the event that a user fails to make a super selection then a series of government mandated fallbacks occur. The purpose of these fallbacks is to ensure that a **Employee** will always have an available super account for payments. These fallbacks are, in order:
+In the event that a user fails to make a super selection then a series of government mandated fallbacks occur. The purpose of these fallbacks is to ensure that an **Employee** will always have an available super account for payments. These fallbacks are, in order:
 
 1. The **Users** stapled super fund, as designated by the ATO.
 2. The employer's default super fund.
@@ -101,9 +101,9 @@ Every employer must nominate a [default super fund](https://www.ato.gov.au/Busin
 
 ### Returning users
 
-In some cases, a **Employee** must return to the SuperAPI to take further actions. If this occurs an email will be sent to the user with a link that they can use to return to your site to complete the process. To allow a user to recall to your site, they must be sent to a page that they can access. This can be either a page protected by your authentication system or a public facing page.
+In some cases, an **Employee** must return to the SuperAPI to take further actions. If this occurs an email will be sent to the user with a link that they can use to return to your site to complete the process. To allow a user to recall to your site, they must be sent to a page that they can access. This can be either a page protected by your authentication system or a public facing page.
 
-A **Employee** returning to complete additional details are authenticated by a magic link sent to either their email address or mobile number. If a **Employee** does not receive a magic link for login (i.e. it has gone to a spam folder) then they can rerequest the link to be sent after a small duration of time. A request to resend the magic link is triggered from within the embed (but before any sensitive information is revealed). We provide instructions on the authentication request page about what we are doing when sending the magic link and how to find the link if it does not arrive (i.e. checking your spam folder).
+An **Employee** returning to complete additional details are authenticated by a magic link sent to either their email address or mobile number. If an **Employee** does not receive a magic link for login (i.e. it has gone to a spam folder) then they can rerequest the link to be sent after a small duration of time. A request to resend the magic link is triggered from within the embed (but before any sensitive information is revealed). We provide instructions on the authentication request page about what we are doing when sending the magic link and how to find the link if it does not arrive (i.e. checking your spam folder).
 
 The email used to send the notification can be configured to use an email address hosted on your domain (appropriate SPF/DKIM records will need to be configured) or can originate from our domain.
 
@@ -126,7 +126,7 @@ The embed itself is responsive and will accommodate mobile, tablet and desktop d
 
 The embed is used in a number of places in your app. They are:
 
-1. When a **Employee** needs to make a super selection or perform another super related action (like a KYC or “Know Your Customer” action so they can consolidate funds across multiple super funds into one).
+1. When an **Employee** needs to make a super selection or perform another super related action (like a KYC or “Know Your Customer” action so they can consolidate funds across multiple super funds into one).
 2. When an employer needs to choose a default fund for their organisation.
 3. In a location that users can be recalled to make further required changes.
 
@@ -154,9 +154,9 @@ The following is an overview of the touchpoints between the SuperAPI system, the
 
 | Touchpoint                                      | Action                                                                                        | Security controls                                                                     |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| **3rd Party Software** to SuperAPI              | Creating a new **Super Selection Session** for a **Employee**                                 | Secured by SSL/TLS, an **API Key** must be provided by the **3rd Party Software**     |
+| **3rd Party Software** to SuperAPI              | Creating a new **Super Selection Session** for an **Employee**                                | Secured by SSL/TLS, an **API Key** must be provided by the **3rd Party Software**     |
 | Webhook from SuperAPI to **3rd Party Software** | **Employee** completed a **Super Selection Session** and data is being returned.              | Secured by SSL/TLS, a preshared token is included in the payload to prevent spoofing. |
-| SuperAPI embed                                  | **3rd Party Software** is embedding the SuperAPI so a **Employee** can make a super selection | Secured by SSL/TLS, the query string used to create the iFrame is signed via HMAC.    |
+| SuperAPI embed                                  | **3rd Party Software** is embedding the SuperAPI so an **Employee** can make a super selection | Secured by SSL/TLS, the query string used to create the iFrame is signed via HMAC.    |
 
 ### Privacy, GDPR and CDR
 

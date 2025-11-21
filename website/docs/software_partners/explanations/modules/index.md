@@ -70,7 +70,7 @@ We are always updating and adding new modules, and when you integrate with Super
 
   <a class="module-card" href="superannuation_choice.html">
     <h3>Superannuation choice</h3>
-    <p>Collect fund validated superaunnation details</p>
+    <p>Collect fund validated superannuation details</p>
     <span class="module-more">More →</span>
   </a>
 </div>

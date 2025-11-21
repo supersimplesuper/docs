@@ -7,7 +7,7 @@ This document will be more useful to:
 - Software engineers or engineering managers working at super funds.
 - Stakeholders who need to understand the scope of work involved in implementing SuperAPI.
 
-## What is Super API?
+## What is SuperAPI?
 
 SuperAPI connects super funds to HR and payroll software, allowing employees to make their superannuation choice quickly and securely during onboarding.
 
@@ -61,9 +61,9 @@ The process runs as follows:
 4. The employee chooses to stay with the fund.
 5. SuperAPI returns the existing membership data to the third‑party software.
 
-### Fund retention
+### Member creation
 
-The following diagram shows how a member is retained with a fund that has integrated to SuperAPI.
+The following diagram shows how a new member is registered with a fund that has integrated to SuperAPI.
 
 ```mermaid
 sequenceDiagram
@@ -94,7 +94,7 @@ When your fund integrates with SuperAPI, its branding is presented exactly as sp
 
 ### Implementation timeline
 
-Where APIs for member lookup and creation already exist, a SuperAPI integration can usually be completed in a few weeks. If new endpoints or changes to authentication are needed, additional time will be required. We will agree a detailed plan and timeline with your technical team during project initiation.
+Where APIs for member lookup and creation already exist, a SuperAPI integration can usually be completed in a few weeks. If new endpoints or changes to authentication are needed, additional time will be required. We will agree on a detailed plan and timeline with your technical team during project initiation.
 
 ## Security
 
@@ -120,4 +120,4 @@ Data are stored solely in Australian data centres certified to ISO 27001 or an
 
 ## Support
 
-If you need to contact us for support, questions or anything at all related to the integration of your fund into SuperAPI, please reach out to support@superapi.com.au or simply call us, 0405 472 748.
+If you need to contact us for support, questions or anything at all related to the integration of your fund into SuperAPI, please reach out to support@superapi.com.au or simply call us on 0405 472 748.
