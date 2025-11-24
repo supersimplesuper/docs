@@ -8,6 +8,9 @@ We are always updating and adding new modules, and when you integrate with Super
 
 <div class="modules-grid">
   <a class="module-card" href="welcome_videos.html">
+    <div class="module-badges">
+      <span class="badge badge-premium">Premium</span>
+    </div>
     <h3>Welcome videos</h3>
     <p>Display welcome, training and policy videos as part of onboarding</p>
     <span class="module-more">More →</span>
@@ -34,6 +37,7 @@ We are always updating and adding new modules, and when you integrate with Super
   <a class="module-card" href="e_sign.html">
     <div class="module-badges">
       <span class="badge badge-beta">Beta</span>
+      <span class="badge badge-premium">Premium</span>
     </div>
     <h3>E-sign</h3>
     <p>Collect signatures on custom documents.</p>
@@ -54,7 +58,7 @@ We are always updating and adding new modules, and when you integrate with Super
 
   <a class="module-card" href="document_uploads.html">
     <div class="module-badges">
-      <!--<span class="badge badge-premium">Premium</span>-->
+      <span class="badge badge-premium">Premium</span>
     </div>
     <h3>Document uploads</h3>
     <p>Collect required documents from the employee onboarding</p>
@@ -78,6 +82,9 @@ We are always updating and adding new modules, and when you integrate with Super
 
 <div class="modules-grid">
   <div class="module-card" href="welcome_videos.html">
+    <div class="module-badges">
+      <span class="badge badge-premium">Premium</span>
+    </div>
     <h3>Policy attestations</h3>
     <p>Upload custom policies that employees can agree to when onboarding.</p>
   </div>

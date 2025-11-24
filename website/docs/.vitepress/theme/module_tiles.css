@@ -86,9 +86,13 @@
 }
 
 .badge-beta {
-  background: #3e46c5;
+  background: linear-gradient(180deg, #3e46c5 0%, #565dff 100%);
 }
 
 .badge-pay {
-  background: #ff4375;
+  background: linear-gradient(135deg, #ff4375 0%, #ff6b9a 100%);
+}
+
+.badge-premium {
+  background: linear-gradient(135deg, #D4A017 0%, #F2C451 100%);
 }
