@@ -41,6 +41,7 @@ This page contains documentation designed to help our software partners integrat
 
 - How does an employer [activate stapling](/software_partners/how_to_guides/stapling-setup-instructions/index.html) in the access manager?
 - How do I [report a data breach](/software_partners/how_to_guides/report_a_data_breach/index.html) to SuperAPI?
+- How do I [show fair work statements](/software_partners/how_to_guides/show_fair_work_statements/index.html) to employees?
 
 ## Explanations
 
