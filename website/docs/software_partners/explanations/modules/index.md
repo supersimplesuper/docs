@@ -34,7 +34,6 @@ We are always updating and adding new modules, and when you integrate with Super
   <a class="module-card" href="e_sign.html">
     <div class="module-badges">
       <span class="badge badge-beta">Beta</span>
-      <!--<span class="badge badge-premium">Premium</span>-->
     </div>
     <h3>E-sign</h3>
     <p>Collect signatures on custom documents.</p>
@@ -83,11 +82,17 @@ We are always updating and adding new modules, and when you integrate with Super
     <p>Upload custom policies that employees can agree to when onboarding.</p>
   </div>
   <div class="module-card" href="welcome_videos.html">
+    <div class="module-badges">
+      <span class="badge badge-pay">Pay per use</span>
+    </div>
     <h3>VEVO checks</h3>
     <p>Perform VEVO checks against new starters.</p>
   </div>
   <div class="module-card" href="welcome_videos.html">
-    <h3>Policy checks</h3>
+    <div class="module-badges">
+      <span class="badge badge-pay">Pay per use</span>
+    </div>
+    <h3>Police checks</h3>
     <p>Perform police checks against new starters.</p>
   </div>
 </div>
