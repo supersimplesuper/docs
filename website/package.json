@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mermaid": "^11.12.1",
+    "mermaid": "^11.12.2",
     "openapi-to-postmanv2": "^5.5.0",
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "2.0.17"
