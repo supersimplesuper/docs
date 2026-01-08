@@ -48,7 +48,7 @@ In Australia these entities collectively comprise the industry infrastructure an
 
 ## Data transport and communication
 
-Before delivering into specifics, you should understand the flow and format of data that is sent between the SuperAPI and the **3rd Party Software**. The following diagram outlines the process of an **Employee** making a super selection in a **Super Selection Session**.
+Before delving into specifics, you should understand the flow and format of data that is sent between the SuperAPI and the **3rd Party Software**. The following diagram outlines the process of an **Employee** making a super selection in a **Super Selection Session**.
 
 ```mermaid
 sequenceDiagram
