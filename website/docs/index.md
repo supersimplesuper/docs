@@ -4,29 +4,35 @@ layout: home
 
 hero:
   name: "SuperAPI"
-  text: "The future of super is embedded"
-  tagline: "Documentation for software partners (HR, Payroll, Workforce Management)"
+  text: "Documentation"
+  tagline: "Guides, references, and resources for integrating with SuperAPI"
   image:
     src: "glyph.svg"
-    alt: "SuperAPI Embedded Super Ecosystem"
-  actions:
-    - theme: brand
-      text: Get started with SuperAPI
-      link: /software_partners/index.html
+    alt: "SuperAPI"
 
 features:
-  - title: A development ecosystem
-    icon:
-      src: /super-api-ecosystem-vertical-v2.svg
-    details: SuperAPI connects super funds and members at scale, to enable efficiency for employers, employees, and software providers when managing superannuation obligations.
-  - title: Automation of choice
-    icon:
-      src: /super-api-embedded-super-choice-form.svg
-    details: We digitise the super choice form to enable employees to make super choices through an informed process. We reduce invalid choices through automation, validation, and UX that informs users of their decisions and obligations.
-  - title: Power through connection
-    icon:
-      src: /simple-ecosystem-overview.png
-    details: Through productised abstraction, we bring the power of a range of APIs for superannuation together in a single package, which solves the key problems faced by employers.
+  - title: Software Partners
+    details: Guides for embedding employee onboarding, super choice, and compliance into your HR, payroll, or workforce management software.
+    link: /software_partners/index.html
+    linkText: Partner docs
+  - title: Funds
+    details: Integration guides for retaining existing members and growing your membership base at the point of super choice.
+    link: /funds/index.html
+    linkText: Fund docs
+  - title: SuperSend
+    details: Real-time SuperStream payments directly to super funds, bypassing clearing houses for faster contribution processing.
+    link: /supersend/index.html
+    linkText: SuperSend docs
+  - title: Security
+    details: Our security posture, data handling practices, infrastructure, and compliance information.
+    link: /security/index.html
+    linkText: Security docs
+  - title: API Spec
+    details: Interactive Swagger documentation for the full SuperAPI REST API.
+    link: https://api.superapi.com.au/swaggerui
+    linkText: Open API spec
+  - title: Status
+    details: Real-time service health and uptime monitoring for the SuperAPI platform.
+    link: https://status.superapi.com.au
+    linkText: View status
 ---
-
-![Product Overview](/super-api-product-overview-v2.svg "Product Overview")
