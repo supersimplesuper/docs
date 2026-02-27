@@ -34,7 +34,10 @@ You should receive a response like:
 {
   "data": {
     "id": "a334d4cf-5599-4615-9616-991823eabbfb",
-    "name": "YourCompanyName"
+    "name": "YourCompanyName",
+    "slug": "yourcompanyname",
+    "custom_theme": null,
+    "sandboxed": true
   },
   "version": "v1"
 }
@@ -52,7 +55,7 @@ curl -X POST https://api.superapi.com.au/api/v1/partner/product \
   -H "x-api-key: superapipartner_yourkeyhere" \
   -d '{
     "name": "My App",
-    "target_origin": "localhost",
+    "target_origin": "http://localhost",
     "webhook_url": "https://example.com/webhooks/superapi"
   }'
 ```
@@ -60,7 +63,7 @@ curl -X POST https://api.superapi.com.au/api/v1/partner/product \
 Note the `id` from the response as you'll need it in the next step.
 
 ::: info
-`target_origin` is the domain where you'll embed SuperAPI iFrames. For local development, use `localhost`. See the [MDN docs on targetOrigin](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage#targetorigin) for more detail.
+`target_origin` is the origin where you'll embed SuperAPI iFrames. For local development, use `http://localhost`. See the [MDN docs on targetOrigin](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage#targetorigin) for more detail.
 :::
 
 ## Step 3: Create a product API key
@@ -86,7 +89,7 @@ Verify it works:
 ```bash
 curl -X GET https://api.superapi.com.au/api/v1/product \
   -H "Content-Type: application/json" \
-  -H "x-api-key: superapi_yourproductkeyhere"
+  -H "x-api-key: superapiproduct_yourproductkeyhere"
 ```
 
 You should receive a response similar to:
@@ -97,7 +100,7 @@ You should receive a response similar to:
     "id": "bffc9067-28ee-4381-a0f2-92fae25d9f83",
     "name": "My App",
     "slug": "my-app",
-    "target_origin": "localhost",
+    "target_origin": "http://localhost",
     "webhook_url": "https://example.com/webhooks/superapi",
     "sandboxed": true
   },
@@ -112,7 +115,7 @@ Employers represent the businesses using your software. Every onboarding session
 ```bash
 curl -X POST https://api.superapi.com.au/api/v1/employer \
   -H "Content-Type: application/json" \
-  -H "x-api-key: superapi_yourproductkeyhere" \
+  -H "x-api-key: superapiproduct_yourproductkeyhere" \
   -d '{
     "abn": "96878537596",
     "name": "Test Company",
@@ -136,17 +139,17 @@ Generate an embed URL to display this configuration UI:
 ```bash
 curl -X POST https://api.superapi.com.au/api/v1/employer/:id/generate-embed-url \
   -H "Content-Type: application/json" \
-  -H "x-api-key: superapi_yourproductkeyhere" \
+  -H "x-api-key: superapiproduct_yourproductkeyhere" \
   -d '{
     "app": "super_settings",
     "session_id": "test-session-1",
-    "valid_until": "2025-12-31T23:59:59Z"
+    "valid_until": "<UTC timestamp within 2 hours from now>"
   }'
 ```
 
 Replace `:id` with the employer ID from Step 4.
 
-The response contains a `url` field. Open it in a browser to see the employer configuration embed. Use our [JavaScript library](https://github.com/supersimplesuper/super-api-embed) to embed this in your application via iFrame.
+The response contains an `embed_url` field. Open it in a browser to see the employer configuration embed. Use our [JavaScript library](https://github.com/supersimplesuper/super-api-embed) to embed this in your application via iFrame.
 
 ::: warning
 Generated URLs are ephemeral. `valid_until` must be within 2 hours of the current time (UTC). Generated URLs are sensitive and should not be stored in a database.
@@ -159,7 +162,7 @@ Once the employer has configured their settings, you can create onboarding sessi
 ```bash
 curl -X POST https://api.superapi.com.au/api/v1/onboarding-session \
   -H "Content-Type: application/json" \
-  -H "x-api-key: superapi_yourproductkeyhere" \
+  -H "x-api-key: superapiproduct_yourproductkeyhere" \
   -d '{
     "employer": {
       "id": "your-employer-id"
@@ -189,13 +192,13 @@ Generate an embed URL for the onboarding session:
 ```bash
 curl -X POST https://api.superapi.com.au/api/v1/onboarding-session/:id/generate-embed-url \
   -H "Content-Type: application/json" \
-  -H "x-api-key: superapi_yourproductkeyhere" \
+  -H "x-api-key: superapiproduct_yourproductkeyhere" \
   -d '{
-    "valid_until": "2025-12-31T23:59:59Z"
+    "valid_until": "<UTC timestamp within 2 hours from now>"
   }'
 ```
 
-Open the returned `url` in a browser. You'll see the onboarding experience your employees will go through, including super choice, tax details, bank accounts, and whatever other [modules](/software_partners/explanations/modules/index.html) are configured.
+Open the returned `embed_url` in a browser. You'll see the onboarding experience your employees will go through, including super choice, tax details, bank accounts, and whatever other [modules](/software_partners/explanations/modules/index.html) are configured.
 
 ## What happens next?
 
