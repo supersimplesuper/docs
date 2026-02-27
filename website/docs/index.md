@@ -19,10 +19,6 @@ features:
     details: Integration guides for retaining existing members and growing your membership base at the point of super choice.
     link: /funds/index.html
     linkText: Fund docs
-  - title: SuperSend
-    details: Real-time SuperStream payments directly to super funds, bypassing clearing houses for faster contribution processing.
-    link: /supersend/index.html
-    linkText: SuperSend docs
   - title: Security
     details: Our security posture, data handling practices, infrastructure, and compliance information.
     link: /security/index.html
