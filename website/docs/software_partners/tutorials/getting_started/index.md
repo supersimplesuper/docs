@@ -15,7 +15,7 @@ You'll need:
 - A browser to view the employer and onboarding embeds
 
 ::: tip
-All new products start in **sandbox mode**. Sandbox behaves identically to production but will not cause any side effects in the real world. For example, requests to the ATO stapling API and direct super fund integrations are simulated so you can develop safely.
+All new partners start in **sandbox mode**. Sandbox behaves identically to production but will not cause any side effects in the real world. For example, requests to the ATO stapling API and direct super fund integrations are simulated so you can develop safely.
 :::
 
 ## Step 1: Verify your partner key
@@ -129,7 +129,9 @@ The `remote_id` is your internal identifier for this employer (e.g. a primary ke
 
 ## Step 5: Show the employer embed
 
-Before employees can be onboarded, the employer needs to configure their settings. Most importantly, they need to select a default super fund. Generate an embed URL to display this configuration UI:
+Before employees can be onboarded, the employer needs to configure their settings via the employer embed. This is where the employer selects their default super fund, which is used as the fallback when an employee does not make a super choice and does not have a stapled fund. The employer default super fund must be set before onboarding sessions can be created.
+
+Generate an embed URL to display this configuration UI:
 
 ```bash
 curl -X POST https://api.superapi.com.au/api/v1/employer/:id/generate-embed-url \
