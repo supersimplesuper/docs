@@ -1,64 +1,34 @@
-# Software partners
+---
+layout: home
 
-This page contains documentation designed to help our software partners integrate with SuperAPI. We've divided the documentation into sections, each of which are designed to help you understand how SuperAPI integrates with your software.
+hero:
+  name: "Software Partners"
+  text: ""
+  tagline: "Everything you need to integrate SuperAPI into your HR, payroll, or workforce management software"
 
-## Getting started
-
-- [SuperAPI Overview](/software_partners/explanations/overview/index.html): This is the best starting point for understanding how SuperAPI works.
-- What [SuperAPI modules](/software_partners/explanations/modules/index.html) are available?
-
-## Tutorials
-
-- Ready to go? Follow the tutorial on how to [integrate SuperAPI](/software_partners/tutorials/integrate_super_api/index.html).
-
-## How-to guides
-
-- How to request access to our [partner dashboard](/software_partners/how_to_guides/partner_dashboard/index.html)
-- How to implement our [hosted MFA](/software_partners/how_to_guides/hosted_mfa/index.html)
-
-### API keys
-
-- How do I [rotate my API keys](/software_partners/how_to_guides/rotate_api_key/index.html)?
-- How do I [verify my product API key](/software_partners/how_to_guides/verify_my_product_api_key/index.html) is working and view product settings?
-
-### Webhooks
-
-- How do I ensure [webhook security](/software_partners/how_to_guides/webhook_security/index.html)?
-- How do I [work with webhooks locally](/software_partners/how_to_guides/work_with_webhooks_locally/index.html)?
-
-### Creating entities
-
-- How do I [dynamically create products](/software_partners/how_to_guides/dynamically_create_products/index.html)?
-- How do I [create an employer](/software_partners/how_to_guides/create_an_employer/index.html)?
-- How do I [work with onboarding sessions](/software_partners/how_to_guides/work_with_onboarding_sessions/index.html)?
-- How do I [update details](/software_partners/how_to_guides/update_details/index.html) on an employee (like superannuation)?
-
-### Theming
-
-- How do I [customise the look and feel](/software_partners/how_to_guides/customise_the_look_and_feel/index.html) of the embeds?
-
-### General
-
-- How does an employer [activate stapling](/software_partners/how_to_guides/stapling-setup-instructions/index.html) in the access manager?
-- How do I [report a data breach](/software_partners/how_to_guides/report_a_data_breach/index.html) to SuperAPI?
-- How do I [show fair work statements](/software_partners/how_to_guides/show_fair_work_statements/index.html) to employees?
-
-## Explanations
-
-- Read a [high-level overview](/software_partners/explanations/overview/index.html) of the steps required to integrate your software with SuperAPI.
-- What is the [difference between product keys and partner keys?](/software_partners/explanations/product_vs_partner_api_keys/index.html)
-- What is the difference between [partners, employers, employees, and onboarding sessions](/software_partners/explanations/understanding_super_api_entities/index.html)?
-- Understand the [employer status](/software_partners/explanations/working_with_the_employer_status/index.html) fields so that you can customise your UI to communicate the employer's onboarding setup.
-- Understand the [lifecycle of an onboarding session](/software_partners/explanations/lifecycle_of_an_onboarding_session/index.html)
-- Learn about [onboarding templates](/software_partners/explanations/onboarding_templates/index.html) and how they can be used to customise the onboarding session.
-- What is [SuperAPI in a box](/software_partners/explanations/super_api_in_a_box/index.html)?
-
-## References
-
-- View our [live swagger spec](https://api.superapi.com.au/swaggerui)
-- Download our [Postman collection](/postman_collection.json){target="_blank" download="download"} to easily explore the API.
-- View the [list of webhooks](/software_partners/references/list_of_webhooks/index.html) that you can expect to be emitted from SuperAPI, along with the payloads they will contain. (this is currently a work in progress)
-- View the [list of workflow slugs](/software_partners/references/workflow_slugs/index.html) that are available to partners.
-- View the [authentication requirements](/software_partners/references/authentication_requirements/index.html) required when embedding SuperAPI.
-
-<!--@include: @/parts/getting_help.md-->
+features:
+  - title: Getting Started
+    details: Go from your partner API key to a working onboarding session in the browser, step by step.
+    link: /software_partners/tutorials/getting_started/index.html
+    linkText: Start here
+  - title: Modules
+    details: Explore the available onboarding modules, including super choice, tax, bank accounts, identity, and more.
+    link: /software_partners/explanations/modules/index.html
+    linkText: View modules
+  - title: Integration Tutorial
+    details: A detailed walkthrough of how SuperAPI fits into your product, including sequence diagrams and data flows.
+    link: /software_partners/tutorials/integrate_super_api/index.html
+    linkText: Read tutorial
+  - title: How-to Guides
+    details: Task-focused guides for webhooks, theming, API keys, employer setup, and more.
+    link: /software_partners/how_to_guides/index.html
+    linkText: Browse guides
+  - title: Key Concepts
+    details: Understand partners, products, employers, employees, onboarding sessions, and how they relate.
+    link: /software_partners/explanations/understanding_super_api_entities/index.html
+    linkText: Learn concepts
+  - title: API Reference
+    details: Interactive Swagger documentation for the full SuperAPI REST API.
+    link: https://api.superapi.com.au/swaggerui
+    linkText: Open API spec
+---
