@@ -2,7 +2,7 @@
 
 This module allows capturing contact information about the employee, including address and international phone numbers.
 
-![Identity](./images/2_contact_details.png)
+![Contact details](./images/2_contact_details.png)
 
 ## Features
 

@@ -6,7 +6,7 @@ This module allows the employee onboarding to sign one or more documents provide
 This module is currently in beta testing on Xonboard and is likely to change before being released to software partners.
 :::
 
-![Identity](./images/4_e_sign.png)
+![E-sign](./images/4_e_sign.png)
 
 ## Coming soon
 

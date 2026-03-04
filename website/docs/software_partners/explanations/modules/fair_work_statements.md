@@ -2,7 +2,7 @@
 
 This module displays employer selected fair work statements to the employee to acknowledge.
 
-![Identity](./images/6_fair_work.png)
+![Fair work statements](./images/6_fair_work.png)
 
 ## Features
 

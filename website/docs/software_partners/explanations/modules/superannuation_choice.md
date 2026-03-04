@@ -2,7 +2,7 @@
 
 This module provides a digital version of the super choice form to allow employees to nominate a super fund.
 
-![Identity](./images/9_super_choice.png)
+![Superannuation choice](./images/9_super_choice.png)
 
 ## Features
 

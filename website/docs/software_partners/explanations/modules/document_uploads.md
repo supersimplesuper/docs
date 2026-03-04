@@ -2,7 +2,7 @@
 
 Request that the employee upload documents like certificates and licenses.
 
-![Identity](./images/7_document_upload.png)
+![Document uploads](./images/7_document_upload.png)
 
 ## Features
 

@@ -2,7 +2,7 @@
 
 This module allows capturing the tax details from employees.
 
-![Identity](./images/5_tfnd.png)
+![Tax details](./images/5_tfnd.png)
 
 ## Features
 

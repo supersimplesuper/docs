@@ -2,7 +2,7 @@
 
 This module allows capturing an emergency contact for the employee.
 
-![Identity](./images/3_emergency_contact.png)
+![Emergency contact](./images/3_emergency_contact.png)
 
 ## Features
 

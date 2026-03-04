@@ -2,7 +2,7 @@
 
 Capture bank account details and account payout splits.
 
-![Identity](./images/8_bank_accounts.png)
+![Bank accounts](./images/8_bank_accounts.png)
 
 ## Features
 
