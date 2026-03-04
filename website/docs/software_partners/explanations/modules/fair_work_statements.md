@@ -1,10 +1,10 @@
 # Fair work statements
 
-This module displays employer selected fair work statements to the employee to acknowledge.
+Meet your Fair Work Ombudsman obligations automatically. Employees are presented with the relevant statements during onboarding and must acknowledge them before continuing, giving employers a timestamped compliance record.
 
 ![Fair work statements](./images/6_fair_work.png)
 
 ## Features
 
-* Display the general, casual and fixed term contract fair work statements to the employee.
-* Records the date and time the employee acknowledged receiving the statements.
+* Displays the Fair Work Information Statement (FWIS), Casual Employment Information Statement (CEIS) and Fixed Term Contract Information Statement (FTCIS) based on the employee's employment type.
+* Records the date and time the employee acknowledged receiving the statements for audit purposes.

@@ -1,11 +1,11 @@
 # Identity
 
-This module allows capturing information about the identity of the employee.
+Collect verified identity information upfront so employees only enter their details once. The form is inclusive by design, supporting custom gender and honourific inputs alongside standard options.
 
 ![Identity](./images/1_identity.png)
 
 ## Features
 
-* Standard gender and honourific dropdowns but with the option to input any gender or honourific required.
+* Inclusive gender and honourific fields with the option to input any value.
 * Form data automatically encrypted and saved as each field is completed.
-* Details automatically populated from information passed by the software partner.
+* Fields pre-populated from data provided by the software partner, reducing manual entry for the employee.

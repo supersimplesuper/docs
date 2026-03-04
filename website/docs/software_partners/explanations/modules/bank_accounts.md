@@ -1,15 +1,14 @@
 # Bank accounts
 
-Capture bank account details and account payout splits.
+Collect payroll-ready bank account details with built-in validation, so employees are paid correctly from their first pay run. Employees can split pay across multiple accounts with flexible rules for fixed amounts and percentages.
 
 ![Bank accounts](./images/8_bank_accounts.png)
 
 ## Features
 
-* Validates BSB by matching against an authorised list of BSBs.
-* Provides visual confirmation of selected banks by showing logos.
-* Can handle restricting the allowed bank accounts to account for employer relationships with banks.
-* Sophisticated "splitting" system allows for rules on money disbursement.
+* BSB validation against an authorised list with visual confirmation through bank logos.
+* Configurable rules to restrict allowed bank accounts, number of accounts and splitting behaviour per integration.
+* Flexible pay splitting across multiple accounts using fixed dollar amounts, percentages or a combination of both.
 * Address automatically pre-populated from previous modules or data provided by the software partner.
 
 ## Coming soon

@@ -1,13 +1,13 @@
 # Document uploads
 
-Request that the employee upload documents like certificates and licenses.
+Collect certificates, licenses, Medicare cards and other supporting documents as part of the onboarding flow instead of chasing them after the employee starts.
 
 ![Document uploads](./images/7_document_upload.png)
 
 ## Features
 
-* Request any number of documents to be uploaded.
-* Documents delivered as secure signed URL for download in zip format.
+* Request any number of documents, each with a custom label and description for the employee.
+* Uploaded documents are delivered as secure signed URLs for download in zip format.
 
 ## Coming soon
 

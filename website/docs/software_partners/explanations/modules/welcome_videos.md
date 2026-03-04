@@ -1,13 +1,13 @@
 # Welcome videos
 
-This module allows you to present videos to the employee onboarding before they commence the remaining steps in the onboarding journey. Use this to display welcome videos, training materials and other information required for the employee before they start their job.
+Set the tone for a new employee's experience before they fill out a single form. Welcome videos let employers deliver a personal introduction, training materials or company culture content right at the start of the onboarding journey.
 
 ![Welcome videos](./images/0_welcome_videos.png)
 
 ## Features
 
-* Use any YouTube video.
-* Multiple videos presented in a sequence defined by the employer.
+* Embed any YouTube video directly into the onboarding flow.
+* Present multiple videos in a sequence defined by the employer.
 
 ## Coming soon
 
