@@ -12,3 +12,5 @@ This module is currently in beta testing on Xonboard and is likely to change bef
 
 * Flexible template fields on documents (employee name, job title) so documents are customised to the employee onboarding.
 * Integration with 3rd party document signing providers, e.g. Annature or Adobe e-sign.
+
+[Missing something? Get in touch and tell us what you need.](https://superapi.com.au/contact/)
