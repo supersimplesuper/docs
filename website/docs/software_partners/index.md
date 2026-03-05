@@ -13,7 +13,7 @@ features:
     linkText: Start here
   - title: Modules
     details: Explore the available onboarding modules, including super choice, tax, bank accounts, identity, and more.
-    link: /software_partners/explanations/modules/index.html
+    link: /software_partners/modules/index.html
     linkText: View modules
   - title: Integration Tutorial
     details: A detailed walkthrough of how SuperAPI fits into your product, including sequence diagrams and data flows.

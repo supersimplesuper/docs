@@ -1,6 +1,6 @@
 # Show fair work statements
 
-SuperAPI provides a [fair work statements module](/software_partners/explanations/modules/fair_work_statements.html) that displays designated fair work statements to employees during onboarding. Employees can view, download and attest that they have received the required statements. This attestation is recorded as a datetime and returned to your system.
+SuperAPI provides a [fair work statements module](/software_partners/modules/fair_work_statements.html) that displays designated fair work statements to employees during onboarding. Employees can view, download and attest that they have received the required statements. This attestation is recorded as a datetime and returned to your system.
 
 Fair work statements consist of three available options:
 

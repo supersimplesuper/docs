@@ -304,7 +304,7 @@ You should receive a response like:
 }
 ```
 
-Open the returned `embed_url` in a browser. You'll see the onboarding experience your employees will go through, including super choice, tax details, bank accounts, and whatever other [modules](/software_partners/explanations/modules/index.html) are configured.
+Open the returned `embed_url` in a browser. You'll see the onboarding experience your employees will go through, including super choice, tax details, bank accounts, and whatever other [modules](/software_partners/modules/index.html) are configured.
 
 ## What happens next?
 
@@ -321,7 +321,7 @@ To handle these in your integration:
 
 ## Next steps
 
-- Browse the [available modules](/software_partners/explanations/modules/index.html) to see what you can include in onboarding
+- Browse the [available modules](/software_partners/modules/index.html) to see what you can include in onboarding
 - [Customise the look and feel](/software_partners/how_to_guides/customise_the_look_and_feel/index.html) to match your brand
 - Read about [SuperAPI entities](/software_partners/explanations/understanding_super_api_entities/index.html) to understand the full data model
 - Explore the [API reference](https://api.superapi.com.au/swaggerui) for all available endpoints
