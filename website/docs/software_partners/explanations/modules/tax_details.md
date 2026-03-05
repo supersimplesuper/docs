@@ -1,6 +1,6 @@
 # Tax details
 
-Replace paper TFN declaration forms with a guided digital experience that reduces errors and employee confusion. When ATO integration is enabled, the completed declaration is submitted automatically — removing manual processing entirely.
+Replace paper TFN declaration forms with a guided digital experience that reduces errors and employee confusion. When ATO integration is enabled, the completed declaration is submitted automatically, removing manual processing entirely.
 
 ![Tax details](./images/5_tfnd.png)
 

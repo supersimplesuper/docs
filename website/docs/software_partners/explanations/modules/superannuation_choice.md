@@ -1,6 +1,6 @@
 # Superannuation choice
 
-Replace the paper super choice form with a guided digital experience. Employees can find their existing fund, join a new one or use the employer default — all in a few clicks. Fund partnerships mean existing memberships are detected automatically and new memberships can be created inline, making super selection fast and frictionless.
+Replace the paper super choice form with a guided digital experience. Employees can find their existing fund, join a new one or use the employer default all in a few clicks. Fund partnerships mean existing memberships are detected automatically and new memberships can be created inline, making super selection fast and frictionless.
 
 ![Superannuation choice](./images/9_super_choice.png)
 

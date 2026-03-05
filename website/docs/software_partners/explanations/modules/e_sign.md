@@ -1,6 +1,6 @@
 # E-sign
 
-Get employment contracts, compliance certificates and other critical documents signed electronically as part of the onboarding flow — no separate tools or follow-up emails required. Employers provide the documents and employees review and sign them before starting work.
+Get employment contracts, compliance certificates and other critical documents signed electronically as part of the onboarding flow, no separate tools or follow-up emails required. Employers provide the documents and employees review and sign them before starting work.
 
 :::warning
 This module is currently in beta testing on Xonboard and is likely to change before being released to software partners.
