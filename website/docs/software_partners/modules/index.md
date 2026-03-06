@@ -12,9 +12,6 @@ We are always updating and adding new modules, and when you integrate with Super
 
 <div class="modules-grid">
   <a class="module-card" href="welcome_videos.html">
-    <div class="module-badges">
-      <span class="badge badge-premium">Premium</span>
-    </div>
     <h3>Welcome videos</h3>
     <p>Set the tone before onboarding begins with welcome messages, training materials and company culture content embedded directly in the flow.</p>
     <span class="module-more">More →</span>
@@ -41,7 +38,6 @@ We are always updating and adding new modules, and when you integrate with Super
   <a class="module-card" href="e_sign.html">
     <div class="module-badges">
       <span class="badge badge-beta">Beta</span>
-      <span class="badge badge-premium">Premium</span>
     </div>
     <h3>E-sign</h3>
     <p>Get contracts and compliance documents signed electronically as part of onboarding, no separate tools or follow-up emails.</p>
@@ -61,9 +57,6 @@ We are always updating and adding new modules, and when you integrate with Super
   </a>
 
   <a class="module-card" href="document_uploads.html">
-    <div class="module-badges">
-      <span class="badge badge-premium">Premium</span>
-    </div>
     <h3>Document uploads</h3>
     <p>Collect certificates, licenses and other supporting documents during onboarding instead of chasing them later.</p>
     <span class="module-more">More →</span>
@@ -76,9 +69,6 @@ We are always updating and adding new modules, and when you integrate with Super
   </a>
   
   <a class="module-card" href="policy_attestations.html">
-    <div class="module-badges">
-      <span class="badge badge-premium">Premium</span>
-    </div>
     <h3>Policy attestations</h3>
     <p>Ensure employees have read and agreed to company policies like Code of Conduct and WHS before they start.</p>
     <span class="module-more">More →</span>
