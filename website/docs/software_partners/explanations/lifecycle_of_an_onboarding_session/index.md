@@ -21,18 +21,16 @@ stateDiagram-v2
     }
     custom_steps --> abandoned: Moved after two weeks of inactivity
     custom_steps --> pending_results: User completed onboarding
-    pending_results --> generate_output
+    pending_results --> completed
     note right of pending_results
         We wait in this state for all actions in
         the custom steps to be completed, e.g.
         waiting for super registration to complete
     end note
-    generate_output --> deliver_output
     note right of custom_steps
         Defined by which workflow slug is
         used when creating the onboarding session
     end note
-    deliver_output --> completed
     completed --> pending_archived
     note right of completed
         Here we emit a event notifying you that the
