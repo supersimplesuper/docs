@@ -11,6 +11,10 @@ features:
     details: Go from your partner API key to a working onboarding session in the browser, step by step.
     link: /software_partners/tutorials/getting_started/index.html
     linkText: Start here
+  - title: Common Gotchas
+    details: The most common issues partners run into when integrating with SuperAPI, and how to avoid them.
+    link: /software_partners/tutorials/common_gotchas/index.html
+    linkText: Read guide
   - title: Modules
     details: Explore the available onboarding modules, including super choice, tax, bank accounts, identity, and more.
     link: /software_partners/modules/index.html
