@@ -222,6 +222,10 @@ Generated URLs are ephemeral. `valid_until` must be within 2 hours of the curren
 
 ## Step 6: Create an onboarding session
 
+::: tip
+Creating an onboarding session will fail if the employer hasn't been fully configured. Make sure the employer entity has been created and the employer has completed their configuration via the employer embed before you attempt to create onboarding sessions.
+:::
+
 Once the employer has configured their settings, you can create onboarding sessions for their employees:
 
 ```bash

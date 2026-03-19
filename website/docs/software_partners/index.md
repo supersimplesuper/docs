@@ -19,10 +19,10 @@ features:
     details: Explore the available onboarding modules, including super choice, tax, bank accounts, identity, and more.
     link: /software_partners/modules/index.html
     linkText: View modules
-  - title: Integration Tutorial
-    details: A detailed walkthrough of how SuperAPI fits into your product, including sequence diagrams and data flows.
+  - title: Designing Your Integration
+    details: How to think about SuperAPI architecturally, including data flows, entity mapping, and where SuperAPI fits in your onboarding process.
     link: /software_partners/tutorials/integrate_super_api/index.html
-    linkText: Read tutorial
+    linkText: Read guide
   - title: How-to Guides
     details: Task-focused guides for webhooks, theming, API keys, employer setup, and more.
     link: /software_partners/how_to_guides/index.html
