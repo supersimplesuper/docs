@@ -99,3 +99,5 @@ We are always updating and adding new modules, and when you integrate with Super
     <p>Perform police checks against new starters.</p>
   </div>
 </div>
+
+<!--@include: @/parts/getting_help.md-->

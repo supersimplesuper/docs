@@ -12,7 +12,7 @@ The `onboarding_status` can be in three states, they are:
 - `incomplete` - Onboarding can proceed but not all settings are correctly configured for the best user experience. For example, if we're unable to perform stapling requests due to authorisation errors, this will be set to `incomplete`.
 - `error` - Critical information is missing and we cannot onboard employees. This state is rare but will occur if a critical setting like the employer's default fund has not been selected.
 
-When an `onboarding_status` is not in the `complete` state, you should redirect the user to a page which [loads the employer embed](/software_partners/how_to_guides/create_an_employer/index.html#showing-the-employer-embed) for them. We will detect the current state that the employer is in and provide instructions for them to fix things so that onboardings can resume smoothly.
+When an `onboarding_status` is not in the `complete` state, you should redirect the user to a page which [loads the employer embed](/software_partners/getting_started/index.html#step-5-show-the-employer-embed) for them. We will detect the current state that the employer is in and provide instructions for them to fix things so that onboardings can resume smoothly.
 
 To visually represent the onboarding status of the employer, we suggest using an error icon (⛔) when in the error state. When the onboarding status is incomplete, we suggest using a warning (⚠️) icon.
 

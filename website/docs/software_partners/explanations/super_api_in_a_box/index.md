@@ -6,7 +6,7 @@ SuperAPI in a Box works by having SuperAPI handle the hosting of embeds on their
 
 ## For employees onboarding
 
-The first step is that your system indicates that an employee wants to onboard. This can be from an event like an employer sending an onboarding request invite and the employee clicking the link or the employee selecting a "self-service" update flow, e.g. they want to update their superannuation details. At this point an [onboarding session](/software_partners/how_to_guides/work_with_onboarding_sessions/index.html) has been created and the employee is ready to complete it. Next, direct the employee to the URL that we host (e.g. `onboarding.yourdomain.com.au`) where they will be prompted to log in. This URL can be made to look as if it was part of your website via the use of a CNAME DNS record.
+The first step is that your system indicates that an employee wants to onboard. This can be from an event like an employer sending an onboarding request invite and the employee clicking the link or the employee selecting a "self-service" update flow, e.g. they want to update their superannuation details. At this point an [onboarding session](/software_partners/getting_started/index.html#step-6-create-an-onboarding-session) has been created and the employee is ready to complete it. Next, direct the employee to the URL that we host (e.g. `onboarding.yourdomain.com.au`) where they will be prompted to log in. This URL can be made to look as if it was part of your website via the use of a CNAME DNS record.
 
 ::: info
 We support a few additional functions when loading this site, e.g. you can prefill the employee's email address to make it easier for them to log in.

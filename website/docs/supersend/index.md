@@ -6,10 +6,6 @@ SuperSend enables direct real-time SuperStream payments, which avoids the delays
 
 _Coming soon_
 
-## How to guides
-
-- How to [upload a SAFF file](/supersend/how_to_guides/upload_a_saff_file/index.html)
-
 ## Explanations
 
 - Explore some of our [frequently asked questions](/supersend/explanations/faq.html)

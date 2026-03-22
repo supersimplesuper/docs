@@ -40,4 +40,4 @@ After issuing the `curl` request above, you will receive a payload similar to th
 }
 ```
 
-After you've got your product key working, [check out how to create an employer](/software_partners/how_to_guides/create_an_employer/index.html).
+After you've got your product key working, [check out how to create an employer](/software_partners/getting_started/index.html#step-4-create-an-employer).

@@ -66,28 +66,4 @@ The onboarding session represents a one-off workflow that can be given to a user
 This entity requires a `remote_id` field which can be used to map back to your system.
 :::
 
-## Tracking SuperAPI entities in your system
-
-We highly suggest creating new database tables to track the "join" between the entities in your system (employers, employees) and the entities in SuperAPI. This provides a convenient indicator that the join between the systems has been created and allows you to store SuperAPI related information in a way that does not pollute the primary models in your system.
-
-For example, to model the relationship between employers in your system and SuperAPI, your database could look like:
-
-```mermaid
-classDiagram
-    class SuperAPI {
-        +UUID id
-    }
-    class EmployerSuperAPIEmployers {
-        +int id
-        +int employer_id Foreign key to your internal employers table
-        +UUID super_api_employer_id Foreign key to remote SuperAPI record
-        +data data returned to you from SuperAPI about the employer
-    }
-    class Employers {
-        +int id
-    }
-    SuperAPI "1" -- "1" EmployerSuperAPIEmployers : linked via Rest API
-    EmployerSuperAPIEmployers "1" -- "*" Employers : internal link via foreign key
-```
-
-The `data` column in this case would model the JSON store in SuperAPI about the `employer` object. This would give you a convenient place to track the status of SuperAPI employers (for example, do they require a default super fund to be selected?). In this case, the remote_id provided to SuperAPI would be the primary key id of the `EmployerSuperAPIEmployers` record. This also creates a nice destination for webhook data to be stored after it has been fetched.
+For guidance on how to model these entities alongside your own database tables, see [Designing Your SuperAPI Integration](/software_partners/integrate_super_api/index.html).

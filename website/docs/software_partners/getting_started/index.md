@@ -281,7 +281,7 @@ You should receive a response like:
 Note the `id` from the response.
 
 ::: tip
-The more employee details you pass, the less the employee has to enter themselves. See [working with onboarding sessions](/software_partners/how_to_guides/work_with_onboarding_sessions/index.html) for the full set of fields you can pre-fill.
+The more employee details you pass, the less the employee has to enter themselves. See the [API reference](https://api.superapi.com.au/swaggerui) for the full set of fields you can pre-fill.
 :::
 
 ## Step 7: Show the onboarding embed
@@ -326,6 +326,7 @@ To handle these in your integration:
 ## Next steps
 
 - Browse the [available modules](/software_partners/modules/index.html) to see what you can include in onboarding
+- Use [onboarding templates](/software_partners/explanations/onboarding_templates/index.html) to customise onboarding sessions with additional requirements like document uploads and policy acknowledgements
 - [Customise the look and feel](/software_partners/how_to_guides/customise_the_look_and_feel/index.html) to match your brand
 - Read about [SuperAPI entities](/software_partners/explanations/understanding_super_api_entities/index.html) to understand the full data model
 - Explore the [API reference](https://api.superapi.com.au/swaggerui) for all available endpoints
