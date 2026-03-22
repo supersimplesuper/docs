@@ -26,7 +26,10 @@
   background: var(--vp-c-bg-soft);
   color: var(--vp-c-text-1);
   text-decoration: none !important;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    border-color 0.12s ease;
 }
 
 .modules-grid a.module-card:hover {
@@ -94,7 +97,7 @@
 }
 
 .badge-premium {
-  background: linear-gradient(135deg, #D4A017 0%, #F2C451 100%);
+  background: linear-gradient(135deg, #d4a017 0%, #f2c451 100%);
 }
 
 /* Partner grid */
@@ -130,7 +133,10 @@
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    border-color 0.12s ease;
 }
 
 .partners-grid a.partner-card:hover {
