@@ -15,7 +15,7 @@ The race condition occurs when a second onboarding session is created before the
 ```mermaid
 sequenceDiagram
     participant E as Employee
-    participant P as Partner System
+    participant P as Your System
     participant S as SuperAPI
     participant F as Super Fund
 
@@ -49,6 +49,18 @@ Rather than relying on individual `onboarding_session_completed` webhooks to upd
 Alternatively, you can handle this in your own system by preventing new onboarding sessions from being created until the previous one has fully completed (i.e. you've received its `onboarding_session_completed` webhook).
 
 For more detail on how onboarding sessions progress through their lifecycle, see the [lifecycle of an onboarding session](/software_partners/explanations/lifecycle_of_an_onboarding_session/index.html) explanation guide. For a full list of webhook events, see the [list of webhooks](/software_partners/references/list_of_webhooks/index.html) reference.
+
+## Onboarding sessions cause side-effects
+
+Creating an onboarding session is not a passive operation. If an onboarding session is created but the employee never completes it, SuperAPI will eventually run abandonment flows. These flows attempt to resolve the employee's superannuation by stapling them to an existing fund or registering them with the employer's default fund. This happens automatically after a period of inactivity (see the [lifecycle of an onboarding session](/software_partners/explanations/lifecycle_of_an_onboarding_session/index.html) for detail on when this occurs).
+
+The problem arises when an employee already has superannuation details recorded in your system - for example, entered by a bookkeeper. If an onboarding session is created and left incomplete, the abandonment flow will resolve the employee's fund independently. When you fetch the completed session data, it may overwrite the details that were already correct in your system.
+
+### How to avoid this
+
+- **Be intentional about creating onboarding sessions.** Don't create them speculatively or as part of a test flow in production. Each session will eventually trigger real side-effects if left incomplete.
+- **Pass existing super fund details when creating the session.** If you already know the employee's super fund, include it in the onboarding session creation payload (see the [API reference](https://api.superapi.com.au/swaggerui) for the available fields). SuperAPI will return this data rather than stapling or defaulting the employee.
+- **Delete sessions you no longer need.** Use the DELETE action on the onboarding session endpoint to clean up sessions that were created in error. Note that sessions in certain states cannot be deleted if they are waiting for data to be returned - see the [lifecycle of an onboarding session](/software_partners/explanations/lifecycle_of_an_onboarding_session/index.html) for more detail.
 
 ## Remote ID confusion
 
