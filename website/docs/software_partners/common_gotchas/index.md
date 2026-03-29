@@ -50,6 +50,38 @@ Alternatively, you can handle this in your own system by preventing new onboardi
 
 For more detail on how onboarding sessions progress through their lifecycle, see the [lifecycle of an onboarding session](/software_partners/explanations/lifecycle_of_an_onboarding_session/index.html) explanation guide. For a full list of webhook events, see the [list of webhooks](/software_partners/references/list_of_webhooks/index.html) reference.
 
+## MRR registration delays
+
+When an employee selects a partner fund that supports Member Registration Requests (MRRs), SuperAPI sends an MRR on the Superstream network to register the employee with that fund. The onboarding session moves to `pending_completion` and stays there until a Member Registration Outcome Response (MROR) is returned by the fund. This process typically takes anywhere from 1 hour to 3 business days.
+
+```mermaid
+sequenceDiagram
+    participant P as Your System
+    participant S as SuperAPI
+    participant F as Super Fund
+
+    P->>S: Employee completes onboarding embed
+    S-->>P: Post-message: employee is done
+    S->>F: MRR sent (Superstream)
+    Note over S,F: 1 hour to 3 days
+    F-->>S: MROR returned
+    S-->>P: Webhook: onboarding_session_completed
+```
+
+This delay is the most common source of confusion during integration. Partners often expect the `onboarding_session_completed` webhook to fire shortly after the employee finishes the embed, and when it doesn't, it gets reported as a bug. In practice, the post-message event tells you the employee is done and your UI can move them forward. The webhook arrives later once SuperAPI has fully resolved the employee's fund registration.
+
+This delay is also the underlying cause of the [webhook race condition](#webhook-race-conditions) described above. If a second onboarding session is created while the first is still waiting for an MROR, the two sessions can complete out of order.
+
+Note that MRRs are not the only source of delay. Member Verification Requests (MVRs) and other Superstream messages can also introduce a wait before results are returned to your system.
+
+If the fund does not return an MROR at all, SuperAPI will eventually run its abandonment flow. In this case the onboarding session will still reach `completed`, but the super selection outcome may be `complete_without_member_number`. See the [lifecycle of an onboarding session](/software_partners/explanations/lifecycle_of_an_onboarding_session/index.html) for detail on abandonment behavior and outcomes.
+
+### How to avoid this
+
+- **Treat the post-message event as the employee's completion point in your UI.** Don't block the employee or show an error while the MRR is in flight. Let them continue through your onboarding flow and sync the super fund details when the webhook arrives.
+- **Communicate the pending state to employers.** If your system shows super fund status to employers or administrators, surface a message indicating that registration is in progress with the fund rather than showing an empty or error state.
+- **Pass existing super fund details when creating onboarding sessions.** If you already know the employee's fund and member number, include them in the session creation payload. This avoids the employee attempting to join a fund they are already a member of, which skips the MRR entirely.
+
 ## Onboarding sessions cause side-effects
 
 Creating an onboarding session is not a passive operation. If an onboarding session is created but the employee never completes it, SuperAPI will eventually run abandonment flows. These flows attempt to resolve the employee's superannuation by stapling them to an existing fund or registering them with the employer's default fund. This happens automatically after a period of inactivity (see the [lifecycle of an onboarding session](/software_partners/explanations/lifecycle_of_an_onboarding_session/index.html) for detail on when this occurs).
