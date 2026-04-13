@@ -2,7 +2,7 @@ name: CD
 
 on:
   schedule:
-    - cron:  '0 1 * * *'
+    - cron: "0 1 * * *"
   push:
     branches:
       - main
@@ -59,4 +59,4 @@ jobs:
 
       - name: Deploy docs to bucket
         run: |
-          aws s3 sync --delete ./docs s3://ss-apps-production-docssuperapi-origin
+          aws s3 sync --delete ./docs s3://superapi-docs
