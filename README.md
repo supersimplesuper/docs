@@ -1,3 +1,5 @@
+Classification: Public
+
 # SuperAPI Documentation
 
 The following repo contains the documentation for our SuperAPI product. These docs can be found online at https://docs.superapi.com.au
