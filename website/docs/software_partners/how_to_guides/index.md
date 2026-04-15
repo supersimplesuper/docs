@@ -22,6 +22,7 @@
 - [Work with webhooks locally](/software_partners/how_to_guides/work_with_webhooks_locally/index.html)
 - [Show fair work statements](/software_partners/how_to_guides/show_fair_work_statements/index.html)
 - [Activate stapling](/software_partners/how_to_guides/stapling-setup-instructions/index.html)
+- [Understanding member verification](/software_partners/how_to_guides/member_verification/index.html)
 
 ## References & Administration
 
