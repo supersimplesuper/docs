@@ -31,7 +31,7 @@ The `confidence` value reflects the strongest verification signal we hold for th
 | Confidence | Source | Typical handling |
 | --- | --- | --- |
 | `verified` | A successful MVR response from the fund. | Safe to pay. The fund has explicitly confirmed the employee is one of their members. |
-| `rejected` | An MVR response from the fund saying the membership does not exist. | Do not pay against this membership; a contribution will be returned. Reach out to the employee to collect correct details, or fall back to the employer's default fund. |
+| `rejected` | An MVR response from the fund saying that contributions will not succeed. | Do not pay against this membership; a contribution will be returned. Reach out to the employee to collect correct details, or fall back to the employer's default fund. |
 | `high` | A direct fund API integration, an MRR (Member Registration Response), or a fund member lookup. | Safe to pay. The value will normally progress to `verified` once the MVR response is received. |
 | `medium` | The ATO stapling API, or a previous SuperAPI super selection carried forward. | Generally safe to pay. An MVR is sent even for stapled funds, so this should progress to `verified` (or `rejected`) once the response is received. |
 | `low` | Default. Partner-provided, employee-provided, or no stronger signal exists. | Pay with caution. You may want to ask the employee to re-confirm their fund before sending a contribution. |
