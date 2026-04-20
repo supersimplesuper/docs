@@ -330,6 +330,6 @@ To handle these in your integration:
 - [Customise the look and feel](/software_partners/how_to_guides/customise_the_look_and_feel/index.html) to match your brand
 - Read about [SuperAPI entities](/software_partners/explanations/understanding_super_api_entities/index.html) to understand the full data model
 - Explore the [API reference](https://api.superapi.com.au/swaggerui) for all available endpoints
-- Using TypeScript and want an opinionated experience integrating with our embeds? Install our library on [NPM](https://www.npmjs.com/package/@super-api/super-api-embed) and view the source on [Github](https://github.com/supersimplesuper/super-api-embed).
+- Using TypeScript and want an opinionated experience integrating with our embeds? Install our library via [NPM](https://www.npmjs.com/package/@super-api/super-api-embed) and view the source on [Github](https://github.com/supersimplesuper/super-api-embed).
 
 <!--@include: @/parts/getting_help.md-->
