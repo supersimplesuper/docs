@@ -8,6 +8,7 @@
 - [Working with the employer status](/software_partners/explanations/working_with_the_employer_status/index.html)
 - [Onboarding templates](/software_partners/explanations/onboarding_templates/index.html)
 - [SuperAPI in a Box](/software_partners/explanations/super_api_in_a_box/index.html)
+- [How SuperAPI stores and uses data](/software_partners/explanations/data_storage_and_handling/index.html)
 - [Authentication requirements](/software_partners/references/authentication_requirements/index.html)
 
 ## Working with SuperAPI
