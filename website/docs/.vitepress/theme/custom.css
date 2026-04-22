@@ -42,6 +42,13 @@
 /* ISO 27001 Certified logo in the site footer */
 .VPFooter .container {
   position: relative;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .VPFooter .container {
+    text-align: center;
+  }
 }
 
 .VPFooter .message .footer-iso-logo {
@@ -58,7 +65,7 @@
     position: static;
     transform: none;
     display: block;
-    margin: 0.75rem auto 0 auto;
+    margin: 0 auto 1.25rem auto;
     height: 46px;
   }
 }
