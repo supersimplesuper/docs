@@ -79,13 +79,13 @@ superapi.com.au will only disclose the personal information You have provided to
 
 You should be aware that superapi.com.au may be required to disclose Your personal information without Your consent in order to comply with any court orders, subpoenas, or other legal process or investigation including by tax authorities, if such disclosure is required by law. Where possible and appropriate, we will notify You if we are required by law to disclose Your personal information.
 
-## superapi.com.au does not store Your identity documents, bank account, or credit card details
+## superapi.com.au stores some payment and identity information to deliver the Service
 
-If You are an employee, superapi.com.au may request Your personal bank account information, including BSB and Account number, via a third-party technology provider, for the provision of the service only, and will not store this information, nor use this information to charge You for the service in any way. The information will be encrypted at all times when it is transmitted for the purposes of delivering the service.
+If You are an employee, superapi.com.au may store Your personal bank account information, including BSB and Account number, where this is collected as part of the onboarding service, so that it can be returned to Your employer for payroll purposes. The information is encrypted at rest and encrypted at all times when transmitted for the purposes of delivering the Service.
 
-If You are an employee, superapi.com.au may request Your identity documents including but not limited to Your Passport, Driver's Licence, and Medicare card via a third-party technology provider, for the provision of the service only, and will not store this information. The information will be encrypted by our service provider at all times when it is transmitted for the purposes of delivering the service.
+If You are an employee, superapi.com.au may store Your identity documents, including but not limited to Your Passport, Driver's Licence, and Medicare card, where Your employer requires these to be uploaded as part of the onboarding service. The information is encrypted at rest and encrypted at all times when transmitted for the purposes of delivering the Service.
 
-If You are an employer, we may collect Your credit card information or BSB and Account number for the purposes of billing You for this service via a third-party technology provider, for the provision of the service only, and will not store this information, nor use this information to charge You except with Your explicit permission and consent via Our third-party technology provider. The information will be encrypted at all times when it is transmitted for the purposes of delivering the service.
+If You are an employer, we may collect Your credit card information or BSB and Account number for the purposes of billing You for this Service via a third-party technology provider, for the provision of the Service only, and will not store this information, nor use this information to charge You except with Your explicit permission and consent via Our third-party technology provider. The information will be encrypted at all times when it is transmitted for the purposes of delivering the Service.
 
 ## You may request access to Your personal information
 
