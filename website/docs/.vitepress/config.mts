@@ -49,7 +49,8 @@ export default withMermaid({
       provider: "local",
     },
     footer: {
-      message: "The future of super is embedded",
+      message:
+        '<img src="/iso27001-certified.svg" alt="ISO/IEC 27001 Certified" class="footer-iso-logo" />The future of super is embedded',
       copyright: "Copyright © 2025 SuperAPI Pty Ltd (ACN: 674 661 244)",
     },
     nav: [

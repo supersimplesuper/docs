@@ -19,3 +19,46 @@
   height: 480px !important; /* Set desired height */
   object-fit: contain; /* Ensure the image fits without distortion */
 }
+
+/* Show the site footer on pages that have a sidebar (default theme hides it). */
+.VPFooter.has-sidebar {
+  display: block;
+}
+
+@media (min-width: 960px) {
+  .VPFooter.has-sidebar {
+    padding-left: calc(var(--vp-sidebar-width) + 24px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPFooter.has-sidebar {
+    padding-left: calc(
+      (100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width) - 8px
+    );
+  }
+}
+
+/* ISO 27001 Certified logo in the site footer */
+.VPFooter .container {
+  position: relative;
+}
+
+.VPFooter .message .footer-iso-logo {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 54px;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .VPFooter .message .footer-iso-logo {
+    position: static;
+    transform: none;
+    display: block;
+    margin: 0.75rem auto 0 auto;
+    height: 46px;
+  }
+}
