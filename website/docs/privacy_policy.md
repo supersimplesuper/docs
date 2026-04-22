@@ -57,15 +57,15 @@ superapi.com.au may use this aggregated non-personally identifiable data to:
 - enhance small business productivity, including by creating useful business insights from that aggregated data and allowing You to benchmark Your business' performance against that aggregated data, and
 - otherwise to improve the Service.
 
-## superapi.com.au holds your personal information on servers located in Australia and Singapore.
+## superapi.com.au holds your personal information on servers located in Australia.
 
-We use third-party data hosting providers to host our Services on servers located in Australia and Singapore.
+We use third-party data hosting providers to host our Services on servers located in Australia.
 
-By entering personal information into the Services, you consent to your encrypted personal information being hosted securely on servers located in Australia, with some of our backup storage on secure servers in Singapore. We may use servers in Singapore at peak times as hundreds of thousands of Australians use superapi.com.au each year to start their new job. While your personal information will be stored on servers located in Australia and Singapore, it will remain within superapi.com.au's effective control at all times. Our data hosting provider's role is limited to providing a secure hosting and storage service to superapi.com.au.
+By entering personal information into the Services, you consent to your encrypted personal information being hosted securely on servers located in Australia. Your personal information will remain within superapi.com.au's effective control at all times. Our data hosting provider's role is limited to providing a secure hosting and storage service to superapi.com.au. Some non-personally identifiable operational data (for example, scrubbed application logs and exception traces) may pass through services whose infrastructure sits outside Australia; these services do not receive personal information.
 
 ## superapi.com.au uses industry best practices to protect your personal information.
 
-superapi.com.au uses SSL data encryption in transit for both the website and database and LUKS (Linux Unified Key Setup) for data at rest. Both of these conform to the latest industry standards.
+superapi.com.au uses TLS encryption in transit for both the website and database, and AES-256 encryption for data at rest (including database snapshots and backups). Both of these conform to current industry standards.
 
 superapi.com.au is committed to protecting the security of Your personal information and we take reasonable precautions to protect it from unauthorised access, modification or disclosure.
 
