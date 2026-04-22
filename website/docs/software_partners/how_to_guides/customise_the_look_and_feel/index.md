@@ -33,6 +33,16 @@ When adding your theme, start small. SuperAPI has a base theme, so rather than s
 We are more than happy to help you implement your theme. Contact us at support@superapi.com.au and we can provide guidance or even create the first draft of your theme to get you started.
 :::
 
+## Adding a custom loader
+
+If you are utilizing our [Javascript library](https://github.com/supersimplesuper/super-api-embed), you can define your own iFrame loading state.
+
+<video controls width="100%">
+  <source src="/loading_embed_in_xonboard.mp4" type="video/mp4" />
+</video>
+
+This is accomplished by providing an loading element when the embed object is constructed as part of the `createLoader` key.
+
 ## Beyond the variables
 
 The variable system has been designed to let you safely make theme changes without affecting how the site functions. However, there are times when you may want to go beyond variable tweaks. For example, you may want to add drop shadows to certain cards. In these cases we can support adding additional custom styles to your theme, but you will need to work with us to ensure these changes do not impact site functionality.
