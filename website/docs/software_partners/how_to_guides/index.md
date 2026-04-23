@@ -24,6 +24,7 @@
 - [Show fair work statements](/software_partners/how_to_guides/show_fair_work_statements/index.html)
 - [Activate stapling](/software_partners/how_to_guides/stapling-setup-instructions/index.html)
 - [Understanding member verification](/software_partners/how_to_guides/member_verification/index.html)
+- [Syncing data to third party systems](/software_partners/how_to_guides/sync_data_to_third_party_systems/index.html)
 
 ## References & Administration
 
