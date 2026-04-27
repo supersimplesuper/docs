@@ -54,11 +54,8 @@ You can log in to ATO Access Manager using your MyGovID.
 
 Check out our clickable demo, which guides you through the setup in the Access Manager portal and the final step required in the SuperAPI employer portal.
 
-<div>
-  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
-  <div class="sl-embed" style="position:relative;padding-bottom:calc(52.76% + 25px);width:100%;height:0;transform:scale(1)">
-    <iframe loading="lazy" class="sl-demo" src="https://superapi.storylane.io/demo/wscwtzonluvr?embed=popup" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
-  </div>
+<div class="sl-embed" style="position:relative;padding-bottom:calc(52.76% + 25px);width:100%;height:0;transform:scale(1)">
+  <iframe loading="lazy" class="sl-demo" src="https://superapi.storylane.io/demo/wscwtzonluvr?embed=popup" name="sl-embed" allow="fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%!important;height:100%!important;border:1px solid rgba(63,95,172,0.35);box-shadow: 0px 0px 18px rgba(26, 19, 72, 0.15);border-radius:10px;box-sizing:border-box;"></iframe>
 </div>
 
 ## FAQ: Help activating automated super stapling
