@@ -1,3 +1,5 @@
+**NOTE: We  have moved this to be tracked in our internal repo instead**
+
 Classification: Public
 
 # SuperAPI Documentation
